@@ -42,6 +42,11 @@ const app = createApp({
         const lineageModal = ref({ open: false, fatherName: '', chain: [] });
         const searchSuggestions = ref([]);
 
+        // Traditions
+        const traditions = ref([]);
+        const traditionSearch = ref('');
+        const selectedTradition = ref(null);
+
         // Theme
         const isDarkTheme = ref(true);
 
@@ -66,10 +71,39 @@ const app = createApp({
                 'doctrines': 'Doctrine Browser',
                 'comparison': 'Comparison Dashboard',
                 'search': 'Topic Search',
+                'traditions': 'Traditions',
                 'why-it-matters': 'Why It Matters'
             };
             return labels[currentView.value] || 'Timeline';
         });
+
+        // Tradition categories
+        const traditionCategories = computed(() => {
+            const cats = new Set();
+            for (const t of traditions.value) {
+                if (t.category) cats.add(t.category);
+            }
+            return Array.from(cats).sort();
+        });
+
+        function filteredTraditionsByCategory(category) {
+            return traditions.value.filter(t => {
+                if (t.category !== category) return false;
+                if (traditionSearch.value) {
+                    return t.name.toLowerCase().includes(traditionSearch.value.toLowerCase());
+                }
+                return true;
+            });
+        }
+
+        function selectTradition(t) {
+            selectedTradition.value = t;
+        }
+
+        function formatTraditionText(text) {
+            if (!text) return '';
+            return text.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
+        }
 
         // Memoization cache for filteredDoctrinesByCategory
         const _doctrineCategoryCache = ref({});
@@ -368,6 +402,16 @@ const app = createApp({
                 bibleRefs.value = data.bibleRefs;
                 loading.value = false;
 
+                // Load traditions
+                try {
+                    const traditionsRes = await fetch('data/traditions.json');
+                    if (traditionsRes.ok) {
+                        traditions.value = await traditionsRes.json();
+                    }
+                } catch (err) {
+                    console.warn('Could not load traditions:', err);
+                }
+
                 // Load search state
                 await TopicSearch.loadTopics();
                 availableTopics.value = TopicSearch.getAvailableTopics();
@@ -403,6 +447,10 @@ const app = createApp({
             getDenomColor, getDenomName, getPosition, getPositionSince, getScoreClass,
             getContinuityPercent, getContinuityDetail,
             openSourcePanel, closeSourcePanel,
+            // Traditions
+            traditions, traditionSearch, selectedTradition,
+            traditionCategories, filteredTraditionsByCategory,
+            selectTradition, formatTraditionText,
             // Theme
             isDarkTheme, toggleTheme,
             // Breadcrumb

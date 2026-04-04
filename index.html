@@ -29,6 +29,9 @@
                 <a href="#search"
                    :class="{ active: currentView === 'search' }"
                    @click.prevent="navigate('search')">Topic Search</a>
+                <a href="#traditions"
+                   :class="{ active: currentView === 'traditions' }"
+                   @click.prevent="navigate('traditions')">Traditions</a>
                 <a href="#why-it-matters"
                    :class="{ active: currentView === 'why-it-matters' }"
                    @click.prevent="navigate('why-it-matters')">Why It Matters</a>
@@ -357,6 +360,71 @@
                         </button>
                     </div>
                 </div>
+            </div>
+
+            <!-- Traditions View -->
+            <div v-if="currentView === 'traditions'" class="view-container traditions-layout">
+                <aside class="panel traditions-sidebar">
+                    <div class="search-box">
+                        <input type="text" v-model="traditionSearch" placeholder="Search traditions..." class="search-input">
+                    </div>
+                    <div v-for="cat in traditionCategories" :key="cat" class="doctrine-category">
+                        <h4 class="category-title">{{ cat }}</h4>
+                        <ul class="doctrine-list">
+                            <li v-for="t in filteredTraditionsByCategory(cat)" :key="t.id"
+                                :class="{ active: selectedTradition && selectedTradition.id === t.id }"
+                                @click="selectTradition(t)">
+                                {{ t.name }}
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <section class="tradition-detail panel" v-if="selectedTradition">
+                    <h2>{{ selectedTradition.name }}</h2>
+                    <div class="tradition-meta">
+                        <span class="tradition-category-tag">{{ selectedTradition.category }}</span>
+                        <span class="tradition-origin-year">Originated c. {{ selectedTradition.originYear }} AD</span>
+                    </div>
+
+                    <h3>Origin</h3>
+                    <p class="tradition-origin">{{ selectedTradition.origin }}</p>
+
+                    <h3>Description</h3>
+                    <div class="tradition-description" v-html="formatTraditionText(selectedTradition.description)"></div>
+
+                    <h3>Scripture Connection</h3>
+                    <div class="scripture-card">
+                        <p class="scripture-text" style="font-style:normal">{{ selectedTradition.scriptureConnection }}</p>
+                    </div>
+
+                    <h3>Historical Development</h3>
+                    <div class="tradition-history" v-html="formatTraditionText(selectedTradition.history)"></div>
+
+                    <h3>Practice Across Denominations</h3>
+                    <div class="tradition-denoms">
+                        <div v-for="d in denominations" :key="d.id" class="tradition-denom-card"
+                             :class="{ 'tradition-practiced': selectedTradition.denominations[d.id] && selectedTradition.denominations[d.id].practices }">
+                            <div class="tradition-denom-header">
+                                <span class="denom-dot" :style="{ background: d.color }"></span>
+                                <strong>{{ d.name }}</strong>
+                                <span class="tradition-badge" v-if="selectedTradition.denominations[d.id]">
+                                    {{ selectedTradition.denominations[d.id].practices ? 'Practiced' : 'Not Practiced' }}
+                                </span>
+                            </div>
+                            <p class="tradition-denom-notes" v-if="selectedTradition.denominations[d.id]">
+                                {{ selectedTradition.denominations[d.id].notes }}
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="tradition-detail panel" v-else>
+                    <div class="empty-state">
+                        <h2>Select a Tradition</h2>
+                        <p>Choose a tradition from the sidebar to explore its history, origin, and practice across Christian denominations.</p>
+                    </div>
+                </section>
             </div>
 
             <!-- Why It Matters View -->

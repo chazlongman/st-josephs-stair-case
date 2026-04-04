@@ -1043,6 +1043,122 @@ body.light-theme .btn-export {
     font-style: italic;
 }
 
+/* --- Traditions --- */
+.traditions-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.traditions-sidebar {
+    position: sticky;
+    top: 76px;
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+}
+
+.tradition-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.tradition-category-tag {
+    background: rgba(138, 180, 248, 0.15);
+    color: #8ab4f8;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tradition-origin-year {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.tradition-origin {
+    color: #ccc;
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.tradition-description p,
+.tradition-history p {
+    color: #d0d0d0;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.tradition-denoms {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tradition-denom-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid #c62828;
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+}
+
+.tradition-denom-card.tradition-practiced {
+    border-left-color: #2e7d32;
+}
+
+.tradition-denom-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.tradition-denom-header strong {
+    font-size: 0.9rem;
+}
+
+.tradition-badge {
+    margin-left: auto;
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.tradition-practiced .tradition-badge {
+    background: rgba(46, 125, 50, 0.2);
+    color: #81c784;
+}
+
+.tradition-denom-card:not(.tradition-practiced) .tradition-badge {
+    background: rgba(198, 40, 40, 0.2);
+    color: #ef9a9a;
+}
+
+.tradition-denom-notes {
+    font-size: 0.85rem;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* Light theme traditions */
+body.light-theme .tradition-category-tag { background: rgba(33, 100, 200, 0.1); color: #1a5fb4; }
+body.light-theme .tradition-origin { color: #555; }
+body.light-theme .tradition-description p,
+body.light-theme .tradition-history p { color: #444; }
+body.light-theme .tradition-denom-card { background: rgba(0, 0, 0, 0.02); border-color: rgba(0, 0, 0, 0.06); }
+body.light-theme .tradition-denom-notes { color: #555; }
+body.light-theme .tradition-origin-year { color: #777; }
+
 /* --- Why It Matters --- */
 .why-layout {
     display: flex;
@@ -1278,6 +1394,15 @@ body.light-theme .btn-export {
     .comparison-table th, .comparison-table td { padding: 6px 8px; }
     #heatmap-chart { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .lineage-modal { max-width: 95vw; padding: 20px; }
+
+    /* Traditions layout single column */
+    .traditions-layout {
+        grid-template-columns: 1fr;
+    }
+    .traditions-sidebar {
+        position: static;
+        max-height: none;
+    }
 
     /* Make positions table scrollable */
     .positions-table {
@@ -1566,6 +1691,20 @@ body.light-theme .btn-export {
     .close-btn {
         font-size: 1.8rem; /* Bigger touch target */
         padding: 8px 12px;
+    }
+
+    /* --- Traditions --- */
+    .tradition-denom-header {
+        flex-wrap: wrap;
+    }
+    .tradition-badge {
+        margin-left: 0;
+        margin-top: 4px;
+    }
+    .tradition-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
     }
 
     /* --- Footer --- */
