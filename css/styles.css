@@ -1237,6 +1237,14 @@ body.light-theme .btn-export {
 }
 
 /* --- Responsive --- */
+
+/* Fix background-attachment: fixed on iOS (causes rendering issues) */
+@supports (-webkit-touch-callout: none) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
 @media (max-width: 900px) {
     .doctrine-layout {
         grid-template-columns: 1fr;
@@ -1250,6 +1258,11 @@ body.light-theme .btn-export {
     .filter-panel {
         flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
+    }
+
+    .filter-group {
+        flex-wrap: wrap;
     }
 
     .stats-grid {
@@ -1260,37 +1273,353 @@ body.light-theme .btn-export {
         width: 100%;
     }
 
+    /* Wrap tables in horizontal scroll */
     .comparison-table { font-size: 0.75rem; }
     .comparison-table th, .comparison-table td { padding: 6px 8px; }
     #heatmap-chart { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .lineage-modal { max-width: 95vw; padding: 20px; }
+
+    /* Make positions table scrollable */
+    .positions-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+    .positions-table thead,
+    .positions-table tbody,
+    .positions-table tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    /* Side-by-side comparison scrollable */
+    .side-by-side {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 @media (max-width: 600px) {
+    /* --- Mobile Navigation: horizontal scroll instead of wrap --- */
     .nav-bar {
         flex-direction: column;
-        gap: 8px;
+        gap: 6px;
+        padding: 10px 12px;
+    }
+
+    .nav-brand {
+        font-size: 1.1rem;
     }
 
     .nav-links {
         width: 100%;
-        justify-content: center;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        gap: 4px;
+        justify-content: flex-start;
+        padding-bottom: 2px;
+    }
+    .nav-links::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
     }
 
+    .nav-links a {
+        padding: 8px 14px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+        /* Minimum touch target 44px height */
+        min-height: 36px;
+        display: flex;
+        align-items: center;
+    }
+
+    .theme-toggle {
+        font-size: 0.78rem;
+        padding: 6px 10px;
+        margin-left: 0;
+        align-self: flex-end;
+        position: absolute;
+        top: 10px;
+        right: 12px;
+    }
+
+    .nav-bar {
+        position: relative;
+    }
+
+    /* --- Breadcrumb compact --- */
+    .breadcrumb-nav {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    /* --- Main Content --- */
     .main-content {
+        padding: 8px;
+    }
+
+    .panel {
+        padding: 14px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+    }
+
+    /* --- Timeline --- */
+    .timeline-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .timeline-panel {
+        min-height: 300px;
+        min-width: 600px; /* Allow horizontal scroll on tiny screens */
+    }
+    .timeline-hint {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+        bottom: 8px;
+        right: 8px;
+    }
+
+    /* --- Filter panel --- */
+    .filter-panel {
+        gap: 8px;
+    }
+    .filter-panel h3 {
+        font-size: 0.8rem;
+    }
+    .filter-group label {
+        font-size: 0.8rem;
+    }
+    .filter-select {
+        padding: 8px 10px; /* Bigger touch target */
+        font-size: 0.85rem;
+    }
+    .btn-reset {
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* --- Search --- */
+    .search-bar-row {
+        flex-direction: column;
+    }
+    .search-bar-panel {
         padding: 12px;
     }
+    .topic-input {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        padding: 12px 14px;
+    }
+    .btn-search {
+        padding: 12px 20px; /* Bigger touch target */
+        width: 100%;
+    }
+    .available-topics {
+        gap: 6px;
+    }
+    .history-chip {
+        padding: 6px 12px; /* Bigger touch target */
+        font-size: 0.78rem;
+    }
 
-    .nav-links a { padding: 6px 10px; font-size: 0.8rem; }
-    .search-bar-row { flex-direction: column; }
-    .topic-input { font-size: 0.9rem; }
-    .positions-table { font-size: 0.8rem; }
-    .positions-table th, .positions-table td { padding: 6px 8px; }
-    .stats-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
-    .lineage-modal { padding: 16px; }
-    .why-hero { padding: 20px 16px; }
-    .why-hero h2 { font-size: 1.4rem; }
-    .timeline-panel { min-height: 350px; }
+    /* --- Doctrine Browser --- */
+    .doctrine-list li {
+        padding: 10px 12px; /* Bigger touch target */
+        font-size: 0.88rem;
+    }
+    .doctrine-detail h2 {
+        font-size: 1.25rem;
+    }
+    .doctrine-detail h3 {
+        font-size: 1rem;
+        margin: 14px 0 8px;
+    }
+    .scripture-card {
+        padding: 10px 12px;
+    }
+
+    /* --- Positions Table: card layout on mobile --- */
+    .positions-table,
+    .positions-table thead,
+    .positions-table tbody,
+    .positions-table tr,
+    .positions-table th,
+    .positions-table td {
+        display: block;
+        width: 100%;
+        white-space: normal;
+    }
+    .positions-table thead {
+        display: none; /* Hide column headers */
+    }
+    .positions-table tr {
+        margin-bottom: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.02);
+    }
+    .positions-table td {
+        padding: 4px 0;
+        border-bottom: none;
+        font-size: 0.85rem;
+    }
+    .positions-table td:first-child {
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .positions-table td:nth-child(2)::before { content: "Position: "; color: #999; font-size: 0.75rem; display: block; }
+    .positions-table td:nth-child(3)::before { content: "Since: "; color: #999; font-size: 0.75rem; display: block; }
+    .positions-table td:nth-child(4)::before { content: "Formally Defined: "; color: #999; font-size: 0.75rem; display: block; }
+    .positions-table td:nth-child(5)::before { content: "Sources: "; color: #999; font-size: 0.75rem; display: block; }
+
+    /* --- Comparison --- */
+    .denom-checkboxes {
+        gap: 8px;
+    }
+    .denom-checkbox {
+        font-size: 0.82rem;
+        padding: 4px 0;
+        min-height: 36px; /* Touch target */
+    }
+    .comparison-table {
+        font-size: 0.7rem;
+    }
+    .comparison-table th, .comparison-table td {
+        padding: 5px 6px;
+    }
+    .side-by-side {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .stat-card {
+        padding: 10px;
+    }
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    /* --- Why It Matters --- */
+    .why-hero {
+        padding: 20px 14px;
+    }
+    .why-hero h2 {
+        font-size: 1.3rem;
+    }
+    .why-lead {
+        font-size: 0.95rem;
+    }
+    .why-section p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+    .why-quote-highlight {
+        padding: 20px 16px;
+    }
+    .why-quote-highlight blockquote p {
+        font-size: 0.95rem;
+    }
+
+    /* --- Father Cards --- */
+    .father-card {
+        padding: 10px 12px;
+    }
+    .father-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .btn-lineage {
+        padding: 8px 14px; /* Bigger touch target */
+    }
+
+    /* --- Modals --- */
+    .lineage-overlay {
+        padding: 10px;
+    }
+    .lineage-modal {
+        padding: 16px;
+        max-height: 85vh;
+    }
+    .lineage-header h3 {
+        font-size: 1.05rem;
+    }
+    .lineage-card {
+        padding: 10px 12px;
+    }
+    .lineage-card strong {
+        font-size: 0.9rem;
+    }
+    .close-btn {
+        font-size: 1.8rem; /* Bigger touch target */
+        padding: 8px 12px;
+    }
+
+    /* --- Footer --- */
+    .attribution-footer {
+        padding: 14px 12px;
+        font-size: 0.72rem;
+    }
+
+    /* --- Mini Timeline --- */
+    .mini-timeline-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        min-height: 120px;
+    }
+    .mini-timeline-legend {
+        gap: 10px;
+        font-size: 0.72rem;
+    }
+
+    /* --- Export Button --- */
+    .btn-export {
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+    }
+}
+
+/* Extra-small screens (very narrow phones) */
+@media (max-width: 360px) {
+    .nav-brand {
+        font-size: 0.95rem;
+    }
+    .nav-links a {
+        padding: 6px 10px;
+        font-size: 0.72rem;
+    }
+    .panel {
+        padding: 10px;
+    }
+    .doctrine-detail h2 {
+        font-size: 1.1rem;
+    }
+    .why-hero h2 {
+        font-size: 1.15rem;
+    }
+    .stat-number {
+        font-size: 1.3rem;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .timeline-panel {
+        min-width: 500px;
+    }
 }
 
 /* --- Breadcrumb Navigation --- */
