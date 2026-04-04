@@ -13,9 +13,10 @@ const ChurchTimeline = {
         const container = document.getElementById('timeline-svg-container');
         if (!container) return;
 
-        // Skip re-render if inputs haven't changed
+        // Skip re-render if inputs haven't changed AND svg is still in the DOM
         const renderKey = JSON.stringify({ f: filters, d: denominations.length, i: allItems.length });
-        if (this._lastRenderKey === renderKey && this.svg) return;
+        const svgStillMounted = this.svg && this.svg.node() && document.contains(this.svg.node());
+        if (this._lastRenderKey === renderKey && svgStillMounted) return;
         this._lastRenderKey = renderKey;
 
         container.innerHTML = '';
