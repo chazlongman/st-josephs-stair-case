@@ -1,5 +1,5 @@
 /**
- * topic-search.js — Local keyword-based topic search
+ * topic-search.js — Local keyword-based topic search with fuzzy matching
  * Searches pre-built topics.json data — no API key required.
  */
 
@@ -43,7 +43,30 @@ const TopicSearch = {
     },
 
     /**
-     * Search topics by keyword matching.
+     * Simple Levenshtein distance for fuzzy matching
+     */
+    _levenshtein(a, b) {
+        const matrix = [];
+        for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+        for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+        for (let i = 1; i <= b.length; i++) {
+            for (let j = 1; j <= a.length; j++) {
+                if (b[i - 1] === a[j - 1]) {
+                    matrix[i][j] = matrix[i - 1][j - 1];
+                } else {
+                    matrix[i][j] = Math.min(
+                        matrix[i - 1][j - 1] + 1,
+                        matrix[i][j - 1] + 1,
+                        matrix[i - 1][j] + 1
+                    );
+                }
+            }
+        }
+        return matrix[b.length][a.length];
+    },
+
+    /**
+     * Search topics by keyword matching with fuzzy support.
      * Returns an array of matching topic objects, ranked by relevance.
      */
     search(query) {
@@ -87,6 +110,20 @@ const TopicSearch = {
                 }
             }
 
+            // Fuzzy matching on topic name and keywords (for typos)
+            if (score === 0) {
+                const nameDist = TopicSearch._levenshtein(q, topic.name.toLowerCase());
+                if (nameDist <= 2 && q.length >= 3) {
+                    score += Math.max(1, 6 - nameDist * 2);
+                }
+                for (const kw of topic.keywords) {
+                    const kwDist = TopicSearch._levenshtein(q, kw);
+                    if (kwDist <= 2 && q.length >= 3) {
+                        score += Math.max(1, 4 - kwDist * 2);
+                    }
+                }
+            }
+
             if (score > 0) {
                 results.push({ ...topic, _score: score });
             }
@@ -95,6 +132,32 @@ const TopicSearch = {
         // Sort by score descending
         results.sort((a, b) => b._score - a._score);
         return results;
+    },
+
+    /**
+     * Get topic suggestions when search returns no results.
+     * Returns up to 5 closest matching topic names.
+     */
+    getSuggestions(query) {
+        const q = query.toLowerCase().trim();
+        if (!q || q.length < 2) return [];
+
+        const scored = TopicSearch.topics.map(topic => {
+            let minDist = TopicSearch._levenshtein(q, topic.name.toLowerCase());
+            // Also check against keywords
+            for (const kw of topic.keywords) {
+                const d = TopicSearch._levenshtein(q, kw);
+                if (d < minDist) minDist = d;
+            }
+            // Bonus for substring containment
+            if (topic.name.toLowerCase().includes(q) || q.includes(topic.name.toLowerCase())) {
+                minDist = 0;
+            }
+            return { name: topic.name, dist: minDist };
+        });
+
+        scored.sort((a, b) => a.dist - b.dist);
+        return scored.slice(0, 5).filter(s => s.dist <= 5).map(s => s.name);
     },
 
     /**

@@ -40,6 +40,13 @@ const app = createApp({
         const availableTopics = ref([]);
         const expandedSections = ref({});
         const lineageModal = ref({ open: false, fatherName: '', chain: [] });
+        const searchSuggestions = ref([]);
+
+        // Theme
+        const isDarkTheme = ref(true);
+
+        // Timeline hint
+        const showTimelineHint = ref(true);
 
         const centuries = computed(() => ChurchUtils.getCenturies());
 
@@ -52,9 +59,27 @@ const app = createApp({
             })
         );
 
+        // Breadcrumb label
+        const breadcrumbLabel = computed(() => {
+            const labels = {
+                'timeline': 'Timeline',
+                'doctrines': 'Doctrine Browser',
+                'comparison': 'Comparison Dashboard',
+                'search': 'Topic Search',
+                'why-it-matters': 'Why It Matters'
+            };
+            return labels[currentView.value] || 'Timeline';
+        });
+
+        // Memoization cache for filteredDoctrinesByCategory
+        const _doctrineCategoryCache = ref({});
+        const _doctrineCacheKey = ref('');
+
         function navigate(view) {
             currentView.value = view;
             window.location.hash = view;
+            // Clear memoization cache on nav
+            _doctrineCategoryCache.value = {};
 
             nextTick(() => {
                 if (view === 'timeline') {
@@ -65,6 +90,9 @@ const app = createApp({
                         doctrines.value,
                         openSourcePanel
                     );
+                    // Auto-hide timeline hint after 5 seconds
+                    showTimelineHint.value = true;
+                    setTimeout(() => { showTimelineHint.value = false; }, 5000);
                 } else if (view === 'comparison') {
                     ChurchComparison.renderContinuityChart(denominations.value, doctrines.value);
                     ChurchComparison.renderHeatmap(denominations.value, doctrines.value);
@@ -84,13 +112,23 @@ const app = createApp({
         }
 
         function filteredDoctrinesByCategory(category) {
-            return doctrines.value.filter(d => {
+            const cacheKey = doctrineSearch.value.toLowerCase() + '||' + category;
+            if (_doctrineCacheKey.value === doctrineSearch.value && _doctrineCategoryCache.value[cacheKey]) {
+                return _doctrineCategoryCache.value[cacheKey];
+            }
+            if (_doctrineCacheKey.value !== doctrineSearch.value) {
+                _doctrineCategoryCache.value = {};
+                _doctrineCacheKey.value = doctrineSearch.value;
+            }
+            const result = doctrines.value.filter(d => {
                 if (d.category !== category) return false;
                 if (doctrineSearch.value) {
                     return d.name.toLowerCase().includes(doctrineSearch.value.toLowerCase());
                 }
                 return true;
             });
+            _doctrineCategoryCache.value[cacheKey] = result;
+            return result;
         }
 
         function getDenomColor(denomId) {
@@ -121,12 +159,21 @@ const app = createApp({
             return 'score-rejected';
         }
 
+        // Memoized continuity calculations
+        const _continuityCache = ref({});
+        function _getContinuity(denomId) {
+            if (_continuityCache.value[denomId]) return _continuityCache.value[denomId];
+            const result = ChurchUtils.calcContinuity(doctrines.value, denomId);
+            _continuityCache.value[denomId] = result;
+            return result;
+        }
+
         function getContinuityPercent(denomId) {
-            return ChurchUtils.calcContinuity(doctrines.value, denomId).percent;
+            return _getContinuity(denomId).percent;
         }
 
         function getContinuityDetail(denomId) {
-            const c = ChurchUtils.calcContinuity(doctrines.value, denomId);
+            const c = _getContinuity(denomId);
             return `${c.consistent} consistent, ${c.modified} modified, ${c.rejected} rejected of ${c.total} doctrines`;
         }
 
@@ -136,6 +183,36 @@ const app = createApp({
 
         function closeSourcePanel() {
             sourcePanel.value.open = false;
+        }
+
+        // --- Theme ---
+        function toggleTheme() {
+            isDarkTheme.value = !isDarkTheme.value;
+            document.body.classList.toggle('light-theme', !isDarkTheme.value);
+            localStorage.setItem('churchHistoryTheme', isDarkTheme.value ? 'dark' : 'light');
+        }
+
+        // --- Export Comparison ---
+        function exportComparison() {
+            if (selectedDenominations.value.length < 2) return;
+            const denomNames = selectedDenominations.value.map(id => getDenomName(id));
+            const headers = ['Doctrine', ...denomNames];
+            const rows = doctrines.value.map(doc => {
+                const cols = selectedDenominations.value.map(denomId => {
+                    const pos = doc.positions.find(p => p.denominationId === denomId);
+                    return pos ? `"${pos.position.replace(/"/g, '""')}"` : 'No data';
+                });
+                return [doc.name, ...cols];
+            });
+
+            const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `doctrine-comparison-${denomNames.join('-vs-')}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
         }
 
         // --- Topic Search Methods ---
@@ -174,11 +251,13 @@ const app = createApp({
             searchError.value = '';
             searchResults.value = null;
             searchDoctrineMatch.value = null;
+            searchSuggestions.value = [];
             expandedSections.value = {};
 
             const results = TopicSearch.search(topic);
             if (results.length === 0) {
-                searchError.value = `No results found for "${topic}". Try a different search term or browse the available topics above.`;
+                searchError.value = `No results found for "${topic}". Try a different search term or browse the available topics.`;
+                searchSuggestions.value = TopicSearch.getSuggestions(topic);
                 return;
             }
 
@@ -213,6 +292,14 @@ const app = createApp({
             const chain = TopicSearch.getLineage(fatherName);
             if (chain) {
                 lineageModal.value = { open: true, fatherName, chain };
+                // Trap focus in modal
+                nextTick(() => {
+                    const modal = document.querySelector('.lineage-modal');
+                    if (modal) {
+                        const closeBtn = modal.querySelector('.close-btn');
+                        if (closeBtn) closeBtn.focus();
+                    }
+                });
             }
         }
 
@@ -225,21 +312,28 @@ const app = createApp({
             return text.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
         }
 
+        // Debounced timeline render
+        let _timelineRenderTimeout = null;
         watch(filters, () => {
             if (currentView.value === 'timeline') {
-                nextTick(() => {
-                    ChurchTimeline.render(
-                        denominations.value,
-                        ChurchUtils.buildTimelineItems(councils.value, events.value, figures.value),
-                        filters.value,
-                        doctrines.value,
-                        openSourcePanel
-                    );
-                });
+                clearTimeout(_timelineRenderTimeout);
+                _timelineRenderTimeout = setTimeout(() => {
+                    nextTick(() => {
+                        ChurchTimeline.render(
+                            denominations.value,
+                            ChurchUtils.buildTimelineItems(councils.value, events.value, figures.value),
+                            filters.value,
+                            doctrines.value,
+                            openSourcePanel
+                        );
+                    });
+                }, 150);
             }
         }, { deep: true });
 
         watch(selectedDenominations, () => {
+            // Invalidate continuity cache
+            _continuityCache.value = {};
             if (currentView.value === 'comparison') {
                 nextTick(() => {
                     ChurchComparison.renderContinuityChart(denominations.value, doctrines.value);
@@ -248,8 +342,23 @@ const app = createApp({
             }
         }, { deep: true });
 
+        // Handle Escape key for modals
+        function handleKeydown(e) {
+            if (e.key === 'Escape') {
+                if (lineageModal.value.open) closeLineage();
+                if (sourcePanel.value.open) closeSourcePanel();
+            }
+        }
+
         onMounted(async () => {
             try {
+                // Restore theme preference
+                const savedTheme = localStorage.getItem('churchHistoryTheme');
+                if (savedTheme === 'light') {
+                    isDarkTheme.value = false;
+                    document.body.classList.add('light-theme');
+                }
+
                 const data = await ChurchUtils.loadAllData();
                 denominations.value = data.denominations;
                 doctrines.value = data.doctrines;
@@ -266,6 +375,9 @@ const app = createApp({
 
                 const hash = window.location.hash.replace('#', '') || 'timeline';
                 navigate(hash);
+
+                // Global keyboard handler
+                document.addEventListener('keydown', handleKeydown);
             } catch (e) {
                 error.value = e.message;
                 loading.value = false;
@@ -291,9 +403,18 @@ const app = createApp({
             getDenomColor, getDenomName, getPosition, getPositionSince, getScoreClass,
             getContinuityPercent, getContinuityDetail,
             openSourcePanel, closeSourcePanel,
+            // Theme
+            isDarkTheme, toggleTheme,
+            // Breadcrumb
+            breadcrumbLabel,
+            // Timeline hint
+            showTimelineHint,
+            // Export
+            exportComparison,
             // Topic Search
             searchTopic, searchResults, searchError, searchHistory,
             searchDoctrineMatch, availableTopics, expandedSections, lineageModal,
+            searchSuggestions,
             performSearch, loadFromHistory,
             clearSearchHistory, goToMatchedDoctrine, formatSummary,
             toggleExpand, isExpanded, visibleScripture, visibleFathers,

@@ -136,5 +136,65 @@
         "chapter": 1,
         "verses": "14",
         "text": "And the Word became flesh and dwelt among us, full of grace and truth; we have beheld his glory, glory as of the only-begotten Son from the Father."
+    },
+    "john-19:26-27": {
+        "book": "John",
+        "chapter": 19,
+        "verses": "26-27",
+        "text": "When Jesus saw his mother, and the disciple whom he loved standing near, he said to his mother, 'Woman, behold, your son!' Then he said to the disciple, 'Behold, your mother!' And from that hour the disciple took her to his own home."
+    },
+    "gen-3:15": {
+        "book": "Genesis",
+        "chapter": 3,
+        "verses": "15",
+        "text": "I will put enmity between you and the woman, and between your seed and her seed; he shall bruise your head, and you shall bruise his heel."
+    },
+    "rev-12:1": {
+        "book": "Revelation",
+        "chapter": 12,
+        "verses": "1",
+        "text": "And a great portent appeared in heaven, a woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars."
+    },
+    "heb-12:1": {
+        "book": "Hebrews",
+        "chapter": 12,
+        "verses": "1",
+        "text": "Therefore, since we are surrounded by so great a cloud of witnesses, let us also lay aside every weight, and sin which clings so closely, and let us run with perseverance the race that is set before us."
+    },
+    "rev-5:8": {
+        "book": "Revelation",
+        "chapter": 5,
+        "verses": "8",
+        "text": "And when he had taken the scroll, the four living creatures and the twenty-four elders fell down before the Lamb, each holding a harp, and with golden bowls full of incense, which are the prayers of the saints."
+    },
+    "rev-8:3-4": {
+        "book": "Revelation",
+        "chapter": 8,
+        "verses": "3-4",
+        "text": "And another angel came and stood at the altar with a golden censer; and he was given much incense to mingle with the prayers of all the saints upon the golden altar before the throne; and the smoke of the incense rose with the prayers of the saints from the hand of the angel before God."
+    },
+    "acts-1:20-26": {
+        "book": "Acts",
+        "chapter": 1,
+        "verses": "20-26",
+        "text": "For it is written in the book of Psalms, 'Let his habitation become desolate, and let there be no one to live in it'; and 'His office let another take.' So one of the men who have accompanied us during all the time that the Lord Jesus went in and out among us, beginning from the baptism of John until the day when he was taken up from us — one of these men must become with us a witness to his resurrection. And they put forward two, Joseph called Barsabbas, who was surnamed Justus, and Matthias. And they prayed and said, 'Lord, who knowest the hearts of all men, show which one of these two thou hast chosen to take the place in this ministry and apostleship from which Judas turned aside, to go to his own place.' And they cast lots for them, and the lot fell on Matthias; and he was enrolled with the eleven apostles."
+    },
+    "1tim-4:14": {
+        "book": "1 Timothy",
+        "chapter": 4,
+        "verses": "14",
+        "text": "Do not neglect the gift you have, which was given you by prophetic utterance when the council of elders laid their hands upon you."
+    },
+    "2tim-1:6": {
+        "book": "2 Timothy",
+        "chapter": 1,
+        "verses": "6",
+        "text": "Hence I remind you to rekindle the gift of God that is within you through the laying on of my hands."
+    },
+    "titus-1:5": {
+        "book": "Titus",
+        "chapter": 1,
+        "verses": "5",
+        "text": "This is why I left you in Crete, that you might amend what was defective, and appoint elders in every town as I directed you."
     }
 }

@@ -793,5 +793,347 @@
                 "sources": []
             }
         ]
+    },
+    {
+        "id": "marian-theology",
+        "name": "Marian Theology",
+        "category": "Christology",
+        "description": "Beliefs about the Blessed Virgin Mary — her role as Theotokos (God-bearer), the Immaculate Conception, the Assumption/Dormition, her Perpetual Virginity, and the practice of Marian devotion.",
+        "biblicalBasis": ["luke-1:28", "luke-1:48", "john-19:26-27", "gen-3:15", "rev-12:1"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "Full Marian dogmas: Mary is Theotokos (Mother of God), was conceived without original sin (Immaculate Conception), remained a perpetual virgin, and was assumed body and soul into heaven (Assumption). Marian devotion including the Rosary is widely practiced.",
+                "since": 33,
+                "formallyDefined": 431,
+                "council": "ephesus",
+                "continuityScore": 1.0,
+                "scoreJustification": "The title Theotokos was used from the earliest centuries and defined at Ephesus (431). The Perpetual Virginity was affirmed by the earliest Fathers. The Immaculate Conception and Assumption were formally defined later but reflect longstanding tradition.",
+                "sources": [
+                    { "type": "council", "url": "https://www.newadvent.org/fathers/3810.htm", "label": "Council of Ephesus (431 AD)" },
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0103319.htm", "label": "Irenaeus, Against Heresies, Book III, ch. 19 (c. 180 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "Mary is Theotokos and Ever-Virgin. Celebrates the Dormition (falling asleep) of Mary rather than the Assumption. Rejects the Immaculate Conception as unnecessary, holding that Mary was purified at the Annunciation. Rich tradition of Marian veneration and iconography.",
+                "since": 33,
+                "formallyDefined": 431,
+                "council": "ephesus",
+                "continuityScore": 0.5,
+                "scoreJustification": "Affirms Theotokos and Perpetual Virginity consistently with the early church. Differs from the Catholic position on the Immaculate Conception and the manner of Mary's departure from earthly life.",
+                "sources": [
+                    { "type": "council", "url": "https://www.newadvent.org/fathers/3810.htm", "label": "Council of Ephesus (431 AD)" }
+                ]
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "Mary is Theotokos and Ever-Virgin. Celebrates the Dormition of Mary. Extensive Marian devotion in liturgy and hymnography.",
+                "since": 33,
+                "formallyDefined": 431,
+                "council": "ephesus",
+                "continuityScore": 0.5,
+                "scoreJustification": "Affirms Theotokos and Perpetual Virginity. Like the Eastern Orthodox, differs on the Immaculate Conception and holds to the Dormition rather than the Assumption.",
+                "sources": []
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Luther himself honored Mary and accepted the title Theotokos, but Lutheranism generally rejects the Immaculate Conception, Assumption, and Marian devotion as lacking scriptural warrant.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "While Luther personally held some Marian views, later Lutheranism rejected most Marian doctrines and devotion, departing from early church practice.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Rejects all distinctively Marian doctrines (Immaculate Conception, Assumption, Perpetual Virginity) and Marian devotion. Mary is honored only as the human mother of Jesus.",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects Marian doctrines attested in the early church, including the Theotokos title defined at Ephesus.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "Accepts the title Theotokos as a Christological statement. Rejects the Immaculate Conception and Assumption. Anglo-Catholics may practice Marian devotion.",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Officially rejects most Marian doctrines beyond Theotokos, though Anglo-Catholic practice is more accepting.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Rejects all Marian doctrines beyond Mary being the mother of Jesus. Views Marian devotion as unbiblical and bordering on idolatry.",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects all Marian doctrines held by the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "Honors Mary as the mother of Jesus but rejects the Immaculate Conception, Assumption, Perpetual Virginity, and Marian devotion.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects Marian doctrines held by the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Rejects all distinctive Marian doctrines. Mary is respected as a model of faith and obedience but not venerated.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects Marian doctrines held by the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Rejects all Marian doctrines beyond Mary being the mother of Jesus. Marian devotion is rejected as unbiblical.",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects all Marian doctrines held by the early church.",
+                "sources": []
+            }
+        ]
+    },
+    {
+        "id": "saints-intercession",
+        "name": "Saints' Intercession",
+        "category": "Church",
+        "description": "Whether the faithful on earth may pray to or through the saints in heaven, the veneration of saints and relics, and the theology of the communion of saints across the boundary of death.",
+        "biblicalBasis": ["heb-12:1", "rev-5:8", "rev-8:3-4"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "Full practice of invoking saints as intercessors before God. Veneration (dulia) of saints and their relics is distinguished from worship (latria) given to God alone. The saints in heaven are alive in Christ and can intercede for those on earth.",
+                "since": 33,
+                "formallyDefined": 787,
+                "council": "nicaea-ii",
+                "continuityScore": 1.0,
+                "scoreJustification": "Invocation of saints and veneration of relics is attested from the 2nd century (Martyrdom of Polycarp). The Second Council of Nicaea (787) formally defended the practice against iconoclasm.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0102.htm", "label": "Martyrdom of Polycarp (c. 155 AD)" },
+                    { "type": "council", "url": "https://www.newadvent.org/fathers/3819.htm", "label": "Second Council of Nicaea (787 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "Full practice of invoking saints and venerating icons and relics. The saints are understood as living members of the Church who intercede before God. Iconography is central to liturgical life.",
+                "since": 33,
+                "formallyDefined": 787,
+                "council": "nicaea-ii",
+                "continuityScore": 1.0,
+                "scoreJustification": "Consistent with early church practice of saint veneration and invocation, formally defended at Nicaea II.",
+                "sources": [
+                    { "type": "council", "url": "https://www.newadvent.org/fathers/3819.htm", "label": "Second Council of Nicaea (787 AD)" }
+                ]
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "Full practice of invoking saints, venerating relics, and honoring icons. The communion of saints spans heaven and earth.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Consistent with early church practice of saint veneration and invocation.",
+                "sources": []
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Saints may be honored as examples of faith, but invoking them as intercessors is rejected. Christ is the sole mediator between God and man.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects invocation of saints, a practice attested from the 2nd century in the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Rejects invocation of saints and veneration of relics as unbiblical. Saints are remembered as examples but not prayed to.",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects saint invocation and relic veneration practiced in the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "The Thirty-Nine Articles call invocation of saints a 'fond thing vainly invented.' Saints are commemorated in the calendar but not invoked. Anglo-Catholics may practice some forms of saint devotion.",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Officially rejects invocation of saints, departing from early church practice.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Rejects all invocation of saints and veneration of relics. Only God should be prayed to, through Christ alone.",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects invocation of saints practiced in the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "Rejects invocation of saints. Saints are honored as examples of holy living but not prayed to.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects invocation of saints practiced in the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Rejects all veneration of saints, relics, and icons. Focus is on following Christ's example directly.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects saint invocation and veneration practiced in the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Rejects invocation of saints. Believers pray directly to God through the Holy Spirit. Saint veneration is viewed as unbiblical.",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects invocation of saints practiced in the early church.",
+                "sources": []
+            }
+        ]
+    },
+    {
+        "id": "apostolic-succession",
+        "name": "Apostolic Succession",
+        "category": "Church",
+        "description": "Whether bishops stand in an unbroken line of succession from the apostles through the laying on of hands, and whether this succession is necessary for valid ordination and sacraments.",
+        "biblicalBasis": ["acts-1:20-26", "1tim-4:14", "2tim-1:6", "titus-1:5"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "Unbroken apostolic succession through bishops is essential for valid ordination and sacraments. The Bishop of Rome holds primacy as successor of Peter. Only bishops in apostolic succession can validly ordain priests and deacons.",
+                "since": 33,
+                "formallyDefined": 325,
+                "council": "nicaea-i",
+                "continuityScore": 1.0,
+                "scoreJustification": "Apostolic succession through bishops is attested from the earliest post-apostolic writings. Clement of Rome (c. 96 AD) explicitly describes the apostles appointing bishops as successors.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/1010.htm", "label": "Clement of Rome, First Epistle to the Corinthians, ch. 42-44 (c. 96 AD)" },
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0103304.htm", "label": "Irenaeus, Against Heresies, Book III, ch. 3 (c. 180 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "Unbroken apostolic succession through bishops is essential. Each bishop is a successor of the apostles, and valid ordination requires the laying on of hands in apostolic succession.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Maintains unbroken episcopal succession consistent with the earliest church practice described by Clement and Irenaeus.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0103304.htm", "label": "Irenaeus, Against Heresies, Book III, ch. 3 (c. 180 AD)" }
+                ]
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "Unbroken apostolic succession through bishops. Valid ordination and sacraments depend on this succession. Traces lineage to the apostles through ancient sees.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Maintains unbroken episcopal succession consistent with early church practice.",
+                "sources": []
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Retained ordained ministry but rejected the necessity of episcopal succession. Luther held that any Christian could ordain in an emergency. Some Lutheran churches (e.g., Scandinavian) retained episcopal succession; others did not.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Retained ordained ministry but rejected the early church insistence on episcopal succession as necessary for valid orders.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Rejects episcopal apostolic succession. The true succession is in faithful teaching of apostolic doctrine, not in an unbroken chain of ordinations. Governed by presbyters (elders) rather than bishops.",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects episcopal succession attested in the earliest post-apostolic writings in favor of doctrinal succession.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "Claims to maintain apostolic succession through its bishops. The validity of Anglican orders is disputed by Rome (Apostolicae Curae, 1896) but affirmed by Old Catholics and some Orthodox.",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Claims and maintains a form of apostolic succession, though its validity is debated among other apostolic churches.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Rejects apostolic succession. Authority comes from the local congregation and fidelity to Scripture, not from an unbroken chain of ordinations.",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects episcopal succession attested in the early church in favor of congregational authority.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "Wesley was an Anglican priest who ordained ministers out of necessity, breaking the succession. Methodism does not claim apostolic succession through bishops.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Broke from episcopal succession when Wesley ordained ministers without being a bishop himself.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Rejects apostolic succession. The true church is defined by discipleship and faithful community, not by episcopal lineage.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects episcopal succession in favor of a gathered community model.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Rejects apostolic succession. Authority comes from the direct empowerment of the Holy Spirit, not from institutional lineage. Emphasizes the charismatic gifts of the Spirit over institutional structures.",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects episcopal succession in favor of direct Spirit empowerment, a departure from early church institutional structure.",
+                "sources": []
+            }
+        ]
     }
 ]

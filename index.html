@@ -10,9 +10,12 @@
 </head>
 <body>
     <div id="app">
+        <!-- Skip to Content (Accessibility) -->
+        <a href="#main-content" class="skip-to-content" @click.prevent="document.getElementById('main-content').focus()">Skip to main content</a>
+
         <!-- Navigation Bar -->
         <nav class="nav-bar">
-            <div class="nav-brand">Church History Tool</div>
+            <div class="nav-brand">St. Joseph's Stair Case</div>
             <div class="nav-links">
                 <a href="#timeline"
                    :class="{ active: currentView === 'timeline' }"
@@ -30,10 +33,20 @@
                    :class="{ active: currentView === 'why-it-matters' }"
                    @click.prevent="navigate('why-it-matters')">Why It Matters</a>
             </div>
+            <button class="theme-toggle" @click="toggleTheme" :aria-label="'Switch to ' + (isDarkTheme ? 'light' : 'dark') + ' mode'">
+                {{ isDarkTheme ? 'Light Mode' : 'Dark Mode' }}
+            </button>
         </nav>
 
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb-nav" role="navigation" aria-label="Breadcrumb">
+            <a href="#" @click.prevent="navigate('timeline')">Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>{{ breadcrumbLabel }}</span>
+        </div>
+
         <!-- Main Content Area -->
-        <main class="main-content">
+        <main class="main-content" id="main-content" role="main" tabindex="-1">
             <!-- Timeline View -->
             <div v-if="currentView === 'timeline'" class="view-container">
                 <div class="panel filter-panel">
@@ -68,6 +81,7 @@
                 </div>
                 <div class="timeline-container">
                     <div id="timeline-svg-container" class="panel timeline-panel"></div>
+                    <div class="timeline-hint" v-if="showTimelineHint">Scroll to zoom &middot; Drag to pan</div>
                 </div>
             </div>
 
@@ -104,17 +118,23 @@
                     </div>
 
                     <h3>Doctrine Mini-Timeline</h3>
+                    <div class="mini-timeline-legend">
+                        <span class="legend-item"><span class="legend-swatch" style="background:#2e7d32"></span> Consistent</span>
+                        <span class="legend-item"><span class="legend-swatch" style="background:#f9a825"></span> Modified</span>
+                        <span class="legend-item"><span class="legend-swatch" style="background:#c62828"></span> Rejected</span>
+                        <span class="legend-item"><span class="legend-line"></span> Formally Defined</span>
+                    </div>
                     <div :id="'mini-timeline-' + selectedDoctrine.id" class="mini-timeline-container"></div>
 
                     <h3>Positions by Denomination</h3>
                     <table class="positions-table">
                         <thead>
                             <tr>
-                                <th>Denomination</th>
-                                <th>Position</th>
-                                <th>Since</th>
-                                <th>Formally Defined</th>
-                                <th>Sources</th>
+                                <th scope="col">Denomination</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">Since</th>
+                                <th scope="col">Formally Defined</th>
+                                <th scope="col">Sources</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -183,7 +203,7 @@
                     <table class="comparison-table">
                         <thead>
                             <tr>
-                                <th>Doctrine</th>
+                                <th scope="col">Doctrine</th>
                                 <th v-for="denomId in selectedDenominations" :key="denomId">
                                     <span class="denom-dot" :style="{ background: getDenomColor(denomId) }"></span>
                                     {{ getDenomName(denomId) }}
@@ -201,6 +221,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <button class="btn-export" @click="exportComparison">Export Comparison as CSV</button>
                 </div>
 
                 <div class="panel summary-stats" v-if="denominations.length">
@@ -266,6 +287,13 @@
                 <!-- No Results -->
                 <div class="panel search-error" v-if="searchError">
                     <p>{{ searchError }}</p>
+                    <div class="available-topics" v-if="searchSuggestions.length" style="margin-top:10px;">
+                        <span class="history-label">Did you mean:</span>
+                        <span v-for="name in searchSuggestions" :key="name"
+                              class="history-chip" @click="searchTopic = name; performSearch()">
+                            {{ name }}
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Doctrine Match -->
@@ -314,7 +342,7 @@
                                 <p class="relevance-note" v-if="quote.relevance">{{ quote.relevance }}</p>
                                 <div class="father-actions">
                                     <a v-if="quote.url" :href="quote.url" target="_blank" rel="noopener" class="father-link">
-                                        View on New Advent &rarr;
+                                        View {{ quote.father }} on New Advent &rarr;
                                     </a>
                                     <button class="btn-lineage" @click="showLineage(quote.father)"
                                             v-if="hasLineage(quote.father)">
@@ -386,10 +414,10 @@
         <!-- Lineage Modal -->
         <transition name="fade">
             <div class="lineage-overlay" v-if="lineageModal.open" @click.self="closeLineage">
-                <div class="lineage-modal">
+                <div class="lineage-modal" role="dialog" aria-labelledby="lineage-title" aria-modal="true">
                     <div class="lineage-header">
-                        <h3>Apostolic Lineage</h3>
-                        <button class="close-btn" @click="closeLineage">&times;</button>
+                        <h3 id="lineage-title">Apostolic Lineage</h3>
+                        <button class="close-btn" @click="closeLineage" aria-label="Close modal">&times;</button>
                     </div>
                     <p class="lineage-subtitle">Tracing {{ lineageModal.fatherName }} back to the Apostles</p>
                     <div class="lineage-chain">
@@ -415,7 +443,7 @@
             <div class="source-panel" v-if="sourcePanel.open">
                 <div class="source-panel-header">
                     <h3>Source</h3>
-                    <button class="close-btn" @click="closeSourcePanel">&times;</button>
+                    <button class="close-btn" @click="closeSourcePanel" aria-label="Close panel">&times;</button>
                 </div>
                 <div class="source-panel-body">
                     <div class="source-type-badge" :class="sourcePanel.source.type">

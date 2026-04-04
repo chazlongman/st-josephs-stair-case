@@ -1,16 +1,22 @@
 /**
  * timeline.js — D3-powered subway-map timeline with denomination lanes,
- * event markers, zoom/pan, and click-to-detail.
+ * event markers, zoom/pan, touch support, and click-to-detail.
  */
 
 const ChurchTimeline = {
     svg: null,
     tooltip: null,
     zoom: null,
+    _lastRenderKey: null,
 
     render(denominations, allItems, filters, doctrines, onSourceClick) {
         const container = document.getElementById('timeline-svg-container');
         if (!container) return;
+
+        // Skip re-render if inputs haven't changed
+        const renderKey = JSON.stringify({ f: filters, d: denominations.length, i: allItems.length });
+        if (this._lastRenderKey === renderKey && this.svg) return;
+        this._lastRenderKey = renderKey;
 
         container.innerHTML = '';
 
@@ -18,19 +24,24 @@ const ChurchTimeline = {
 
         const margin = { top: 40, right: 40, bottom: 40, left: 180 };
         const width = container.clientWidth || 1200;
+        // On small screens, reduce left margin
+        if (width < 600) margin.left = 100;
         const laneHeight = 50;
         const height = margin.top + margin.bottom + denominations.length * laneHeight + 60;
 
         const svg = d3.select(container)
             .append('svg')
             .attr('width', width)
-            .attr('height', height);
+            .attr('height', height)
+            .attr('role', 'img')
+            .attr('aria-label', 'Interactive timeline of church history showing councils, events, and figures across denominations');
 
         let tooltip = d3.select(container).select('.timeline-tooltip');
         if (tooltip.empty()) {
             tooltip = d3.select(container)
                 .append('div')
                 .attr('class', 'timeline-tooltip')
+                .attr('role', 'tooltip')
                 .style('display', 'none');
         }
 
@@ -53,14 +64,14 @@ const ChurchTimeline = {
 
         const xAxis = d3.axisTop(xScale)
             .tickFormat(d => d + ' AD')
-            .ticks(Math.min(20, (yearMax - yearMin) / 100));
+            .ticks(Math.min(width < 600 ? 6 : 20, (yearMax - yearMin) / 100));
 
         g.append('g')
             .attr('class', 'x-axis')
             .call(xAxis)
             .selectAll('text')
             .style('fill', '#aaa')
-            .style('font-size', '11px');
+            .style('font-size', width < 600 ? '9px' : '11px');
 
         g.selectAll('.x-axis line, .x-axis path')
             .style('stroke', 'rgba(255,255,255,0.15)');
@@ -99,9 +110,9 @@ const ChurchTimeline = {
                 .attr('dy', '0.35em')
                 .attr('text-anchor', 'end')
                 .attr('fill', denom.color)
-                .attr('font-size', '12px')
+                .attr('font-size', width < 600 ? '10px' : '12px')
                 .attr('font-weight', '600')
-                .text(denom.name);
+                .text(width < 600 ? denom.name.split(' ')[0] : denom.name);
         });
 
         const markerColors = {
@@ -136,32 +147,58 @@ const ChurchTimeline = {
 
             const marker = g.append('g')
                 .attr('class', 'timeline-marker')
-                .attr('transform', `translate(${x},${y})`);
+                .attr('transform', `translate(${x},${y})`)
+                .attr('tabindex', '0')
+                .attr('role', 'button')
+                .attr('aria-label', `${item.name}, ${ChurchUtils.formatYear(item.year)}`);
 
             marker.append('path')
                 .attr('d', d3.symbol().type(markerShapes[item.type] || d3.symbolCircle).size(120)())
                 .attr('fill', markerColors[item.type] || '#fff');
 
-            marker.on('mouseenter', (event) => {
+            const showTooltip = (event) => {
                 const rect = container.getBoundingClientRect();
+                const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+                const clientY = event.touches ? event.touches[0].clientY : event.clientY;
                 tooltip
                     .style('display', 'block')
-                    .style('left', (event.clientX - rect.left + 10) + 'px')
-                    .style('top', (event.clientY - rect.top - 10) + 'px')
+                    .style('left', (clientX - rect.left + 10) + 'px')
+                    .style('top', (clientY - rect.top - 10) + 'px')
                     .html(`
                         <h4>${item.name}</h4>
                         <div class="tooltip-year">${ChurchUtils.formatYear(item.year)}</div>
                         <p style="margin-top:6px;font-size:0.82rem;color:#bbb;">${item.description || ''}</p>
                     `);
-            });
+            };
 
-            marker.on('mouseleave', () => {
+            const hideTooltip = () => {
                 tooltip.style('display', 'none');
+            };
+
+            marker.on('mouseenter', showTooltip);
+            marker.on('mouseleave', hideTooltip);
+            // Touch support
+            marker.on('touchstart', (event) => {
+                event.preventDefault();
+                showTooltip(event);
             });
+            marker.on('touchend', hideTooltip);
+            // Keyboard support
+            marker.on('focus', showTooltip);
+            marker.on('blur', hideTooltip);
 
             marker.on('click', () => {
                 if (item.sources && item.sources.length > 0) {
                     onSourceClick(item.sources[0]);
+                }
+            });
+
+            marker.on('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    if (item.sources && item.sources.length > 0) {
+                        onSourceClick(item.sources[0]);
+                    }
                 }
             });
         });
@@ -197,6 +234,9 @@ const ChurchTimeline = {
             });
 
         svg.call(zoomBehavior);
+        // Enable touch gestures for zoom
+        svg.on('touchstart.zoom', null);
+        svg.call(zoomBehavior.touchable(true));
 
         this.svg = svg;
         this.tooltip = tooltip;
