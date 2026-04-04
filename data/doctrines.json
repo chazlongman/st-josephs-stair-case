@@ -1,0 +1,797 @@
+[
+    {
+        "id": "trinity",
+        "name": "The Holy Trinity",
+        "category": "Christology",
+        "description": "The belief that God is one being in three co-equal, co-eternal persons: Father, Son, and Holy Spirit.",
+        "biblicalBasis": ["matt-28:19", "john-1:1"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "One God in three consubstantial persons. Defined at Nicaea (325) and Constantinople (381). Includes the Filioque — the Holy Spirit proceeds from the Father and the Son.",
+                "since": 33,
+                "formallyDefined": 325,
+                "council": "nicaea-i",
+                "continuityScore": 1.0,
+                "scoreJustification": "Trinitarian belief is attested from apostolic times in baptismal formulas and early creeds. The Nicene definition articulated what was already believed.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0103.htm", "label": "Ignatius of Antioch, Letter to the Ephesians" },
+                    { "type": "council", "url": "https://www.newadvent.org/fathers/3801.htm", "label": "Nicene Creed (325 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "One God in three consubstantial persons. Rejects the Filioque — the Holy Spirit proceeds from the Father alone through the Son.",
+                "since": 33,
+                "formallyDefined": 325,
+                "council": "nicaea-i",
+                "continuityScore": 1.0,
+                "scoreJustification": "Holds the same Trinitarian theology as the early church. The Filioque dispute is about the internal procession, not the Trinity itself.",
+                "sources": [
+                    { "type": "council", "url": "https://www.newadvent.org/fathers/3801.htm", "label": "Nicene Creed (325 AD)" }
+                ]
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "One God in three consubstantial persons. Follows the original Nicene-Constantinopolitan Creed without the Filioque.",
+                "since": 33,
+                "formallyDefined": 325,
+                "council": "nicaea-i",
+                "continuityScore": 1.0,
+                "scoreJustification": "Full Trinitarian orthodoxy consistent with early church.",
+                "sources": [
+                    { "type": "council", "url": "https://www.newadvent.org/fathers/3801.htm", "label": "Nicene Creed (325 AD)" }
+                ]
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Affirms the Nicene and Athanasian Creeds. One God in three persons, including the Filioque.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Retained full Trinitarian orthodoxy from Catholic tradition.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Affirms classical Trinitarian theology as expressed in the ecumenical creeds.",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Retained full Trinitarian orthodoxy.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "Affirms the Nicene Creed and classical Trinitarianism. Included in the Thirty-Nine Articles.",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Retained full Trinitarian orthodoxy.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Affirms the Trinity. God eternally exists in three persons.",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Retained full Trinitarian orthodoxy.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "Affirms classical Trinitarian theology as in the Articles of Religion.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Retained full Trinitarian orthodoxy.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Affirms the Trinity, though with less emphasis on creedal formulations.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Retained full Trinitarian orthodoxy despite de-emphasizing creeds.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Most Pentecostal denominations affirm the Trinity. Oneness Pentecostals hold a modalist view (one God manifesting in three modes).",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Mainstream Pentecostals are Trinitarian, but the significant Oneness movement within Pentecostalism departs from early church Trinitarianism.",
+                "sources": []
+            }
+        ]
+    },
+    {
+        "id": "eucharist",
+        "name": "The Eucharist / Lord's Supper",
+        "category": "Sacraments",
+        "description": "Beliefs about the nature of communion — whether Christ is truly present in the bread and wine, and in what manner.",
+        "biblicalBasis": ["john-6:53-56", "1cor-11:23-26"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "Real Presence through transubstantiation — the substance of bread and wine truly becomes the Body and Blood of Christ while the appearances remain.",
+                "since": 33,
+                "formallyDefined": 1215,
+                "council": "fourth-lateran",
+                "continuityScore": 1.0,
+                "scoreJustification": "The earliest Church Fathers (Ignatius, Justin Martyr, Irenaeus) consistently taught the Real Presence. Transubstantiation articulated the mechanism of a belief held from the beginning.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0109.htm", "label": "Ignatius of Antioch, Letter to the Smyrnaeans (c. 110 AD)" },
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0126.htm", "label": "Justin Martyr, First Apology, ch. 66 (c. 155 AD)" },
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0103418.htm", "label": "Irenaeus, Against Heresies, Book IV, ch. 18 (c. 180 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "Real Presence — the bread and wine truly become the Body and Blood of Christ. The mechanism is a divine mystery, not defined as precisely as transubstantiation.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Consistent Real Presence belief from the early church, differing from Catholicism only in the philosophical explanation of the mechanism.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/310244.htm", "label": "John Chrysostom, Homily on Matthew (c. 390 AD)" }
+                ]
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "Real Presence — the elements truly become the Body and Blood of Christ through the Holy Spirit's action in the epiclesis.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Consistent Real Presence belief from the early church.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/310118.htm", "label": "Cyril of Alexandria, Commentary on John (c. 430 AD)" }
+                ]
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Real Presence through sacramental union — Christ's body and blood are truly present 'in, with, and under' the bread and wine. Rejects transubstantiation but affirms Real Presence.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Affirms the Real Presence (consistent with early church) but rejects the traditional explanation of how it occurs.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Spiritual presence — Christ is spiritually present in communion but not physically. The faithful receive Christ by faith through the Holy Spirit.",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Maintains a form of Christ's presence but rejects the physical Real Presence taught by early Church Fathers.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "Range of views from Real Presence to receptionism. The Thirty-Nine Articles reject transubstantiation but affirm Christ's presence in a manner not precisely defined.",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Broad range of belief; many Anglicans affirm Real Presence, but the official position is deliberately ambiguous.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Memorial/ordinance view — communion is a symbolic remembrance of Christ's death. The bread and grape juice are symbols, not the literal body and blood.",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Explicitly rejects the Real Presence taught by all early Church Fathers. A purely symbolic view has no attestation in the pre-Nicene period.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "Real spiritual presence — Christ is truly present in the sacrament through the Holy Spirit. Not a mere symbol, but not transubstantiation.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Affirms a real but non-physical presence, partially consistent with early church teaching.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Memorial view — communion is an act of remembrance and community, symbolizing Christ's sacrifice. Not a sacrament but an ordinance.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects Real Presence and sacramental nature of the Eucharist, inconsistent with early church teaching.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Typically memorial/symbolic view. Communion is an ordinance of remembrance rather than a sacrament conveying grace.",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Symbolic view inconsistent with early church Real Presence teaching.",
+                "sources": []
+            }
+        ]
+    },
+    {
+        "id": "justification",
+        "name": "Justification / Salvation",
+        "category": "Soteriology",
+        "description": "How a person is made right with God — by faith alone, by works, or by a combination of faith and works cooperating with grace.",
+        "biblicalBasis": ["rom-3:28", "eph-2:8-9", "james-2:24"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "Justification is by grace through faith, but faith must be alive and active in charity (works). Initial justification is received at baptism; ongoing justification involves cooperation with grace through the sacraments and good works.",
+                "since": 33,
+                "formallyDefined": 1545,
+                "council": "trent",
+                "continuityScore": 1.0,
+                "scoreJustification": "Early Church Fathers consistently taught that faith and works/charity are both necessary. The Council of Trent articulated what the Fathers already held.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/1102.htm", "label": "Clement of Rome, First Epistle to the Corinthians, ch. 30-32 (c. 96 AD)" },
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0126.htm", "label": "Justin Martyr, First Apology (c. 155 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "Theosis (divinization) — salvation is a process of becoming partakers of the divine nature through cooperation with God's grace. Faith and works are inseparable aspects of the life in Christ.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Theosis is deeply rooted in early Church Fathers (Irenaeus, Athanasius). The synergistic view of faith and works matches early church teaching.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0103425.htm", "label": "Irenaeus, Against Heresies, Book V, Preface (c. 180 AD)" }
+                ]
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "Salvation through faith expressed in works and participation in the sacramental life of the Church. Similar to Eastern Orthodox theosis tradition.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Consistent with early church synergistic soteriology.",
+                "sources": []
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Sola fide — justification by faith alone. Good works are the fruit of faith but do not contribute to justification. Forensic justification: God declares the sinner righteous through faith in Christ.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Sola fide as a formal principle is absent from pre-Nicene writings. Early Fathers consistently linked faith with works as necessary for salvation.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Sola fide — justification by faith alone through grace alone. Irresistible grace and unconditional election. Good works are evidence of election, not a cause of justification.",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Sola fide and irresistible grace are not attested in pre-Nicene sources.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "Justification by faith, with a range of emphases. The Thirty-Nine Articles lean Protestant (faith alone), but Anglo-Catholic tradition maintains a more Catholic view.",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Mixed: official articles lean toward sola fide, but broad Anglican tradition includes views closer to the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Sola fide — salvation by grace through faith alone. Once genuinely saved, always saved (eternal security / perseverance of the saints).",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Sola fide and eternal security are not attested in pre-Nicene writings.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "Justification by faith through prevenient grace. Wesley taught that grace enables free response, and believers can fall from grace. Sanctification is an ongoing process.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Wesley's synergism and possibility of falling from grace are closer to early church teaching than strict sola fide, but still frames justification primarily through faith.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Faith expressed through discipleship and obedience. Salvation involves following Christ in daily life. Emphasis on visible fruit of repentance.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Emphasis on faith-and-works discipleship is somewhat consistent with early church, though sacramental framework is absent.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Salvation by faith in Christ, evidenced by baptism in the Holy Spirit (often with speaking in tongues). Some hold eternal security, others believe in possibility of apostasy.",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "The distinctive emphasis on tongues as evidence of Spirit baptism is a novel development not found in early church soteriology.",
+                "sources": []
+            }
+        ]
+    },
+    {
+        "id": "baptism",
+        "name": "Baptism",
+        "category": "Sacraments",
+        "description": "The nature, mode, and recipients of baptism — whether it confers grace, whether infants should be baptized, and what mode (immersion, pouring, sprinkling) is valid.",
+        "biblicalBasis": ["john-3:5", "acts-2:38", "matt-28:19"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "Sacrament of regeneration that removes original sin and confers sanctifying grace. Infant baptism is normative. Valid by immersion, pouring, or sprinkling in the name of the Trinity.",
+                "since": 33,
+                "formallyDefined": 1545,
+                "council": "trent",
+                "continuityScore": 1.0,
+                "scoreJustification": "Infant baptism and baptismal regeneration are attested in the earliest Church Fathers and the Didache. The early church consistently taught baptism as necessary for salvation.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0714.htm", "label": "Didache, ch. 7 (c. 70-100 AD)" },
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0126.htm", "label": "Justin Martyr, First Apology, ch. 61 (c. 155 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "Sacrament (mystery) of regeneration. Infant baptism by triple immersion is normative, followed immediately by chrismation and first communion.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Consistent with early church practice of baptismal regeneration and infant baptism.",
+                "sources": []
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "Sacrament of regeneration. Infant baptism by immersion, followed by chrismation. Consistent with ancient practice.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Consistent with early church practice.",
+                "sources": []
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Sacrament that effects regeneration and forgiveness. Infant baptism affirmed. Baptism is God's work, not the believer's decision.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Retained baptismal regeneration and infant baptism from Catholic tradition, consistent with early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Sacrament and sign of the covenant. Infant baptism practiced as the New Covenant parallel to circumcision. Does not regenerate but is a means of grace.",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Retains infant baptism but denies baptismal regeneration, which was taught by early Church Fathers.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "Sacrament of new birth and incorporation into Christ. Infant baptism normative. The Book of Common Prayer speaks of baptismal regeneration.",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Retains baptismal regeneration and infant baptism consistent with early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Ordinance (not sacrament) of believer's baptism only. Baptism is by full immersion following a personal profession of faith. Does not confer grace or regeneration.",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects infant baptism and baptismal regeneration, both of which are well-attested in early church sources.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "Sacrament of initiation and prevenient grace. Infant baptism practiced. Baptism is a sign of regeneration and new birth.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Retains infant baptism and baptismal regeneration consistent with early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Believer's baptism only. Baptism follows a conscious decision to follow Christ. Infant baptism is rejected as invalid. Baptism is an outward sign, not regenerative.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects infant baptism and baptismal regeneration, both attested in the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Believer's baptism by immersion. An ordinance of obedience following conversion. Not regenerative. Some practice re-baptism in Jesus' name only.",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects infant baptism and baptismal regeneration. Jesus-name-only baptism contradicts the Trinitarian formula attested in the Didache.",
+                "sources": []
+            }
+        ]
+    },
+    {
+        "id": "papal-authority",
+        "name": "Papal Authority",
+        "category": "Ecclesiology",
+        "description": "Whether the Bishop of Rome holds supreme authority over the universal Church, and if so, the nature and extent of that authority.",
+        "biblicalBasis": ["matt-16:18-19"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "The Pope, as successor of Saint Peter, holds supreme, full, and universal authority over the whole Church. Papal infallibility when speaking ex cathedra on faith and morals (defined 1870).",
+                "since": 33,
+                "formallyDefined": 1870,
+                "council": "vatican-i",
+                "continuityScore": 1.0,
+                "scoreJustification": "Roman primacy is attested by Clement of Rome (96 AD), Ignatius, and Irenaeus. The scope of authority developed over time, but the principle of Roman leadership is early.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/1010.htm", "label": "Clement of Rome, First Epistle to the Corinthians (c. 96 AD)" },
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0103303.htm", "label": "Irenaeus, Against Heresies, Book III, ch. 3 (c. 180 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "The Bishop of Rome held a primacy of honor among equals (primus inter pares) but not supreme jurisdiction. Rejects papal infallibility. Church governance is conciliar.",
+                "since": 1054,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Early church evidence shows both Roman primacy and conciliar governance. The Orthodox position reflects one strand of early practice.",
+                "sources": []
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "Rejects papal supremacy. Each church is autocephalous under its own patriarch. Honors the ancient patriarchates but recognizes no single supreme head.",
+                "since": 451,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Early church had multiple centers of authority; the degree of Roman supremacy in the pre-Nicene era is debated.",
+                "sources": []
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Rejects papal authority entirely. The Pope may be a useful historical office but holds no divine authority over the Church.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Complete rejection of Roman primacy, which is attested in the earliest Church Fathers.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Rejects papal authority. Church governance is presbyterian (rule by elders) rather than episcopal.",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects both papal authority and the episcopal structure of the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "Rejects papal jurisdiction. The monarch (or national church) is the supreme governor. Retains episcopal governance with archbishops.",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Replaced papal authority with royal supremacy, a concept unknown to the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Rejects all hierarchical church authority. Each local congregation is autonomous and self-governing under Christ alone.",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Congregational autonomy contradicts the hierarchical episcopal structure documented from the earliest church.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "No papal authority. Governed by a connexional system with bishops, but authority is shared through conferences.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects papal authority and replaces episcopal structure with a conference system.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Rejects all external church authority. Each congregation is autonomous. No hierarchy beyond the local level.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Congregational autonomy contradicts early church hierarchical governance.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Varies by denomination. Generally congregational or presbyterian governance. No recognition of papal authority.",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects papal authority and early church episcopal structure.",
+                "sources": []
+            }
+        ]
+    },
+    {
+        "id": "sola-scriptura",
+        "name": "Sola Scriptura / Sacred Tradition",
+        "category": "Scripture & Tradition",
+        "description": "Whether scripture alone is the sole rule of faith, or whether sacred tradition and the Church's teaching authority (Magisterium) are also authoritative sources of divine revelation.",
+        "biblicalBasis": ["2tim-3:16-17", "2thess-2:15", "1tim-3:15"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "Scripture and Sacred Tradition together form the single deposit of faith, interpreted authoritatively by the Magisterium (teaching authority of the Church). Neither is sufficient alone.",
+                "since": 33,
+                "formallyDefined": 1545,
+                "council": "trent",
+                "continuityScore": 1.0,
+                "scoreJustification": "Early Church Fathers consistently appealed to both scripture and apostolic tradition. Sola scriptura as a principle is absent from pre-Nicene sources.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0103303.htm", "label": "Irenaeus, Against Heresies III.3 — apostolic tradition through bishops (c. 180 AD)" },
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/0407.htm", "label": "Basil the Great, On the Holy Spirit, ch. 27 — unwritten traditions (c. 375 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "Scripture is part of Holy Tradition, not separate from it. The Church, guided by the Holy Spirit through ecumenical councils, interprets both.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Consistent with the early church's understanding of scripture within the living tradition of the Church.",
+                "sources": []
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "Scripture and Tradition together form the basis of faith, interpreted by the Church through its councils and fathers.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 1.0,
+                "scoreJustification": "Consistent with early church practice.",
+                "sources": []
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Sola scriptura — Scripture alone is the sole infallible rule of faith. Tradition is valued but subordinate to and judged by scripture.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Sola scriptura as a formal principle is not found in the early church. The Fathers consistently appealed to tradition alongside scripture.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Sola scriptura — The Bible alone is the Word of God and the only infallible rule for faith and practice.",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Not attested in early church practice.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "Scripture contains all things necessary for salvation (prima scriptura). Tradition and reason are also authoritative (the 'three-legged stool' of Hooker).",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "The inclusion of tradition and reason alongside scripture is closer to the early church than strict sola scriptura.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Sola scriptura — The Bible is the sole authority for faith and practice. No creed, tradition, or church body has binding authority.",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects all extra-biblical authority, contrary to early church practice.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "The Wesleyan Quadrilateral — Scripture is primary, supplemented by tradition, reason, and experience.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "The inclusion of tradition alongside scripture is partially consistent with early church, though 'experience' as an authority is novel.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Sola scriptura with emphasis on the New Testament and the words of Christ. The community interprets scripture together.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Sola scriptura is not an early church principle.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Sola scriptura, supplemented by ongoing personal revelation through the Holy Spirit (prophecy, words of knowledge).",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Sola scriptura plus personal revelation as authority is doubly inconsistent with early church practice.",
+                "sources": []
+            }
+        ]
+    },
+    {
+        "id": "purgatory",
+        "name": "Purgatory",
+        "category": "Eschatology",
+        "description": "Whether there exists a state of purification after death for those who die in God's grace but are not yet fully purified.",
+        "biblicalBasis": ["1cor-3:15", "rev-21:27"],
+        "positions": [
+            {
+                "denominationId": "catholic",
+                "position": "Purgatory exists as a state of purification after death for those who die in grace but with temporal punishment still due. Prayers for the dead are efficacious.",
+                "since": 33,
+                "formallyDefined": 1545,
+                "council": "trent",
+                "continuityScore": 1.0,
+                "scoreJustification": "Prayers for the dead are attested in the earliest Christian catacombs and by early Fathers. The concept of post-death purification is ancient even if the term 'purgatory' is later.",
+                "sources": [
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/1102.htm", "label": "Clement of Alexandria, Stromata (c. 200 AD)" },
+                    { "type": "father", "url": "https://www.newadvent.org/fathers/1102.htm", "label": "Augustine, City of God, Book XXI (c. 426 AD)" }
+                ]
+            },
+            {
+                "denominationId": "eastern-orthodox",
+                "position": "Affirms an intermediate state and prayers for the dead, but rejects the Latin doctrine of purgatory as a place of punitive fire. The dead can benefit from the prayers of the living.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Affirms prayers for the dead (consistent with early church) but rejects the specific Western formulation of purgatory.",
+                "sources": []
+            },
+            {
+                "denominationId": "oriental-orthodox",
+                "position": "Prayers for the dead are practiced. Rejects the Western doctrine of purgatory but acknowledges a state of waiting before final judgment.",
+                "since": 33,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.5,
+                "scoreJustification": "Prayers for the dead are early church practice; rejection of purgatory as defined is a partial departure.",
+                "sources": []
+            },
+            {
+                "denominationId": "lutheran",
+                "position": "Rejects purgatory entirely. Souls go directly to heaven or hell at death. Luther called purgatory a human invention unsupported by scripture.",
+                "since": 1517,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects purgatory and prayers for the dead, both attested in the early church.",
+                "sources": []
+            },
+            {
+                "denominationId": "reformed",
+                "position": "Rejects purgatory. Souls go directly to be with Christ (heaven) or separated from God (hell).",
+                "since": 1536,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects post-death purification and prayers for the dead.",
+                "sources": []
+            },
+            {
+                "denominationId": "anglican",
+                "position": "The Thirty-Nine Articles call purgatory a 'Romish doctrine' to be rejected. Some Anglo-Catholics pray for the dead.",
+                "since": 1534,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Officially rejects purgatory, though some Anglicans retain prayers for the dead.",
+                "sources": []
+            },
+            {
+                "denominationId": "baptist",
+                "position": "Rejects purgatory. Immediate judgment: heaven for believers, hell for unbelievers.",
+                "since": 1609,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects purgatory and prayers for the dead.",
+                "sources": []
+            },
+            {
+                "denominationId": "methodist",
+                "position": "Rejects purgatory. Wesley did not teach an intermediate state of purification.",
+                "since": 1738,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects purgatory and prayers for the dead.",
+                "sources": []
+            },
+            {
+                "denominationId": "anabaptist",
+                "position": "Rejects purgatory. Souls await the final resurrection and judgment.",
+                "since": 1525,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects purgatory.",
+                "sources": []
+            },
+            {
+                "denominationId": "pentecostal",
+                "position": "Rejects purgatory. Immediate destiny after death: heaven or hell.",
+                "since": 1901,
+                "formallyDefined": null,
+                "council": null,
+                "continuityScore": 0.0,
+                "scoreJustification": "Rejects purgatory.",
+                "sources": []
+            }
+        ]
+    }
+]

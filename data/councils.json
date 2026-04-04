@@ -1,0 +1,79 @@
+[
+    {
+        "id": "nicaea-i",
+        "name": "First Council of Nicaea",
+        "year": 325,
+        "description": "Convened by Emperor Constantine. Defined the divinity of Christ against Arianism and produced the Nicene Creed. Established the date of Easter and early canons of church governance.",
+        "doctrinesAffected": ["trinity", "divinity-of-christ"]
+    },
+    {
+        "id": "constantinople-i",
+        "name": "First Council of Constantinople",
+        "year": 381,
+        "description": "Expanded the Nicene Creed to affirm the divinity of the Holy Spirit. Condemned Apollinarism and Macedonianism.",
+        "doctrinesAffected": ["trinity"]
+    },
+    {
+        "id": "ephesus",
+        "name": "Council of Ephesus",
+        "year": 431,
+        "description": "Affirmed Mary as Theotokos (God-bearer) against Nestorius. Condemned Nestorianism and affirmed the unity of Christ's person.",
+        "doctrinesAffected": ["theotokos", "incarnation"]
+    },
+    {
+        "id": "chalcedon",
+        "name": "Council of Chalcedon",
+        "year": 451,
+        "description": "Defined Christ as one person in two natures (divine and human), 'without confusion, without change, without division, without separation.' The Oriental Orthodox rejected this formulation.",
+        "doctrinesAffected": ["incarnation", "divinity-of-christ"]
+    },
+    {
+        "id": "constantinople-ii",
+        "name": "Second Council of Constantinople",
+        "year": 553,
+        "description": "Condemned the Three Chapters to reconcile Chalcedonian and non-Chalcedonian Christians. Reaffirmed Chalcedonian Christology.",
+        "doctrinesAffected": ["incarnation"]
+    },
+    {
+        "id": "constantinople-iii",
+        "name": "Third Council of Constantinople",
+        "year": 681,
+        "description": "Condemned Monothelitism and affirmed that Christ has two wills (divine and human) corresponding to his two natures.",
+        "doctrinesAffected": ["incarnation", "divinity-of-christ"]
+    },
+    {
+        "id": "nicaea-ii",
+        "name": "Second Council of Nicaea",
+        "year": 787,
+        "description": "Restored the veneration of icons, distinguishing veneration (dulia) from worship (latria). Ended the first period of iconoclasm.",
+        "doctrinesAffected": ["saints-intercession"]
+    },
+    {
+        "id": "fourth-lateran",
+        "name": "Fourth Lateran Council",
+        "year": 1215,
+        "description": "Formally defined transubstantiation as the doctrine of the Eucharist. Also addressed confession requirements and Trinitarian theology against the Cathars.",
+        "doctrinesAffected": ["eucharist", "confession", "trinity"]
+    },
+    {
+        "id": "trent",
+        "name": "Council of Trent",
+        "year": 1545,
+        "description": "Counter-Reformation council (1545-1563). Defined Catholic positions on justification, sacraments, scripture and tradition, original sin, and purgatory in response to Protestant challenges.",
+        "doctrinesAffected": ["justification", "eucharist", "baptism", "confession", "holy-orders", "matrimony", "confirmation", "anointing-of-sick", "original-sin", "purgatory", "canon-of-scripture", "sacred-tradition"]
+    },
+    {
+        "id": "vatican-i",
+        "name": "First Vatican Council",
+        "year": 1870,
+        "description": "Defined papal infallibility — the Pope, when speaking ex cathedra on matters of faith and morals, is preserved from error by divine assistance.",
+        "doctrinesAffected": ["papal-authority"]
+    },
+    {
+        "id": "vatican-ii",
+        "name": "Second Vatican Council",
+        "year": 1962,
+        "description": "Pastoral council (1962-1965) that reformed liturgy, affirmed religious liberty, engaged ecumenism, and addressed the Church's relationship to the modern world.",
+        "doctrinesAffected": ["church-governance", "eucharist"]
+    }
+]

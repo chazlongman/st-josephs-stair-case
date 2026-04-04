@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Joseph's Stair Case</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <div class="nav-brand">Church History Tool</div>
+            <div class="nav-links">
+                <a href="#timeline"
+                   :class="{ active: currentView === 'timeline' }"
+                   @click.prevent="navigate('timeline')">Timeline</a>
+                <a href="#doctrines"
+                   :class="{ active: currentView === 'doctrines' }"
+                   @click.prevent="navigate('doctrines')">Doctrine Browser</a>
+                <a href="#comparison"
+                   :class="{ active: currentView === 'comparison' }"
+                   @click.prevent="navigate('comparison')">Comparison</a>
+                <a href="#search"
+                   :class="{ active: currentView === 'search' }"
+                   @click.prevent="navigate('search')">Topic Search</a>
+                <a href="#why-it-matters"
+                   :class="{ active: currentView === 'why-it-matters' }"
+                   @click.prevent="navigate('why-it-matters')">Why It Matters</a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Timeline View -->
+            <div v-if="currentView === 'timeline'" class="view-container">
+                <div class="panel filter-panel">
+                    <h3>Filters</h3>
+                    <div class="filter-group">
+                        <label>Century Range</label>
+                        <div class="filter-row">
+                            <select v-model.number="filters.centuryStart" class="filter-select">
+                                <option v-for="c in centuries" :key="c" :value="c">{{ c }}s AD</option>
+                            </select>
+                            <span>to</span>
+                            <select v-model.number="filters.centuryEnd" class="filter-select">
+                                <option v-for="c in centuries" :key="c" :value="c">{{ c }}s AD</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Denomination</label>
+                        <select v-model="filters.denomination" class="filter-select">
+                            <option value="">All</option>
+                            <option v-for="d in denominations" :key="d.id" :value="d.id">{{ d.name }}</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Doctrine Category</label>
+                        <select v-model="filters.category" class="filter-select">
+                            <option value="">All</option>
+                            <option v-for="cat in doctrineCategories" :key="cat" :value="cat">{{ cat }}</option>
+                        </select>
+                    </div>
+                    <button class="btn-reset" @click="resetFilters">Reset Filters</button>
+                </div>
+                <div class="timeline-container">
+                    <div id="timeline-svg-container" class="panel timeline-panel"></div>
+                </div>
+            </div>
+
+            <!-- Doctrine Browser View -->
+            <div v-if="currentView === 'doctrines'" class="view-container doctrine-layout">
+                <aside class="panel doctrine-sidebar">
+                    <div class="search-box">
+                        <input type="text" v-model="doctrineSearch" placeholder="Search doctrines..." class="search-input">
+                    </div>
+                    <div v-for="cat in doctrineCategories" :key="cat" class="doctrine-category">
+                        <h4 class="category-title">{{ cat }}</h4>
+                        <ul class="doctrine-list">
+                            <li v-for="doc in filteredDoctrinesByCategory(cat)" :key="doc.id"
+                                :class="{ active: selectedDoctrine && selectedDoctrine.id === doc.id }"
+                                @click="selectDoctrine(doc)">
+                                {{ doc.name }}
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <section class="doctrine-detail panel" v-if="selectedDoctrine">
+                    <h2>{{ selectedDoctrine.name }}</h2>
+                    <p class="doctrine-description">{{ selectedDoctrine.description }}</p>
+
+                    <h3>Biblical Basis</h3>
+                    <div class="scripture-refs">
+                        <div v-for="refId in selectedDoctrine.biblicalBasis" :key="refId" class="scripture-card">
+                            <template v-if="bibleRefs[refId]">
+                                <strong>{{ bibleRefs[refId].book }} {{ bibleRefs[refId].chapter }}:{{ bibleRefs[refId].verses }}</strong>
+                                <p class="scripture-text">"{{ bibleRefs[refId].text }}"</p>
+                                <span class="translation-tag">RSV-CE</span>
+                            </template>
+                        </div>
+                    </div>
+
+                    <h3>Doctrine Mini-Timeline</h3>
+                    <div :id="'mini-timeline-' + selectedDoctrine.id" class="mini-timeline-container"></div>
+
+                    <h3>Positions by Denomination</h3>
+                    <table class="positions-table">
+                        <thead>
+                            <tr>
+                                <th>Denomination</th>
+                                <th>Position</th>
+                                <th>Since</th>
+                                <th>Formally Defined</th>
+                                <th>Sources</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="pos in selectedDoctrine.positions" :key="pos.denominationId">
+                                <td>
+                                    <span class="denom-dot" :style="{ background: getDenomColor(pos.denominationId) }"></span>
+                                    {{ getDenomName(pos.denominationId) }}
+                                </td>
+                                <td>{{ pos.position }}</td>
+                                <td>{{ pos.since }} AD</td>
+                                <td>{{ pos.formallyDefined ? pos.formallyDefined + ' AD' : '—' }}</td>
+                                <td>
+                                    <span v-for="(src, i) in pos.sources" :key="i">
+                                        <a :href="src.url" target="_blank" rel="noopener"
+                                           class="source-link"
+                                           @click.prevent="openSourcePanel(src)">
+                                            <sup>[{{ i + 1 }}]</sup>
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="doctrine-detail panel" v-else>
+                    <div class="empty-state">
+                        <h2>Select a Doctrine</h2>
+                        <p>Choose a doctrine from the sidebar to explore its history across Christian traditions.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Comparison Dashboard View -->
+            <div v-if="currentView === 'comparison'" class="view-container comparison-layout">
+                <div class="panel comparison-controls">
+                    <h3>Compare Denominations</h3>
+                    <p class="compare-instructions">Select 2-3 denominations for side-by-side comparison:</p>
+                    <div class="denom-checkboxes">
+                        <label v-for="d in denominations" :key="d.id" class="denom-checkbox">
+                            <input type="checkbox" :value="d.id" v-model="selectedDenominations"
+                                   :disabled="selectedDenominations.length >= 3 && !selectedDenominations.includes(d.id)">
+                            <span class="denom-dot" :style="{ background: d.color }"></span>
+                            {{ d.name }}
+                        </label>
+                    </div>
+                </div>
+
+                <div class="panel continuity-scores">
+                    <h3>Doctrinal Continuity Scores</h3>
+                    <p class="score-subtitle">Percentage of core doctrines consistent with pre-Nicene (33-325 AD) early church positions</p>
+                    <div id="continuity-chart"></div>
+                </div>
+
+                <div class="panel heatmap-container">
+                    <h3>Doctrine-Denomination Heatmap</h3>
+                    <div class="heatmap-legend">
+                        <span class="legend-item"><span class="legend-color consistent"></span> Consistent (1.0)</span>
+                        <span class="legend-item"><span class="legend-color modified"></span> Modified (0.5)</span>
+                        <span class="legend-item"><span class="legend-color rejected"></span> Rejected (0.0)</span>
+                    </div>
+                    <div id="heatmap-chart"></div>
+                </div>
+
+                <div class="panel side-by-side" v-if="selectedDenominations.length >= 2">
+                    <h3>Side-by-Side: {{ selectedDenomNames.join(' vs. ') }}</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Doctrine</th>
+                                <th v-for="denomId in selectedDenominations" :key="denomId">
+                                    <span class="denom-dot" :style="{ background: getDenomColor(denomId) }"></span>
+                                    {{ getDenomName(denomId) }}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="doc in doctrines" :key="doc.id">
+                                <td class="doctrine-name-cell">{{ doc.name }}</td>
+                                <td v-for="denomId in selectedDenominations" :key="denomId"
+                                    :class="getScoreClass(doc, denomId)">
+                                    <div class="position-text">{{ getPosition(doc, denomId) }}</div>
+                                    <div class="position-since">Since {{ getPositionSince(doc, denomId) }} AD</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="panel summary-stats" v-if="denominations.length">
+                    <h3>Summary Statistics</h3>
+                    <div class="stats-grid">
+                        <div v-for="d in denominations" :key="d.id" class="stat-card">
+                            <span class="denom-dot" :style="{ background: d.color }"></span>
+                            <strong>{{ d.name }}</strong>
+                            <div class="stat-number">{{ getContinuityPercent(d.id) }}%</div>
+                            <div class="stat-detail">
+                                {{ getContinuityDetail(d.id) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel methodology-disclaimer">
+                    <h3>Methodology & Disclaimer</h3>
+                    <p>Doctrinal continuity scores are a simplified model intended to illustrate broad patterns in how Christian beliefs have developed across traditions. Theological continuity is far more nuanced than any numerical score can capture.</p>
+                    <p>Each score is editorially assigned based on historical sources and links to its justification. Scores reflect whether a denomination's current position aligns with the pre-Nicene early church consensus (33-325 AD) as documented in scripture and Church Father writings.</p>
+                    <ul>
+                        <li><strong>1.0 — Consistent:</strong> Position matches the early church baseline</li>
+                        <li><strong>0.5 — Modified:</strong> Related but altered position</li>
+                        <li><strong>0.0 — Rejected:</strong> Position explicitly rejected or abandoned</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Topic Search View -->
+            <div v-if="currentView === 'search'" class="view-container search-layout">
+                <!-- Search Bar -->
+                <div class="panel search-bar-panel">
+                    <h3>Topic Search</h3>
+                    <p class="search-subtitle">Search scripture references and Church Father quotes by topic</p>
+                    <div class="search-bar-row">
+                        <input type="text" v-model="searchTopic" placeholder="Search a topic (e.g., Confession, Icons, Fasting, Real Presence)..."
+                               class="search-input topic-input"
+                               @keyup.enter="performSearch">
+                        <button class="btn-search" @click="performSearch" :disabled="!searchTopic.trim()">
+                            Search
+                        </button>
+                    </div>
+
+                    <!-- Available Topics -->
+                    <div class="available-topics" v-if="!searchResults && !searchError">
+                        <span class="history-label">Available topics:</span>
+                        <span v-for="name in availableTopics" :key="name"
+                              class="history-chip" @click="searchTopic = name; performSearch()">
+                            {{ name }}
+                        </span>
+                    </div>
+
+                    <!-- Search History -->
+                    <div class="search-history" v-if="searchHistory.length">
+                        <span class="history-label">Recent:</span>
+                        <span v-for="(item, i) in searchHistory" :key="i"
+                              class="history-chip" @click="loadFromHistory(item)">
+                            {{ item.query }}
+                        </span>
+                        <button class="btn-clear-history" @click="clearSearchHistory">Clear</button>
+                    </div>
+                </div>
+
+                <!-- No Results -->
+                <div class="panel search-error" v-if="searchError">
+                    <p>{{ searchError }}</p>
+                </div>
+
+                <!-- Doctrine Match -->
+                <div class="panel doctrine-match-card" v-if="searchDoctrineMatch && searchResults">
+                    <p>This topic is also covered in the Doctrine Browser:
+                        <a href="#" @click.prevent="goToMatchedDoctrine">{{ searchDoctrineMatch.name }} &rarr;</a>
+                    </p>
+                </div>
+
+                <!-- Results -->
+                <div v-for="result in searchResults" :key="result.id">
+                    <!-- Summary -->
+                    <div class="panel search-summary">
+                        <h3>{{ result.name }}</h3>
+                        <div class="summary-text" v-html="formatSummary(result.summary)"></div>
+                    </div>
+
+                    <!-- Scripture References -->
+                    <div class="panel" v-if="result.scriptureRefs && result.scriptureRefs.length">
+                        <h3>Scripture References (RSV-CE)</h3>
+                        <div class="scripture-refs">
+                            <div v-for="(ref, i) in visibleScripture(result)" :key="i" class="scripture-card">
+                                <strong>{{ ref.reference }}</strong>
+                                <p class="scripture-text">"{{ ref.text }}"</p>
+                                <p class="relevance-note" v-if="ref.relevance">{{ ref.relevance }}</p>
+                                <span class="translation-tag">RSV-CE</span>
+                            </div>
+                        </div>
+                        <button v-if="result.scriptureRefs.length > 4" class="btn-show-more"
+                                @click="toggleExpand(result.id, 'scripture')">
+                            {{ isExpanded(result.id, 'scripture') ? 'Show Less' : `Show ${result.scriptureRefs.length - 4} More` }}
+                        </button>
+                    </div>
+
+                    <!-- Church Father Quotes -->
+                    <div class="panel" v-if="result.fatherQuotes && result.fatherQuotes.length">
+                        <h3>Church Father References</h3>
+                        <div class="father-quotes">
+                            <div v-for="(quote, i) in visibleFathers(result)" :key="i" class="father-card">
+                                <div class="father-header">
+                                    <strong>{{ quote.father }}</strong>
+                                    <span class="father-year">{{ quote.year }}</span>
+                                </div>
+                                <div class="father-work">{{ quote.work }}</div>
+                                <p class="father-quote">"{{ quote.quote }}"</p>
+                                <p class="relevance-note" v-if="quote.relevance">{{ quote.relevance }}</p>
+                                <div class="father-actions">
+                                    <a v-if="quote.url" :href="quote.url" target="_blank" rel="noopener" class="father-link">
+                                        View on New Advent &rarr;
+                                    </a>
+                                    <button class="btn-lineage" @click="showLineage(quote.father)"
+                                            v-if="hasLineage(quote.father)">
+                                        Trace to Apostles
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button v-if="result.fatherQuotes.length > 4" class="btn-show-more"
+                                @click="toggleExpand(result.id, 'fathers')">
+                            {{ isExpanded(result.id, 'fathers') ? 'Show Less' : `Show ${result.fatherQuotes.length - 4} More` }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why It Matters View -->
+            <div v-if="currentView === 'why-it-matters'" class="view-container why-layout">
+                <div class="panel why-hero">
+                    <h2>Why the Early Church Matters</h2>
+                    <p class="why-lead">If Christianity is true, then what the earliest Christians believed and practiced — the people closest to Christ and his apostles — carries enormous weight. Understanding the early church isn't just an academic exercise. It's a matter of discovering what was actually handed down from Christ himself.</p>
+                </div>
+
+                <div class="panel why-section">
+                    <h3>The Proximity Argument</h3>
+                    <p>The Church Fathers lived in a world far closer to Christ than we do. Some of them personally knew the apostles. Clement of Rome worked alongside Paul. Ignatius of Antioch and Polycarp were disciples of the Apostle John. Irenaeus sat at Polycarp's feet as a young man and later wrote, <em>"I listened to his words carefully and stored them in my memory."</em></p>
+                    <p>This is not a distant chain. From Jesus to John to Polycarp to Irenaeus, we are only three links removed from Christ himself — and Irenaeus wrote extensively about what the apostles taught. When we read these men, we are reading witnesses who had direct access to the apostolic generation.</p>
+                    <p>By contrast, the Protestant Reformation occurred nearly 1,500 years after Christ. The question every Christian must ask is: if the earliest Christians — the people taught by the apostles themselves — all believed something, and a reformer 15 centuries later taught the opposite, which position is more likely to reflect what Christ actually taught?</p>
+                </div>
+
+                <div class="panel why-section">
+                    <h3>The Consistency Argument</h3>
+                    <p>One of the most striking features of early Christian writing is its consistency. On core doctrines like the Real Presence in the Eucharist, baptismal regeneration, the authority of bishops, and the necessity of both faith and works, the Church Fathers speak with a remarkably unified voice across different centuries, languages, and regions.</p>
+                    <p>This wasn't coordinated. Ignatius in Antioch (110 AD), Justin Martyr in Rome (155 AD), Irenaeus in Gaul (180 AD), and Cyprian in North Africa (250 AD) all taught the same things about the Eucharist, church governance, and salvation — despite being separated by time, geography, and language. The simplest explanation for this consistency is that they were all passing on what they received from the same source: the apostles.</p>
+                    <p>When a belief appears everywhere, always, and is held by everyone in the early church, it carries a weight that later innovations — no matter how sincerely held — simply cannot match.</p>
+                </div>
+
+                <div class="panel why-section">
+                    <h3>The "Pillar and Foundation" Argument</h3>
+                    <p>Scripture itself points to the Church — not scripture alone — as the guardian of truth. Saint Paul calls the Church <em>"the pillar and foundation of the truth"</em> (1 Timothy 3:15). Jesus promised that the gates of hell would not prevail against his Church (Matthew 16:18) and that the Holy Spirit would guide it into all truth (John 16:13).</p>
+                    <p>If these promises mean anything, then the Church Christ founded could not have fallen into universal error on fundamental doctrines for its first 1,500 years. Yet that is precisely what the Protestant Reformation implies — that the entire Church got the Eucharist, justification, baptism, and church governance wrong from the very beginning, and that the truth was only recovered in the 16th century.</p>
+                    <p>The early church record makes this claim extraordinarily difficult to sustain. The historical evidence shows not a church that slowly drifted into error, but a church that consistently taught the same doctrines from the apostolic era onward.</p>
+                </div>
+
+                <div class="panel why-section">
+                    <h3>The Canon Argument</h3>
+                    <p>Every Christian who reads the Bible relies on a decision made by the early Church. The books of the New Testament were not self-selecting. There was no table of contents dropped from heaven. Instead, the Church — through bishops in apostolic succession meeting in councils — discerned which books were inspired and which were not.</p>
+                    <p>The Council of Rome (382 AD), the Council of Hippo (393 AD), and the Council of Carthage (397 AD) formally ratified the 27-book New Testament canon. The same councils also affirmed the deuterocanonical books (Wisdom, Sirach, Maccabees, etc.) as part of the Old Testament — books that the Protestant Reformation later removed.</p>
+                    <p>This creates a profound question: if you trust the early Church's authority to determine which books belong in the Bible, on what basis do you reject that same Church's authority on what those books mean? The Church that gave you the Bible also taught the Real Presence, baptismal regeneration, apostolic succession, and the communion of saints.</p>
+                </div>
+
+                <div class="panel why-section">
+                    <h3>The Development vs. Innovation Argument</h3>
+                    <p>Catholics and Orthodox distinguish between <em>development</em> of doctrine and <em>innovation</em>. A development makes explicit what was always implicit — like a seed growing into a tree. The tree looks different from the seed, but it contains nothing that wasn't already present in embryonic form. An innovation introduces something genuinely new that has no root in what came before.</p>
+                    <p>The doctrine of the Trinity is a good example of legitimate development. The word "Trinity" doesn't appear in scripture, and the precise formulation at the Council of Nicaea (325 AD) goes beyond anything explicitly stated in the Bible. But the raw materials — the divinity of the Father, Son, and Spirit — are all present in scripture and in the earliest Christian practice (baptism in the name of all three). Nicaea made explicit what was always believed.</p>
+                    <p>By contrast, <em>sola scriptura</em> (scripture alone) and <em>sola fide</em> (faith alone) are not developments of earlier beliefs — they are contradictions of them. No Church Father in the first 1,500 years taught that scripture was the sole rule of faith apart from sacred tradition, or that faith alone without works was sufficient for salvation. These are innovations, not developments.</p>
+                    <p>This tool exists to help you see these patterns for yourself. Trace the doctrines. Read the sources. Follow the evidence where it leads.</p>
+                </div>
+
+                <div class="panel why-section why-quote-highlight">
+                    <blockquote>
+                        <p>"In the Catholic Church itself, all possible care must be taken that we hold that faith which has been believed everywhere, always, by all. For that is truly and in the strictest sense Catholic."</p>
+                        <footer>— Saint Vincent of Lerins, <cite>Commonitorium</cite>, c. 434 AD</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </main>
+
+        <!-- Lineage Modal -->
+        <transition name="fade">
+            <div class="lineage-overlay" v-if="lineageModal.open" @click.self="closeLineage">
+                <div class="lineage-modal">
+                    <div class="lineage-header">
+                        <h3>Apostolic Lineage</h3>
+                        <button class="close-btn" @click="closeLineage">&times;</button>
+                    </div>
+                    <p class="lineage-subtitle">Tracing {{ lineageModal.fatherName }} back to the Apostles</p>
+                    <div class="lineage-chain">
+                        <div v-for="(link, i) in lineageModal.chain" :key="i" class="lineage-link">
+                            <div class="lineage-connector" v-if="i > 0">
+                                <div class="connector-line"></div>
+                                <div class="connector-arrow"></div>
+                            </div>
+                            <div class="lineage-card" :class="{ 'lineage-apostle': i === lineageModal.chain.length - 1 }">
+                                <strong>{{ link.name }}</strong>
+                                <div class="lineage-role">{{ link.role }}</div>
+                                <div class="lineage-years">{{ link.years }}</div>
+                                <div class="lineage-connection">{{ link.connection }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+
+        <!-- Source Panel (slide-out) -->
+        <transition name="slide">
+            <div class="source-panel" v-if="sourcePanel.open">
+                <div class="source-panel-header">
+                    <h3>Source</h3>
+                    <button class="close-btn" @click="closeSourcePanel">&times;</button>
+                </div>
+                <div class="source-panel-body">
+                    <div class="source-type-badge" :class="sourcePanel.source.type">
+                        {{ sourcePanel.source.type }}
+                    </div>
+                    <p class="source-label">{{ sourcePanel.source.label }}</p>
+                    <a :href="sourcePanel.source.url" target="_blank" rel="noopener" class="source-external-link">
+                        Open Source &rarr;
+                    </a>
+                </div>
+            </div>
+        </transition>
+
+        <!-- Attribution Footer -->
+        <footer class="attribution-footer">
+            <p>Scripture quotations are from the Revised Standard Version of the Bible — Catholic Edition (RSV-CE), copyright &copy; 1965, 1966 the Division of Christian Education of the National Council of the Churches of Christ in the United States of America. Used by permission. All rights reserved.</p>
+            <p>Church Fathers texts referenced from <a href="https://www.newadvent.org/fathers/" target="_blank" rel="noopener">New Advent — Church Fathers</a>.</p>
+            <p><a href="#" @click.prevent="navigate('comparison')">Scoring Methodology</a> — See the Comparison Dashboard for full documentation of the quantitative scoring system.</p>
+        </footer>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/doctrine-browser.js"></script>
+    <script src="js/comparison.js"></script>
+    <script src="js/topic-search.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

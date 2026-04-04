@@ -1,0 +1,240 @@
+{
+    "Saint Peter": {
+        "chain": [
+            { "name": "Saint Peter", "role": "Apostle, First Bishop of Rome", "years": "d. c. 64 AD", "connection": "Called directly by Jesus Christ" }
+        ]
+    },
+    "Saint Paul": {
+        "chain": [
+            { "name": "Saint Paul", "role": "Apostle to the Gentiles", "years": "c. 5–64 AD", "connection": "Called directly by the risen Christ on the road to Damascus (Acts 9)" }
+        ]
+    },
+    "Saint Clement of Rome": {
+        "chain": [
+            { "name": "Saint Clement of Rome", "role": "Bishop of Rome (4th Pope)", "years": "d. c. 99 AD", "connection": "Ordained by Saint Peter" },
+            { "name": "Saint Peter", "role": "Apostle, First Bishop of Rome", "years": "d. c. 64 AD", "connection": "Called directly by Jesus Christ" }
+        ]
+    },
+    "Didache": {
+        "chain": [
+            { "name": "Didache", "role": "Teaching of the Twelve Apostles", "years": "c. 70–100 AD", "connection": "Compiled from the oral teaching of the Twelve Apostles" },
+            { "name": "The Twelve Apostles", "role": "Apostles chosen by Christ", "years": "c. 30–100 AD", "connection": "Called directly by Jesus Christ" }
+        ]
+    },
+    "Saint Ignatius of Antioch": {
+        "chain": [
+            { "name": "Saint Ignatius of Antioch", "role": "Bishop of Antioch, Martyr", "years": "c. 35–108 AD", "connection": "Disciple of the Apostle John; tradition holds he was also taught by Saint Peter, who appointed him Bishop of Antioch" },
+            { "name": "Saint John the Apostle", "role": "Apostle, 'The Beloved Disciple'", "years": "c. 6–100 AD", "connection": "Called directly by Jesus Christ" }
+        ]
+    },
+    "Saint Polycarp": {
+        "chain": [
+            { "name": "Saint Polycarp", "role": "Bishop of Smyrna, Martyr", "years": "c. 69–155 AD", "connection": "Disciple of the Apostle John, who appointed him Bishop of Smyrna" },
+            { "name": "Saint John the Apostle", "role": "Apostle, 'The Beloved Disciple'", "years": "c. 6–100 AD", "connection": "Called directly by Jesus Christ" }
+        ]
+    },
+    "Saint Irenaeus of Lyon": {
+        "chain": [
+            { "name": "Saint Irenaeus of Lyon", "role": "Bishop of Lyon", "years": "c. 130–202 AD", "connection": "Disciple of Saint Polycarp as a young man in Smyrna; wrote: 'I listened to his words carefully and stored them in my memory'" },
+            { "name": "Saint Polycarp", "role": "Bishop of Smyrna, Martyr", "years": "c. 69–155 AD", "connection": "Disciple of the Apostle John" },
+            { "name": "Saint John the Apostle", "role": "Apostle, 'The Beloved Disciple'", "years": "c. 6–100 AD", "connection": "Called directly by Jesus Christ" }
+        ]
+    },
+    "Saint Justin Martyr": {
+        "chain": [
+            { "name": "Saint Justin Martyr", "role": "Philosopher, Apologist, Martyr", "years": "c. 100–165 AD", "connection": "Converted through encounter with an old man who knew the apostles' teaching; studied in the churches of Rome and Ephesus which were founded by the apostles" },
+            { "name": "Apostolic Churches of Rome & Ephesus", "role": "Churches founded by Peter, Paul, and John", "years": "c. 40s–60s AD", "connection": "Founded by the Apostles Peter, Paul, and John" }
+        ]
+    },
+    "Tertullian": {
+        "chain": [
+            { "name": "Tertullian", "role": "Church Father, Apologist (Carthage)", "years": "c. 155–220 AD", "connection": "Trained in the faith of the Church of Carthage and Rome; appealed to apostolic churches as the standard of truth" },
+            { "name": "Church of Rome", "role": "Founded by Saints Peter and Paul", "years": "c. 40s–60s AD", "connection": "Founded by the Apostles Peter and Paul" }
+        ]
+    },
+    "Saint Clement of Alexandria": {
+        "chain": [
+            { "name": "Saint Clement of Alexandria", "role": "Head of the Catechetical School of Alexandria", "years": "c. 150–215 AD", "connection": "Studied under Pantaenus, head of the Alexandrian school" },
+            { "name": "Pantaenus", "role": "Founder/Head of the Catechetical School of Alexandria", "years": "d. c. 200 AD", "connection": "Tradition records he was taught by men who had known the apostles; sent as missionary to India" },
+            { "name": "Apostolic Tradition of Alexandria", "role": "Church founded by Saint Mark", "years": "c. 49 AD", "connection": "Saint Mark the Evangelist, companion of Saint Peter" }
+        ]
+    },
+    "Origen": {
+        "chain": [
+            { "name": "Origen", "role": "Theologian, Head of the Catechetical School of Alexandria", "years": "c. 185–253 AD", "connection": "Pupil of Saint Clement of Alexandria" },
+            { "name": "Saint Clement of Alexandria", "role": "Head of the Catechetical School of Alexandria", "years": "c. 150–215 AD", "connection": "Studied under Pantaenus" },
+            { "name": "Pantaenus", "role": "Head of the Alexandrian School", "years": "d. c. 200 AD", "connection": "Taught by men who knew the apostles" },
+            { "name": "Apostolic Tradition of Alexandria", "role": "Church founded by Saint Mark", "years": "c. 49 AD", "connection": "Saint Mark the Evangelist, companion of Saint Peter" }
+        ]
+    },
+    "Saint Cyprian of Carthage": {
+        "chain": [
+            { "name": "Saint Cyprian of Carthage", "role": "Bishop of Carthage, Martyr", "years": "c. 210–258 AD", "connection": "Converted and mentored by the priest Caecilius; deeply influenced by Tertullian, whom he called 'The Master'" },
+            { "name": "Tertullian", "role": "Church Father, Apologist", "years": "c. 155–220 AD", "connection": "Trained in the apostolic faith of Rome and Carthage" },
+            { "name": "Church of Rome", "role": "Founded by Saints Peter and Paul", "years": "c. 40s–60s AD", "connection": "Founded by the Apostles Peter and Paul" }
+        ]
+    },
+    "Saint Athanasius of Alexandria": {
+        "chain": [
+            { "name": "Saint Athanasius of Alexandria", "role": "Bishop of Alexandria, Doctor of the Church", "years": "c. 296–373 AD", "connection": "Secretary to Bishop Alexander of Alexandria; ordained by Alexander and succeeded him" },
+            { "name": "Alexander of Alexandria", "role": "Bishop of Alexandria", "years": "d. 328 AD", "connection": "Bishop in the apostolic see of Alexandria, in unbroken succession from Saint Mark" },
+            { "name": "Apostolic See of Alexandria", "role": "Church founded by Saint Mark", "years": "c. 49 AD", "connection": "Saint Mark the Evangelist, companion of Saint Peter" }
+        ]
+    },
+    "Saint Basil the Great": {
+        "chain": [
+            { "name": "Saint Basil the Great", "role": "Bishop of Caesarea, Doctor of the Church", "years": "c. 329–379 AD", "connection": "Grandson of Saint Macrina the Elder, who was taught by Saint Gregory Thaumaturgus" },
+            { "name": "Saint Macrina the Elder", "role": "Confessor during persecutions", "years": "c. 270–340 AD", "connection": "Disciple of Saint Gregory Thaumaturgus" },
+            { "name": "Saint Gregory Thaumaturgus", "role": "Bishop of Neocaesarea", "years": "c. 213–270 AD", "connection": "Pupil of Origen" },
+            { "name": "Origen", "role": "Head of the Catechetical School of Alexandria", "years": "c. 185–253 AD", "connection": "Pupil of Clement of Alexandria, in the Alexandrian apostolic tradition" }
+        ]
+    },
+    "Saint Ambrose of Milan": {
+        "chain": [
+            { "name": "Saint Ambrose of Milan", "role": "Bishop of Milan, Doctor of the Church", "years": "c. 339–397 AD", "connection": "Elected Bishop of Milan by the people; trained in the Roman apostolic tradition" },
+            { "name": "Apostolic See of Rome", "role": "The church Ambrose looked to as the standard of faith", "years": "c. 40s AD", "connection": "Founded by the Apostles Peter and Paul" }
+        ]
+    },
+    "Saint John Chrysostom": {
+        "chain": [
+            { "name": "Saint John Chrysostom", "role": "Archbishop of Constantinople, Doctor of the Church", "years": "c. 349–407 AD", "connection": "Studied under Diodore of Tarsus at the school of Antioch" },
+            { "name": "Diodore of Tarsus", "role": "Bishop of Tarsus, Head of the School of Antioch", "years": "d. c. 390 AD", "connection": "Trained in the Antiochene tradition, the apostolic see founded by Saint Peter" },
+            { "name": "Apostolic See of Antioch", "role": "Church where believers were first called Christians (Acts 11:26)", "years": "c. 37 AD", "connection": "Founded by the Apostle Peter, who served as its first bishop" }
+        ]
+    },
+    "Saint Augustine of Hippo": {
+        "chain": [
+            { "name": "Saint Augustine of Hippo", "role": "Bishop of Hippo, Doctor of the Church", "years": "354–430 AD", "connection": "Baptized and mentored by Saint Ambrose of Milan" },
+            { "name": "Saint Ambrose of Milan", "role": "Bishop of Milan, Doctor of the Church", "years": "c. 339–397 AD", "connection": "Bishop in communion with the apostolic See of Rome" },
+            { "name": "Apostolic See of Rome", "role": "Founded by Saints Peter and Paul", "years": "c. 40s AD", "connection": "Founded by the Apostles Peter and Paul" }
+        ]
+    },
+    "Saint Cyril of Jerusalem": {
+        "chain": [
+            { "name": "Saint Cyril of Jerusalem", "role": "Bishop of Jerusalem, Doctor of the Church", "years": "c. 313–386 AD", "connection": "Bishop of Jerusalem, the mother church of all Christianity" },
+            { "name": "Apostolic See of Jerusalem", "role": "The original church, led first by Saint James the Just", "years": "33 AD", "connection": "Saint James the Just, 'brother of the Lord,' first Bishop of Jerusalem, appointed by the apostles" }
+        ]
+    },
+    "Saint Cyril of Alexandria": {
+        "chain": [
+            { "name": "Saint Cyril of Alexandria", "role": "Patriarch of Alexandria, Doctor of the Church", "years": "c. 376–444 AD", "connection": "Nephew and successor of Patriarch Theophilus of Alexandria; bishop in the apostolic see of Saint Mark" },
+            { "name": "Apostolic See of Alexandria", "role": "Church founded by Saint Mark", "years": "c. 49 AD", "connection": "Saint Mark the Evangelist, companion of Saint Peter" }
+        ]
+    },
+    "Saint Ephrem the Syrian": {
+        "chain": [
+            { "name": "Saint Ephrem the Syrian", "role": "Deacon, Doctor of the Church, Hymnographer", "years": "c. 306–373 AD", "connection": "Studied under Saint Jacob of Nisibis, who attended the Council of Nicaea" },
+            { "name": "Saint Jacob of Nisibis", "role": "Bishop of Nisibis", "years": "d. 338 AD", "connection": "Bishop in the Syriac apostolic tradition, attendee of the First Council of Nicaea (325)" },
+            { "name": "Syriac Apostolic Tradition", "role": "Churches evangelized by the Apostle Thomas and Addai (Thaddeus)", "years": "1st century AD", "connection": "Tradition traces to the Apostle Thomas and Addai, one of the Seventy Disciples" }
+        ]
+    },
+    "Saint Jerome": {
+        "chain": [
+            { "name": "Saint Jerome", "role": "Priest, Doctor of the Church, Translator of the Vulgate", "years": "c. 342–420 AD", "connection": "Studied under Saint Gregory Nazianzen in Constantinople; ordained in Antioch" },
+            { "name": "Saint Gregory Nazianzen", "role": "Archbishop of Constantinople, Doctor of the Church", "years": "c. 329–390 AD", "connection": "Fellow student with Basil the Great; friend of Athanasius" },
+            { "name": "Apostolic tradition through the Cappadocian Fathers and Alexandrian school", "role": "Continuous teaching lineage", "years": "1st–4th century", "connection": "Traceable through Origen, Clement, Pantaenus to Saint Mark and Saint Peter" }
+        ]
+    },
+    "Saint Gregory the Great": {
+        "chain": [
+            { "name": "Saint Gregory the Great", "role": "Pope, Bishop of Rome, Doctor of the Church", "years": "c. 540–604 AD", "connection": "Bishop of Rome in unbroken succession from Saint Peter" },
+            { "name": "Apostolic See of Rome", "role": "Unbroken succession of bishops from Saint Peter", "years": "c. 40s AD", "connection": "Founded by the Apostles Peter and Paul" }
+        ]
+    },
+    "Saint John Damascene": {
+        "chain": [
+            { "name": "Saint John Damascene", "role": "Monk, Priest, Doctor of the Church", "years": "c. 675–749 AD", "connection": "Trained by Cosmas the Monk, a Sicilian scholar; monk at the Monastery of Mar Saba near Jerusalem" },
+            { "name": "Monastery of Mar Saba", "role": "Founded by Saint Sabas", "years": "483 AD", "connection": "Ancient monastery in the Judean desert, in the apostolic tradition of Jerusalem" },
+            { "name": "Apostolic See of Jerusalem", "role": "The mother church of Christianity", "years": "33 AD", "connection": "Founded at Pentecost, first led by Saint James the Just" }
+        ]
+    },
+    "Saint Vincent of Lerins": {
+        "chain": [
+            { "name": "Saint Vincent of Lerins", "role": "Monk and Theologian", "years": "d. c. 445 AD", "connection": "Monk at the Monastery of Lerins, Gaul; trained in the Gallic apostolic tradition" },
+            { "name": "Monastery of Lerins", "role": "Major monastic center of learning", "years": "c. 410 AD", "connection": "Founded by Saint Honoratus; a center of orthodox teaching in the Western apostolic tradition" },
+            { "name": "Western Apostolic Tradition", "role": "Churches of Gaul and Rome", "years": "1st–2nd century", "connection": "The faith brought to Gaul by missionaries from Rome and the East, including Saint Irenaeus" }
+        ]
+    },
+    "Saint Leo the Great": {
+        "chain": [
+            { "name": "Saint Leo the Great", "role": "Pope, Bishop of Rome, Doctor of the Church", "years": "c. 400–461 AD", "connection": "Bishop of Rome in unbroken succession from Saint Peter" },
+            { "name": "Apostolic See of Rome", "role": "Unbroken succession of bishops from Saint Peter", "years": "c. 40s AD", "connection": "Founded by the Apostles Peter and Paul" }
+        ]
+    },
+    "Saint Gregory of Nyssa": {
+        "chain": [
+            { "name": "Saint Gregory of Nyssa", "role": "Bishop of Nyssa, Cappadocian Father", "years": "c. 335–395 AD", "connection": "Brother of Saint Basil the Great; trained by Basil and their sister Saint Macrina the Younger" },
+            { "name": "Saint Basil the Great", "role": "Bishop of Caesarea", "years": "c. 329–379 AD", "connection": "Grandson of Saint Macrina the Elder, disciple of Gregory Thaumaturgus" },
+            { "name": "Saint Gregory Thaumaturgus", "role": "Bishop of Neocaesarea", "years": "c. 213–270 AD", "connection": "Pupil of Origen in Caesarea" },
+            { "name": "Origen", "role": "Head of the Catechetical School of Alexandria", "years": "c. 185–253 AD", "connection": "In the apostolic tradition through Clement, Pantaenus, and Saint Mark" }
+        ]
+    },
+    "Theodore the Studite": {
+        "chain": [
+            { "name": "Theodore the Studite", "role": "Abbot of the Stoudios Monastery, Constantinople", "years": "759–826 AD", "connection": "Monk and abbot in the tradition of the Church of Constantinople" },
+            { "name": "Church of Constantinople", "role": "Apostolic see tradition", "years": "c. 37 AD", "connection": "Tradition traces the founding of the church to the Apostle Andrew" }
+        ]
+    },
+    "Second Council of Nicaea": {
+        "chain": [
+            { "name": "Second Council of Nicaea", "role": "Seventh Ecumenical Council", "years": "787 AD", "connection": "Ecumenical council of bishops in apostolic succession from all major sees" },
+            { "name": "The Apostolic Sees", "role": "Rome, Constantinople, Alexandria, Antioch, Jerusalem", "years": "1st century AD", "connection": "Founded by or tracing authority to the original apostles" }
+        ]
+    },
+    "Council of Ephesus": {
+        "chain": [
+            { "name": "Council of Ephesus", "role": "Third Ecumenical Council", "years": "431 AD", "connection": "Council of bishops in apostolic succession, convened at Ephesus — the city where Saint John and Saint Paul taught" },
+            { "name": "Church of Ephesus", "role": "Apostolic church", "years": "c. 53 AD", "connection": "Founded by Saint Paul; later led by the Apostle John and his disciple Saint Polycarp" }
+        ]
+    },
+    "Council of Carthage": {
+        "chain": [
+            { "name": "Council of Carthage", "role": "Regional council that ratified the biblical canon", "years": "397 AD", "connection": "Council of North African bishops in communion with Rome" },
+            { "name": "Church of Carthage", "role": "Major church of Roman Africa", "years": "2nd century AD", "connection": "In communion with and under the authority of the apostolic See of Rome" }
+        ]
+    },
+    "Pope Damasus I": {
+        "chain": [
+            { "name": "Pope Damasus I", "role": "Bishop of Rome", "years": "c. 305–384 AD", "connection": "Bishop of Rome in unbroken succession from Saint Peter" },
+            { "name": "Apostolic See of Rome", "role": "Unbroken succession of bishops from Saint Peter", "years": "c. 40s AD", "connection": "Founded by the Apostles Peter and Paul" }
+        ]
+    },
+    "Muratorian Fragment": {
+        "chain": [
+            { "name": "Muratorian Fragment", "role": "Earliest known list of New Testament books", "years": "c. 170 AD", "connection": "Written by an unknown author in Rome, reflecting the canon received by the Roman church from the apostles" },
+            { "name": "Church of Rome", "role": "Founded by Saints Peter and Paul", "years": "c. 40s AD", "connection": "Founded by the Apostles Peter and Paul" }
+        ]
+    },
+    "Catacomb Inscriptions": {
+        "chain": [
+            { "name": "Catacomb Inscriptions", "role": "Funerary inscriptions by early Roman Christians", "years": "c. 200–300 AD", "connection": "Written by members of the Roman Christian community" },
+            { "name": "Church of Rome", "role": "The Christian community at Rome", "years": "c. 40s AD", "connection": "Founded by the Apostles Peter and Paul" }
+        ]
+    },
+    "Sub Tuum Praesidium": {
+        "chain": [
+            { "name": "Sub Tuum Praesidium", "role": "Oldest known prayer to the Blessed Virgin Mary", "years": "c. 250 AD", "connection": "Found on a papyrus from Egypt (Rylands Papyrus 470), reflecting the devotion of the Egyptian Christian community" },
+            { "name": "Church of Alexandria / Egypt", "role": "Church founded by Saint Mark", "years": "c. 49 AD", "connection": "Saint Mark the Evangelist, companion of Saint Peter" }
+        ]
+    },
+    "Leontius of Neapolis": {
+        "chain": [
+            { "name": "Leontius of Neapolis", "role": "Bishop of Neapolis, Cyprus", "years": "c. 590–650 AD", "connection": "Bishop in the Church of Cyprus" },
+            { "name": "Church of Cyprus", "role": "Apostolic church", "years": "1st century AD", "connection": "Evangelized by Saints Paul and Barnabas (Acts 13:4–12); Barnabas was a native of Cyprus" }
+        ]
+    },
+    "Eusebius of Caesarea": {
+        "chain": [
+            { "name": "Eusebius of Caesarea", "role": "Bishop of Caesarea, Father of Church History", "years": "c. 260–340 AD", "connection": "Student of Pamphilus, who studied in the library and school of Origen at Caesarea" },
+            { "name": "Pamphilus of Caesarea", "role": "Priest and scholar", "years": "c. 240–309 AD", "connection": "Custodian of Origen's library; defender of Origen's legacy" },
+            { "name": "Origen", "role": "Head of the Catechetical School of Alexandria, later Caesarea", "years": "c. 185–253 AD", "connection": "In the apostolic tradition through Clement, Pantaenus, and Saint Mark" }
+        ]
+    },
+    "Theodore of Mopsuestia": {
+        "chain": [
+            { "name": "Theodore of Mopsuestia", "role": "Bishop of Mopsuestia", "years": "c. 350–428 AD", "connection": "Studied alongside John Chrysostom under Diodore of Tarsus at the school of Antioch" },
+            { "name": "Diodore of Tarsus", "role": "Bishop of Tarsus, Head of the School of Antioch", "years": "d. c. 390 AD", "connection": "Trained in the Antiochene apostolic tradition" },
+            { "name": "Apostolic See of Antioch", "role": "Church where believers were first called Christians", "years": "c. 37 AD", "connection": "Founded by the Apostle Peter" }
+        ]
+    }
+}

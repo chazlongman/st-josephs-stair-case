@@ -1,0 +1,110 @@
+[
+    {
+        "id": "peter",
+        "name": "Saint Peter",
+        "born": -1,
+        "died": 64,
+        "denominationId": "catholic",
+        "role": "Apostle, First Bishop of Rome",
+        "doctrinesInfluenced": ["papal-authority", "apostolic-succession", "baptism"]
+    },
+    {
+        "id": "paul",
+        "name": "Saint Paul",
+        "born": 5,
+        "died": 64,
+        "denominationId": "catholic",
+        "role": "Apostle to the Gentiles",
+        "doctrinesInfluenced": ["justification", "original-sin", "eucharist"]
+    },
+    {
+        "id": "ignatius-of-antioch",
+        "name": "Saint Ignatius of Antioch",
+        "born": 35,
+        "died": 108,
+        "denominationId": "catholic",
+        "role": "Church Father, Bishop of Antioch",
+        "doctrinesInfluenced": ["eucharist", "apostolic-succession", "church-governance"]
+    },
+    {
+        "id": "irenaeus",
+        "name": "Saint Irenaeus of Lyon",
+        "born": 130,
+        "died": 202,
+        "denominationId": "catholic",
+        "role": "Church Father, Bishop of Lyon",
+        "doctrinesInfluenced": ["apostolic-succession", "sacred-tradition", "eucharist"]
+    },
+    {
+        "id": "augustine",
+        "name": "Saint Augustine of Hippo",
+        "born": 354,
+        "died": 430,
+        "denominationId": "catholic",
+        "role": "Church Father, Doctor of the Church",
+        "doctrinesInfluenced": ["original-sin", "predestination", "trinity", "justification"]
+    },
+    {
+        "id": "athanasius",
+        "name": "Saint Athanasius of Alexandria",
+        "born": 296,
+        "died": 373,
+        "denominationId": "catholic",
+        "role": "Church Father, Bishop of Alexandria",
+        "doctrinesInfluenced": ["trinity", "divinity-of-christ", "canon-of-scripture"]
+    },
+    {
+        "id": "thomas-aquinas",
+        "name": "Saint Thomas Aquinas",
+        "born": 1225,
+        "died": 1274,
+        "denominationId": "catholic",
+        "role": "Doctor of the Church, Theologian",
+        "doctrinesInfluenced": ["eucharist", "trinity", "justification"]
+    },
+    {
+        "id": "martin-luther",
+        "name": "Martin Luther",
+        "born": 1483,
+        "died": 1546,
+        "denominationId": "lutheran",
+        "role": "Reformer",
+        "doctrinesInfluenced": ["justification", "eucharist", "papal-authority", "sola-scriptura", "purgatory"]
+    },
+    {
+        "id": "john-calvin",
+        "name": "John Calvin",
+        "born": 1509,
+        "died": 1564,
+        "denominationId": "reformed",
+        "role": "Reformer, Theologian",
+        "doctrinesInfluenced": ["predestination", "eucharist", "church-governance", "justification"]
+    },
+    {
+        "id": "huldrych-zwingli",
+        "name": "Huldrych Zwingli",
+        "born": 1484,
+        "died": 1531,
+        "denominationId": "reformed",
+        "role": "Reformer",
+        "doctrinesInfluenced": ["eucharist", "baptism", "sola-scriptura"]
+    },
+    {
+        "id": "john-wesley",
+        "name": "John Wesley",
+        "born": 1703,
+        "died": 1791,
+        "denominationId": "methodist",
+        "role": "Founder of Methodism",
+        "doctrinesInfluenced": ["justification", "salvation"]
+    },
+    {
+        "id": "menno-simons",
+        "name": "Menno Simons",
+        "born": 1496,
+        "died": 1561,
+        "denominationId": "anabaptist",
+        "role": "Anabaptist Leader",
+        "doctrinesInfluenced": ["baptism", "church-governance"]
+    }
+]

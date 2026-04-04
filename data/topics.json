@@ -1,0 +1,1155 @@
+[
+    {
+        "id": "confession",
+        "name": "Confession / Penance",
+        "keywords": ["confession", "penance", "reconciliation", "forgive sins", "confess", "absolution", "penitent"],
+        "summary": "The practice of confessing sins to a priest for absolution is one of the oldest practices in Christianity, rooted in Christ's commission to the apostles in John 20:22-23. The early Church Fathers consistently taught that serious sins required confession to a bishop or priest, who held the authority to bind and loose as given by Christ.\n\nIn the earliest centuries, public penance was the norm for grave sins, with the penitent undergoing a period of exclusion and prayer before being reconciled to the community by the bishop. By the early medieval period, private confession to a priest became standard practice in the West, formalized at the Fourth Lateran Council (1215) which required annual confession. The Eastern churches maintained similar practices throughout.\n\nThe Protestant Reformation largely rejected sacramental confession, with Luther initially retaining it before most Lutheran churches made it optional, and Reformed traditions eliminating it entirely in favor of direct confession to God. The Catholic and Orthodox churches continue to regard confession as a sacrament instituted by Christ.",
+        "scriptureRefs": [
+            {
+                "reference": "John 20:22-23",
+                "text": "And when he had said this, he breathed on them, and said to them, 'Receive the Holy Spirit. If you forgive the sins of any, they are forgiven; if you retain the sins of any, they are retained.'",
+                "relevance": "Christ directly grants the apostles the power to forgive or retain sins, the foundational text for sacramental confession."
+            },
+            {
+                "reference": "James 5:16",
+                "text": "Therefore confess your sins to one another, and pray for one another, that you may be healed.",
+                "relevance": "Explicit instruction to confess sins to others, not only to God privately."
+            },
+            {
+                "reference": "Matthew 18:18",
+                "text": "Truly, I say to you, whatever you bind on earth shall be bound in heaven, and whatever you loose on earth shall be loosed in heaven.",
+                "relevance": "The power of binding and loosing given to the apostles, understood as authority over sin."
+            },
+            {
+                "reference": "2 Corinthians 5:18-20",
+                "text": "All this is from God, who through Christ reconciled us to himself and gave us the ministry of reconciliation... So we are ambassadors for Christ, God making his appeal through us.",
+                "relevance": "Paul describes a ministry of reconciliation entrusted to the apostles."
+            },
+            {
+                "reference": "Acts 19:18",
+                "text": "Many also of those who were now believers came, confessing and divulging their practices.",
+                "relevance": "Early converts publicly confessing their sins as part of their conversion."
+            },
+            {
+                "reference": "1 John 1:9",
+                "text": "If we confess our sins, he is faithful and just, and will forgive our sins and cleanse us from all unrighteousness.",
+                "relevance": "Confession is presented as the normal means of receiving forgiveness — the verse implies an ongoing practice, not a once-for-all event."
+            },
+            {
+                "reference": "Matthew 16:19",
+                "text": "I will give you the keys of the kingdom of heaven, and whatever you bind on earth shall be bound in heaven, and whatever you loose on earth shall be loosed in heaven.",
+                "relevance": "The keys of the kingdom given to Peter — authority to bind and loose, including authority over sin."
+            },
+            {
+                "reference": "Leviticus 5:5",
+                "text": "When a man is guilty in any of these, he shall confess the sin he has committed.",
+                "relevance": "The Old Testament precursor establishing the principle that sin requires verbal confession — a pattern fulfilled and elevated in the New Covenant."
+            },
+            {
+                "reference": "Proverbs 28:13",
+                "text": "He who conceals his transgressions will not prosper, but he who confesses and forsakes them will obtain mercy.",
+                "relevance": "Scripture consistently links confession — not concealment — with receiving divine mercy."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Didache",
+                "work": "The Teaching of the Twelve Apostles, Ch. 4",
+                "quote": "In the congregation you shall confess your transgressions, and you shall not come to prayer with an evil conscience.",
+                "url": "https://www.newadvent.org/fathers/0714.htm",
+                "year": "c. 70-100 AD",
+                "relevance": "One of the earliest Christian writings outside scripture, commanding confession of sins in the assembly."
+            },
+            {
+                "father": "Saint Clement of Rome",
+                "work": "First Epistle to the Corinthians, Ch. 51",
+                "quote": "For all our transgressions which we have committed through any of the wiles of the adversary, let us pray that we may be forgiven. And those who have been leaders of sedition and disagreement ought to look to the common hope.",
+                "url": "https://www.newadvent.org/fathers/1010.htm",
+                "year": "c. 96 AD",
+                "relevance": "The Bishop of Rome urging confession and repentance for sins against the community."
+            },
+            {
+                "father": "Saint Irenaeus of Lyon",
+                "work": "Against Heresies, Book I, Ch. 13",
+                "quote": "Some of these women make a public confession, but others are ashamed to do this, and in silence, as if withdrawing from themselves the hope of the life of God, they either apostatize entirely or hesitate between the two courses.",
+                "url": "https://www.newadvent.org/fathers/0103113.htm",
+                "year": "c. 180 AD",
+                "relevance": "Shows that public confession was practiced in the second century church."
+            },
+            {
+                "father": "Tertullian",
+                "work": "On Repentance, Ch. 10",
+                "quote": "That act which is usually performed is called exomologesis, by which we confess our sins to the Lord, not as though He were ignorant of them, but because satisfaction is prepared by confession, and by confession repentance is born.",
+                "url": "https://www.newadvent.org/fathers/0312.htm",
+                "year": "c. 203 AD",
+                "relevance": "Describes the formal practice of confession (exomologesis) in the early third century."
+            },
+            {
+                "father": "Saint Cyprian of Carthage",
+                "work": "On the Lapsed, Ch. 28",
+                "quote": "I entreat you, brethren, let every one who has sinned confess his sin while he is still in this world, while his confession can be received, while the satisfaction and remission made by the priests are pleasing to the Lord.",
+                "url": "https://www.newadvent.org/fathers/050703.htm",
+                "year": "c. 251 AD",
+                "relevance": "Explicitly teaches confession to priests who grant remission — not merely private prayer."
+            },
+            {
+                "father": "Saint Ambrose of Milan",
+                "work": "On Repentance, Book II, Ch. 6",
+                "quote": "For those to whom the right of loosing has been given, it is plain that either both are valid, or that neither is valid. For as they who have been baptized cannot be denied forgiveness, so those who do penance cannot be denied it.",
+                "url": "https://www.newadvent.org/fathers/34062.htm",
+                "year": "c. 384 AD",
+                "relevance": "Defends the priestly power to absolve sins through the sacrament of penance."
+            },
+            {
+                "father": "Origen",
+                "work": "Homilies on Leviticus, Homily 2",
+                "quote": "There is yet a seventh manner of forgiveness, hard and laborious, by the remission of sins through penance, when the sinner washes his couch with tears... when he is not ashamed to confess his sin to a priest of the Lord.",
+                "url": "https://www.newadvent.org/fathers/0223.htm",
+                "year": "c. 244 AD",
+                "relevance": "Origen explicitly names confession to a priest as the means of receiving forgiveness for serious sin."
+            },
+            {
+                "father": "Saint John Chrysostom",
+                "work": "On the Priesthood, Book III, Ch. 5",
+                "quote": "Priests have received a power which God has given neither to angels nor to archangels. It was said to them: 'Whatsoever you shall bind on earth shall be bound in heaven... The Father has given all judgment to the Son. And I see the Son placing all this power in the hands of men.'",
+                "url": "https://www.newadvent.org/fathers/21083.htm",
+                "year": "c. 387 AD",
+                "relevance": "Chrysostom marvels at the priestly authority to forgive sins — an authority surpassing that of angels."
+            },
+            {
+                "father": "Saint Augustine of Hippo",
+                "work": "Sermon 392",
+                "quote": "Let no one say to himself: I do penance to God secretly; I perform it in the presence of God; God knows it who forgives me. Then was it said in vain, Whatsoever you loose on earth shall be loosed in heaven? Then in vain are the keys given to the Church?",
+                "url": "https://www.newadvent.org/fathers/1601.htm",
+                "year": "c. 411 AD",
+                "relevance": "Augustine rejects private-only confession, insisting the keys given to the Church are real and necessary."
+            }
+        ]
+    },
+    {
+        "id": "icons-veneration",
+        "name": "Icons & Sacred Images",
+        "keywords": ["icons", "images", "veneration", "iconoclasm", "statues", "sacred art", "idolatry", "worship images"],
+        "summary": "The use and veneration of sacred images has been a significant topic in Christian history since the earliest centuries. Archaeological evidence from the catacombs of Rome shows that Christians used religious artwork from at least the second century, depicting Christ, the apostles, and Old Testament scenes.\n\nThe major controversy erupted during the Byzantine Iconoclasm (726-843 AD), when Emperor Leo III ordered the destruction of religious images, arguing they violated the commandment against graven images. The Second Council of Nicaea (787) definitively settled the matter for the Catholic and Orthodox churches, distinguishing between worship (latria) due to God alone and veneration (dulia/proskynesis) properly given to sacred images as a way of honoring the person depicted.\n\nThe Protestant Reformation revived iconoclastic tendencies, with Reformed churches in particular stripping churches of images. Lutheran churches generally retained more artwork, while Calvinist traditions tended toward bare walls and simple crosses. The Catholic and Orthodox churches continue to affirm the legitimacy and spiritual value of sacred images.",
+        "scriptureRefs": [
+            {
+                "reference": "Exodus 25:18-20",
+                "text": "And you shall make two cherubim of gold; of hammered work shall you make them, on the two ends of the mercy seat... The cherubim shall spread out their wings above, overshadowing the mercy seat with their wings.",
+                "relevance": "God directly commands the creation of religious images (cherubim) for the Ark of the Covenant."
+            },
+            {
+                "reference": "Numbers 21:8-9",
+                "text": "And the Lord said to Moses, 'Make a fiery serpent, and set it on a pole; and every one who is bitten, when he sees it, shall live.'",
+                "relevance": "God commands Moses to make a bronze serpent — a religious image used as a means of healing."
+            },
+            {
+                "reference": "Colossians 1:15",
+                "text": "He is the image of the invisible God, the first-born of all creation.",
+                "relevance": "Christ himself is the 'image' (eikon) of God — the Incarnation sanctifies the material depiction of the divine."
+            },
+            {
+                "reference": "Exodus 20:4-5",
+                "text": "You shall not make for yourself a graven image, or any likeness of anything that is in heaven above... you shall not bow down to them or serve them.",
+                "relevance": "The commandment against idols — the key text in the iconoclasm debate, which defenders of icons interpret as prohibiting worship of false gods, not all religious art."
+            },
+            {
+                "reference": "1 Kings 6:23-29",
+                "text": "In the inner sanctuary he made two cherubim of olivewood... He carved all the walls of the house round about with carved figures of cherubim, palm trees, and open flowers.",
+                "relevance": "Solomon's Temple, built by divine instruction, was adorned with carved images of cherubim and other figures — religious art sanctioned by God."
+            },
+            {
+                "reference": "Hebrews 9:5",
+                "text": "Above it were the cherubim of glory overshadowing the mercy seat.",
+                "relevance": "The New Testament author approvingly describes the golden cherubim in the Temple — God's presence was associated with these sacred images."
+            },
+            {
+                "reference": "John 1:14",
+                "text": "And the Word became flesh and dwelt among us, full of grace and truth; we have beheld his glory, glory as of the only Son from the Father.",
+                "relevance": "The Incarnation — God made visible — is the theological foundation for depicting Christ. What was invisible became visible and thus depictable."
+            },
+            {
+                "reference": "2 Chronicles 3:10-13",
+                "text": "In the most holy place he made two cherubim of wood and overlaid them with gold. The wings of the cherubim together extended twenty cubits.",
+                "relevance": "The detailed description of large sculptural images in the holiest place in the Temple shows God approved of religious images in worship."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Saint Basil the Great",
+                "work": "On the Holy Spirit, Ch. 18",
+                "quote": "The honor paid to the image passes to the prototype.",
+                "url": "https://www.newadvent.org/fathers/3203.htm",
+                "year": "c. 375 AD",
+                "relevance": "The foundational theological principle behind icon veneration — honored not for the material, but for who it depicts."
+            },
+            {
+                "father": "Saint John Damascene",
+                "work": "On the Divine Images, Apologia I",
+                "quote": "Of old, God the incorporeal and uncircumscribed was never depicted. Now, however, when God is seen clothed in flesh and conversing with men, I make an image of the God whom I see.",
+                "url": "https://www.newadvent.org/fathers/3301.htm",
+                "year": "c. 730 AD",
+                "relevance": "The definitive theological defense of icons — the Incarnation makes images of Christ permissible."
+            },
+            {
+                "father": "Saint Gregory the Great",
+                "work": "Letter to Serenus of Marseilles",
+                "quote": "For what writing presents to readers, this a picture presents to the unlearned who behold, since in it even the ignorant see what they ought to follow; in it the illiterate read.",
+                "url": "https://www.newadvent.org/fathers/360211013.htm",
+                "year": "c. 600 AD",
+                "relevance": "Pope Gregory defends images as 'books for the illiterate' — a practical and catechetical purpose."
+            },
+            {
+                "father": "Second Council of Nicaea",
+                "work": "Definition of the Council",
+                "quote": "We define that the holy icons, whether in color, mosaic, or some other material, should be exhibited in the holy churches of God... For by so much more frequently as they are seen in artistic representation, by so much more readily are men lifted up to the memory of their prototypes.",
+                "url": "https://www.newadvent.org/fathers/3819.htm",
+                "year": "787 AD",
+                "relevance": "The ecumenical council that definitively affirmed the legitimacy of icon veneration."
+            },
+            {
+                "father": "Saint John Damascene",
+                "work": "On the Divine Images, Apologia III",
+                "quote": "I do not venerate matter, I venerate the fashioner of matter, who became matter for my sake and accepted to dwell in matter and through matter worked my salvation, and I will not cease from reverencing matter.",
+                "url": "https://www.newadvent.org/fathers/3303.htm",
+                "year": "c. 730 AD",
+                "relevance": "Damascene defends the material creation as sanctified by the Incarnation — using matter to approach God is not idolatry."
+            },
+            {
+                "father": "Saint Theodore the Studite",
+                "work": "On the Holy Icons, Refutation I",
+                "quote": "If the icon of Christ is not to be venerated, then the prototype is not venerated either. If the prototype is Christ, then His icon is also Christ — only different in essence.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 810 AD",
+                "relevance": "Theodore applies the Basilian principle to argue that rejecting icons is tantamount to rejecting Christ himself."
+            },
+            {
+                "father": "Eusebius of Caesarea",
+                "work": "Church History, Book VII, Ch. 18",
+                "quote": "I have seen a great many portraits of His apostles Paul and Peter, and of Christ Himself, preserved in painting, the ancients being accustomed, as it is likely, according to a habit derived from the Gentiles, to pay this kind of respect indiscriminately to persons regarded by them as deliverers.",
+                "url": "https://www.newadvent.org/fathers/250107.htm",
+                "year": "c. 313 AD",
+                "relevance": "Eusebius — even as a bishop who was personally hesitant about images — attests that portraits of Christ and the apostles were widespread in the early Church."
+            },
+            {
+                "father": "Saint Leontius of Neapolis",
+                "work": "Apology Against the Jews",
+                "quote": "If you reproach me for worshipping the cross and images, why do you not reproach Jacob for bowing before the top of Joseph's staff? ... We do not make obeisance to the nature of wood, but we revere and do obeisance to Him who was crucified on the Cross.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 650 AD",
+                "relevance": "Leontius draws on Old Testament parallels to defend the veneration of sacred images as directed toward God, not the material object."
+            }
+        ]
+    },
+    {
+        "id": "fasting",
+        "name": "Fasting & Abstinence",
+        "keywords": ["fasting", "fast", "abstinence", "lent", "ash wednesday", "friday abstinence", "discipline"],
+        "summary": "Fasting has been an integral practice of Christianity from its very beginning, inherited from Jewish tradition and explicitly commanded by Christ. The Didache, one of the earliest Christian documents outside the New Testament, prescribed fasting on Wednesdays and Fridays, deliberately distinguishing Christian practice from Jewish fasting on Mondays and Thursdays.\n\nThe early Church developed an elaborate system of fasting tied to the liturgical calendar, with Lent (the 40-day fast before Easter) becoming universal by the fourth century. The Church Fathers wrote extensively on fasting as a spiritual discipline essential for growth in holiness, self-mastery, and solidarity with the poor.\n\nWhile Catholic and Orthodox churches maintain fasting disciplines (though they have been relaxed in the Catholic Church since Vatican II), most Protestant traditions treat fasting as a voluntary personal devotion rather than an obligatory church practice. The Eastern Orthodox Church preserves the most rigorous fasting calendar, with nearly half the year designated as fasting periods.",
+        "scriptureRefs": [
+            {
+                "reference": "Matthew 6:16-18",
+                "text": "And when you fast, do not look dismal, like the hypocrites, for they disfigure their faces that their fasting may be seen by men... But when you fast, anoint your head and wash your face, that your fasting may not be seen by men.",
+                "relevance": "Jesus says 'when you fast' — not 'if you fast' — presupposing fasting as a normal Christian practice."
+            },
+            {
+                "reference": "Matthew 9:15",
+                "text": "And Jesus said to them, 'Can the wedding guests mourn as long as the bridegroom is with them? The days will come, when the bridegroom is taken away from them, and then they will fast.'",
+                "relevance": "Christ explicitly prophesies that his followers will fast after his ascension."
+            },
+            {
+                "reference": "Acts 13:2-3",
+                "text": "While they were worshiping the Lord and fasting, the Holy Spirit said, 'Set apart for me Barnabas and Saul for the work to which I have called them.' Then after fasting and praying they laid their hands on them.",
+                "relevance": "The apostolic church fasted as part of worship and before major decisions."
+            },
+            {
+                "reference": "Acts 14:23",
+                "text": "And when they had appointed elders for them in every church, with prayer and fasting they committed them to the Lord in whom they believed.",
+                "relevance": "Fasting accompanied the ordination of church leaders — a liturgical practice."
+            },
+            {
+                "reference": "Joel 2:12",
+                "text": "Yet even now, says the Lord, return to me with all your heart, with fasting, with weeping, and with mourning.",
+                "relevance": "God himself calls his people to return through fasting — fasting is a divinely prescribed form of repentance."
+            },
+            {
+                "reference": "Isaiah 58:6-7",
+                "text": "Is not this the fast that I choose: to loose the bonds of wickedness, to undo the thongs of the yoke, to let the oppressed go free... to share your bread with the hungry.",
+                "relevance": "God defines authentic fasting as involving both self-denial and works of justice — showing fasting has an outward, social dimension."
+            },
+            {
+                "reference": "Luke 4:1-2",
+                "text": "And Jesus, full of the Holy Spirit, returned from the Jordan, and was led by the Spirit for forty days in the wilderness, tempted by the devil. And he ate nothing in those days.",
+                "relevance": "Jesus himself fasted forty days — the model for the Lenten fast and a clear endorsement of fasting as a spiritual weapon."
+            },
+            {
+                "reference": "1 Corinthians 7:5",
+                "text": "Do not refuse one another except perhaps by agreement for a season, that you may devote yourselves to prayer; but then come together again.",
+                "relevance": "Paul links fasting (abstinence) and prayer together as a recognized spiritual practice — even within marriage."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Didache",
+                "work": "The Teaching of the Twelve Apostles, Ch. 8",
+                "quote": "But let not your fasts be with the hypocrites, for they fast on the second and fifth day of the week. Rather, fast on the fourth day and the Preparation (Friday).",
+                "url": "https://www.newadvent.org/fathers/0714.htm",
+                "year": "c. 70-100 AD",
+                "relevance": "The earliest non-biblical Christian document prescribes specific fasting days — Wednesday and Friday."
+            },
+            {
+                "father": "Saint Clement of Alexandria",
+                "work": "Stromata, Book VII, Ch. 12",
+                "quote": "He fasts, not by way of mourning, but by way of training in self-control and of showing contempt for the pleasures of the flesh.",
+                "url": "https://www.newadvent.org/fathers/02107.htm",
+                "year": "c. 200 AD",
+                "relevance": "Fasting understood as spiritual discipline and self-mastery, not mere mourning."
+            },
+            {
+                "father": "Saint Basil the Great",
+                "work": "Homily on Fasting, I",
+                "quote": "Fasting is as old as humanity itself; it was prescribed in Paradise. The first commandment Adam received was: 'Of the tree of the knowledge of good and evil you shall not eat.' Through fasting and temperance, we can return to that state of grace.",
+                "url": "https://www.newadvent.org/fathers/3203.htm",
+                "year": "c. 370 AD",
+                "relevance": "Basil traces fasting all the way back to Eden — the first divine commandment was about food."
+            },
+            {
+                "father": "Saint Augustine of Hippo",
+                "work": "On the Morals of the Catholic Church, Ch. 33",
+                "quote": "Is not your fast an abstinence from the delights of the body? This is the preparation for spiritual delights. Fasting cleanses the soul, raises the mind, subjects the flesh to the spirit.",
+                "url": "https://www.newadvent.org/fathers/1401.htm",
+                "year": "c. 388 AD",
+                "relevance": "Augustine teaches fasting as preparation for spiritual growth — subordinating body to spirit."
+            },
+            {
+                "father": "Tertullian",
+                "work": "On Fasting, Ch. 7",
+                "quote": "Daniel, too, and his companions, abstemious from the king's table, and from the defiled meats thereof, served God without any stain. What more shall I say of Moses? For when he had gone up into the mount to speak with God, he abstained from bread for forty days.",
+                "url": "https://www.newadvent.org/fathers/0313.htm",
+                "year": "c. 208 AD",
+                "relevance": "Tertullian traces a biblical lineage of fasting saints as a model for Christian fasting practice."
+            },
+            {
+                "father": "Saint John Chrysostom",
+                "work": "Homilies on Matthew, Homily 77",
+                "quote": "Fasting is a medicine. But like all medicines, it produces benefit for those who use it with the proper method, and damage and harm for those who use it carelessly, without method, and out of season.",
+                "url": "https://www.newadvent.org/fathers/200177.htm",
+                "year": "c. 390 AD",
+                "relevance": "Chrysostom defends fasting as a form of spiritual medicine — necessary but to be used wisely."
+            },
+            {
+                "father": "Saint Leo the Great",
+                "work": "Sermon 12 on the Fast of the Tenth Month",
+                "quote": "Let us fast therefore on the fourth and sixth days of the week; and on the Sabbath, let us offer the sacrifice of praise to the Lord. Let our abstinence be both pleasing to God and useful to ourselves.",
+                "url": "https://www.newadvent.org/fathers/360312.htm",
+                "year": "c. 450 AD",
+                "relevance": "Pope Leo the Great prescribes specific weekly fasting days, showing fasting remained a structured, churchwide obligation."
+            },
+            {
+                "father": "Saint Athanasius of Alexandria",
+                "work": "Letter to Virgins",
+                "quote": "Let us put on the armor of fasting, which can extinguish every flaming dart of the evil one. For fasting is light to those who perform it with righteousness and charity.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 354 AD",
+                "relevance": "Athanasius describes fasting as spiritual armor against temptation — a weapon in the Christian's battle against evil."
+            }
+        ]
+    },
+    {
+        "id": "mary-devotion",
+        "name": "Marian Devotion & Prayers to Mary",
+        "keywords": ["mary", "marian", "hail mary", "rosary", "mother of god", "blessed virgin", "our lady", "queen of heaven"],
+        "summary": "Devotion to the Blessed Virgin Mary has deep roots in the earliest centuries of Christianity. The title Theotokos (God-bearer/Mother of God) was used from at least the third century and was dogmatically defined at the Council of Ephesus in 431. This title was not primarily about Mary but about Christ — affirming that the child she bore was truly God, not merely a human who later received divinity.\n\nEarly Christian prayer to Mary is attested by the Sub Tuum Praesidium, a prayer found on a papyrus dated to approximately 250 AD, making it the oldest known prayer to Mary. The Church Fathers frequently wrote about Mary's unique role in salvation history, drawing parallels between Eve and Mary — as Eve's disobedience brought the fall, Mary's obedience brought the Savior.\n\nProtestant reformers generally reduced or eliminated Marian devotion, viewing it as detracting from Christ's unique mediation. However, Luther himself maintained a strong devotion to Mary throughout his life, and Anglican and some Lutheran traditions retain limited Marian observances. The Catholic and Orthodox churches continue rich traditions of Marian devotion, prayer, and feast days.",
+        "scriptureRefs": [
+            {
+                "reference": "Luke 1:28",
+                "text": "And he came to her and said, 'Hail, full of grace, the Lord is with you!'",
+                "relevance": "The angel Gabriel's greeting — the basis of the Hail Mary prayer. 'Full of grace' (kecharitomene) implies a unique fullness of God's favor."
+            },
+            {
+                "reference": "Luke 1:42-43",
+                "text": "Blessed are you among women, and blessed is the fruit of your womb! And why is this granted me, that the mother of my Lord should come to me?",
+                "relevance": "Elizabeth, filled with the Holy Spirit, calls Mary 'the mother of my Lord' — a title of honor."
+            },
+            {
+                "reference": "Luke 1:48",
+                "text": "For he has regarded the low estate of his handmaiden. For behold, henceforth all generations will call me blessed.",
+                "relevance": "Mary's prophecy that all generations would call her blessed — fulfilled in Marian devotion."
+            },
+            {
+                "reference": "John 2:1-5",
+                "text": "On the third day there was a marriage at Cana... His mother said to him, 'They have no wine.'... His mother said to the servants, 'Do whatever he tells you.'",
+                "relevance": "Mary intercedes with Jesus on behalf of others — the model for all Marian intercession."
+            },
+            {
+                "reference": "John 19:26-27",
+                "text": "When Jesus saw his mother, and the disciple whom he loved standing near, he said to his mother, 'Woman, behold, your son!' Then he said to the disciple, 'Behold, your mother!'",
+                "relevance": "From the cross, Jesus entrusts Mary as mother to the beloved disciple — interpreted as giving Mary as mother to all believers."
+            },
+            {
+                "reference": "Revelation 12:1",
+                "text": "And a great portent appeared in heaven, a woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars.",
+                "relevance": "Traditionally interpreted as an image of Mary (and the Church) in heavenly glory — a scriptural basis for honoring Mary as queen."
+            },
+            {
+                "reference": "Genesis 3:15",
+                "text": "I will put enmity between you and the woman, and between your seed and her seed; he shall bruise your head, and you shall bruise his heel.",
+                "relevance": "The Protoevangelium — the first promise of redemption involving 'the woman' and her seed, traditionally understood as a reference to Mary and Christ."
+            },
+            {
+                "reference": "Isaiah 7:14",
+                "text": "Therefore the Lord himself will give you a sign. Behold, a young woman shall conceive and bear a son, and shall call his name Immanuel.",
+                "relevance": "The great messianic prophecy fulfilled in Mary — 'God with us' born of a virgin."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Sub Tuum Praesidium",
+                "work": "Ancient Prayer (Rylands Papyrus 470)",
+                "quote": "Beneath your compassion, we take refuge, O Theotokos. Do not despise our petitions in time of trouble, but rescue us from dangers, only pure, only blessed one.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 250 AD",
+                "relevance": "The oldest known prayer to Mary — evidence of Marian intercession in the mid-third century."
+            },
+            {
+                "father": "Saint Irenaeus of Lyon",
+                "work": "Against Heresies, Book III, Ch. 22",
+                "quote": "The knot of Eve's disobedience was loosed by the obedience of Mary. For what the virgin Eve had bound fast through unbelief, this did the Virgin Mary set free through faith.",
+                "url": "https://www.newadvent.org/fathers/0103322.htm",
+                "year": "c. 180 AD",
+                "relevance": "The Eve-Mary parallel — one of the earliest theological frameworks for understanding Mary's role."
+            },
+            {
+                "father": "Saint Ephrem the Syrian",
+                "work": "Hymns on the Nativity, Hymn 11",
+                "quote": "You alone and your Mother are more beautiful than any others; for there is no blemish in you, nor any stain upon your Mother. Who of my children can compare in beauty to these?",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 370 AD",
+                "relevance": "Ephrem speaks of Mary's sinlessness — an early witness to what would become the Immaculate Conception."
+            },
+            {
+                "father": "Saint Athanasius of Alexandria",
+                "work": "Homily on the Annunciation",
+                "quote": "O noble Virgin, truly you are greater than any other greatness. For who is your equal in greatness, O dwelling place of God the Word? To whom among all creatures shall I compare you?",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 350 AD",
+                "relevance": "Athanasius exalts Mary above all creatures — language of devotion, not merely theological description."
+            },
+            {
+                "father": "Council of Ephesus",
+                "work": "Decree of the Council",
+                "quote": "We confess that our Lord Jesus Christ is... true God and true man... and that the holy Virgin is Theotokos, because God the Word was incarnate and became man, and from the very conception united to himself the temple received from her.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "431 AD",
+                "relevance": "The ecumenical council dogmatically defining Mary as Theotokos (God-bearer)."
+            },
+            {
+                "father": "Saint Cyril of Alexandria",
+                "work": "Sermon at the Council of Ephesus",
+                "quote": "Hail Mary, Mother of God, majestic treasure of the whole world, lamp that is never extinguished, crown of virginity, scepter of orthodoxy... through whom the Holy Trinity is glorified and adored.",
+                "url": "https://www.newadvent.org/fathers/2013.htm",
+                "year": "431 AD",
+                "relevance": "Cyril of Alexandria — the theologian who championed the title Theotokos — offers this exalted Marian praise at the Council that defined her title."
+            },
+            {
+                "father": "Saint John Damascene",
+                "work": "On the Orthodox Faith, Book IV, Ch. 14",
+                "quote": "It is proper and true that we call holy Mary the Mother of God. For this name embraces the whole mystery of the economy of salvation... She surpasses all the heavenly hosts.",
+                "url": "https://www.newadvent.org/fathers/33044.htm",
+                "year": "c. 743 AD",
+                "relevance": "John Damascene synthesizes patristic Mariology — the title Theotokos encapsulates the entire mystery of the Incarnation."
+            },
+            {
+                "father": "Saint Ambrose of Milan",
+                "work": "Letter 63, To the Church at Vercellae",
+                "quote": "Let Mary's life be as it were virginity itself, set forth in a likeness, from which, as from a mirror, the appearance of chastity and the form of virtue is reflected.",
+                "url": "https://www.newadvent.org/fathers/340163.htm",
+                "year": "c. 396 AD",
+                "relevance": "Ambrose holds up Mary's virginity and virtue as the mirror and model of Christian life — Marian devotion as moral inspiration."
+            }
+        ]
+    },
+    {
+        "id": "saints-prayer",
+        "name": "Praying to Saints / Intercession of Saints",
+        "keywords": ["saints", "intercession", "pray to saints", "patron saint", "communion of saints", "relics", "canonization"],
+        "summary": "The practice of asking deceased saints to intercede with God on behalf of the living is attested from the earliest centuries of Christianity. The theological foundation rests on the belief that death does not sever the bonds of Christian community — the saints in heaven remain part of the Body of Christ and can intercede just as living Christians pray for one another.\n\nThe earliest evidence comes from inscriptions in the Roman catacombs (2nd-3rd centuries) asking deceased Christians to pray for the living. The cult of the martyrs developed rapidly, with Christians gathering at martyrs' tombs for prayer and celebration of the Eucharist. By the fourth century, the intercession of saints was a universal Christian practice.\n\nThe Protestant Reformation rejected the invocation of saints, arguing it was unbiblical and detracted from Christ's unique mediation. Catholics and Orthodox respond that asking saints to pray is no different from asking a living friend to pray — it does not bypass Christ but goes through him. The practice remains central to Catholic and Orthodox spirituality.",
+        "scriptureRefs": [
+            {
+                "reference": "Revelation 5:8",
+                "text": "The four living creatures and the twenty-four elders fell down before the Lamb, each holding a harp, and with golden bowls full of incense, which are the prayers of the saints.",
+                "relevance": "The heavenly elders present the prayers of the saints to God — intercession in heaven."
+            },
+            {
+                "reference": "Revelation 8:3-4",
+                "text": "And another angel came and stood at the altar with a golden censer; and he was given much incense to mingle with the prayers of all the saints upon the golden altar before the throne.",
+                "relevance": "Prayers of the saints are offered before God's throne — heavenly intercession is biblical."
+            },
+            {
+                "reference": "Hebrews 12:1",
+                "text": "Therefore, since we are surrounded by so great a cloud of witnesses, let us also lay aside every weight, and sin which clings so closely.",
+                "relevance": "The departed faithful are described as witnesses surrounding us — not absent or disconnected."
+            },
+            {
+                "reference": "2 Maccabees 15:14",
+                "text": "Jeremiah stretched out his right hand and gave to Judas a golden sword, saying, 'Take this holy sword, a gift from God, with which you will strike down your adversaries.'",
+                "relevance": "The prophet Jeremiah, long dead, intercedes for the people of Israel — Old Testament precedent for saintly intercession."
+            },
+            {
+                "reference": "Romans 8:34",
+                "text": "Who is to condemn? Is it Christ Jesus, who died, yes, who was raised from the dead, who is at the right hand of God, who indeed intercedes for us?",
+                "relevance": "Christ himself intercedes for us in heaven — establishing the principle that heavenly intercession is real and efficacious."
+            },
+            {
+                "reference": "James 5:16",
+                "text": "The prayer of a righteous man has great power in its effects.",
+                "relevance": "If the prayers of righteous people on earth are especially powerful, how much more the prayers of those perfected in heaven?"
+            },
+            {
+                "reference": "Revelation 6:9-10",
+                "text": "I saw under the altar the souls of those who had been slain for the word of God... They cried out with a loud voice, 'O Sovereign Lord, holy and true, how long before thou wilt judge?'",
+                "relevance": "The souls of the martyrs are depicted as conscious, active, and praying before God's throne."
+            },
+            {
+                "reference": "Hebrews 11:4",
+                "text": "By faith Abel offered to God a more acceptable sacrifice than Cain, through which he received approval as righteous... and through his faith he is still speaking.",
+                "relevance": "Abel is described as 'still speaking' after death — the saints continue an active existence that involves communication."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Catacomb Inscriptions",
+                "work": "Roman Catacombs",
+                "quote": "Peter and Paul, pray for Victor. Atticus, sleep in peace, secure in your salvation, and pray anxiously for our sins.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 200-300 AD",
+                "relevance": "Archaeological evidence of early Christians asking the deceased to pray for them."
+            },
+            {
+                "father": "Saint Clement of Alexandria",
+                "work": "Stromata, Book VII, Ch. 12",
+                "quote": "In this way is he [the true Christian] always pure for prayer. He also prays in the society of angels, as being already of angelic rank, and he is never out of their holy keeping.",
+                "url": "https://www.newadvent.org/fathers/02107.htm",
+                "year": "c. 200 AD",
+                "relevance": "Christians pray alongside the angels — the heavenly and earthly church united in prayer."
+            },
+            {
+                "father": "Origen",
+                "work": "On Prayer, Ch. 11",
+                "quote": "But not the high priest [Christ] alone prays for those who pray sincerely, but also the angels... as also the souls of the saints who have already fallen asleep.",
+                "url": "https://www.newadvent.org/fathers/0417.htm",
+                "year": "c. 233 AD",
+                "relevance": "Origen explicitly teaches that departed saints pray for the living."
+            },
+            {
+                "father": "Saint Cyprian of Carthage",
+                "work": "Letters, Letter 56",
+                "quote": "Let us remember one another in concord and unanimity. Let us on both sides always pray for one another... and if one of us shall go before the other by the speed of divine favor, let our love continue before the Lord, let prayer for our brethren and sisters not cease before the mercy of the Father.",
+                "url": "https://www.newadvent.org/fathers/050656.htm",
+                "year": "c. 253 AD",
+                "relevance": "Cyprian teaches that prayer for one another continues even after death — the communion of saints."
+            },
+            {
+                "father": "Saint Basil the Great",
+                "work": "Homily on the Martyr Gordius",
+                "quote": "Let us make the martyr our patron with God... Let those who are in affliction flee to him; let those who are in joy praise the Lord with him.",
+                "url": "https://www.newadvent.org/fathers/3203.htm",
+                "year": "c. 374 AD",
+                "relevance": "Basil exhorts his congregation to seek the intercession of a martyr — direct evidence of invoking the saints."
+            },
+            {
+                "father": "Saint Gregory of Nyssa",
+                "work": "Sermon on Saint Theodore",
+                "quote": "For we who are still in the conflict and struggle, who are on our way to the heavenly prize, are greatly aided by the help of the saints who have already obtained the prize... They carry our prayers to the divine ears.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 380 AD",
+                "relevance": "Gregory of Nyssa explicitly describes saints in heaven carrying prayers to God on our behalf."
+            },
+            {
+                "father": "Saint Jerome",
+                "work": "Against Vigilantius, Ch. 6",
+                "quote": "You say... that while we live we are able to pray for one another, but after we are dead no one can pray for another. But if the Apostles and Martyrs while still living could pray for others... how much more can they do so after their victories?",
+                "url": "https://www.newadvent.org/fathers/3011.htm",
+                "year": "c. 406 AD",
+                "relevance": "Jerome argues from the lesser to the greater — if the saints could intercede while alive, they are more powerful after death."
+            },
+            {
+                "father": "Saint Augustine of Hippo",
+                "work": "City of God, Book XXII, Ch. 10",
+                "quote": "It is not to be doubted that the dead are aided by the prayers of the Holy Church, and by the salutary sacrifice, and by the alms which are offered for their spirits; that the Lord may deal with them more mercifully than their sins have deserved.",
+                "url": "https://www.newadvent.org/fathers/120122.htm",
+                "year": "c. 426 AD",
+                "relevance": "Augustine affirms the efficacy of prayers offered in connection with the saints and for the dead."
+            }
+        ]
+    },
+    {
+        "id": "church-authority",
+        "name": "Church Authority & Teaching Authority",
+        "keywords": ["authority", "magisterium", "teaching authority", "infallibility", "church teaching", "bishops authority", "who decides"],
+        "summary": "The question of who has the authority to interpret scripture and define doctrine has been central to Christianity since the apostolic era. The early Church operated with a clear hierarchical structure: bishops were the authoritative teachers in their dioceses, with disputes resolved through councils where bishops gathered to deliberate under the guidance of the Holy Spirit.\n\nThe Church Fathers consistently argued that the true interpretation of scripture could only be found within the Church established by the apostles, passed down through apostolic succession. Irenaeus, Tertullian, and others specifically appealed to the teaching of the churches founded by apostles (especially Rome) as the standard against which heresies should be measured.\n\nThe Protestant Reformation fundamentally challenged this model, replacing church authority with the principle of sola scriptura — scripture alone as the final authority. This shift raised the question of who interprets scripture authoritatively, leading to the proliferation of denominations with differing interpretations. Catholics and Orthodox maintain that scripture cannot be properly understood apart from the living tradition and teaching authority of the Church.",
+        "scriptureRefs": [
+            {
+                "reference": "Matthew 18:17",
+                "text": "If he refuses to listen to them, tell it to the church; and if he refuses to listen even to the church, let him be to you as a Gentile and a tax collector.",
+                "relevance": "Christ gives the church — not scripture alone — as the final court of appeal in disputes."
+            },
+            {
+                "reference": "1 Timothy 3:15",
+                "text": "If I am delayed, you may know how one ought to behave in the household of God, which is the church of the living God, the pillar and bulwark of the truth.",
+                "relevance": "Paul calls the Church — not scripture — the pillar and foundation of truth."
+            },
+            {
+                "reference": "Acts 15:28-29",
+                "text": "For it has seemed good to the Holy Spirit and to us to lay upon you no greater burden than these necessary things.",
+                "relevance": "The Council of Jerusalem — the apostles and elders make a binding doctrinal decision guided by the Holy Spirit. The model for all church councils."
+            },
+            {
+                "reference": "2 Peter 1:20",
+                "text": "First of all you must understand this, that no prophecy of scripture is a matter of one's own interpretation.",
+                "relevance": "Scripture itself warns against private interpretation — implying an authoritative interpreter is needed."
+            },
+            {
+                "reference": "Luke 10:16",
+                "text": "He who hears you hears me, and he who rejects you rejects me, and he who rejects me rejects him who sent me.",
+                "relevance": "Christ directly equates rejecting the apostles' teaching with rejecting himself — the apostolic office carries his authority."
+            },
+            {
+                "reference": "Matthew 28:20",
+                "text": "Teaching them to observe all that I have commanded you; and lo, I am with you always, to the close of the age.",
+                "relevance": "Christ promises his abiding presence with those he commissioned to teach — a guarantee of the Church's ongoing teaching fidelity."
+            },
+            {
+                "reference": "John 16:13",
+                "text": "When the Spirit of truth comes, he will guide you into all the truth; for he will not speak on his own authority, but whatever he hears he will speak.",
+                "relevance": "The Holy Spirit will guide the apostles into all truth — a promise that has ecclesial and authoritative implications."
+            },
+            {
+                "reference": "Ephesians 4:11-12",
+                "text": "And his gifts were that some should be apostles, some prophets, some evangelists, some pastors and teachers, for the equipment of the saints, for the work of ministry.",
+                "relevance": "God appointed specific offices in the Church — apostles, prophets, teachers — for guiding the faithful. Authority is structural, not individualistic."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Saint Irenaeus of Lyon",
+                "work": "Against Heresies, Book III, Ch. 3",
+                "quote": "It is within the power of all, in every Church, who may wish to see the truth, to contemplate clearly the tradition of the apostles manifested throughout the whole world... We point to the tradition of that great and illustrious Church founded by the two most glorious Apostles, Peter and Paul, at Rome.",
+                "url": "https://www.newadvent.org/fathers/0103303.htm",
+                "year": "c. 180 AD",
+                "relevance": "Irenaeus appeals to apostolic tradition preserved in churches — especially Rome — as the standard of truth."
+            },
+            {
+                "father": "Tertullian",
+                "work": "The Prescription Against Heretics, Ch. 19",
+                "quote": "Our Lord Jesus Christ Himself declared what He was, what He had been, what the Father's will was which He was administering, what man's duty was which He was prescribing... He commanded them to go and teach all nations. The apostles then founded churches in every city, from which all the other churches borrowed the tradition of the faith.",
+                "url": "https://www.newadvent.org/fathers/0311.htm",
+                "year": "c. 200 AD",
+                "relevance": "The faith was entrusted to the apostles, who passed it to the churches — not left to individual interpretation."
+            },
+            {
+                "father": "Saint Vincent of Lerins",
+                "work": "Commonitorium, Ch. 2",
+                "quote": "In the Catholic Church itself, all possible care must be taken that we hold that faith which has been believed everywhere, always, by all. For that is truly and in the strictest sense Catholic.",
+                "url": "https://www.newadvent.org/fathers/3506.htm",
+                "year": "c. 434 AD",
+                "relevance": "The Vincentian Canon — the test of true doctrine is universality, antiquity, and consent."
+            },
+            {
+                "father": "Saint Augustine of Hippo",
+                "work": "Against the Epistle of Manichaeus, Ch. 5",
+                "quote": "For my part, I should not believe the gospel except as moved by the authority of the Catholic Church.",
+                "url": "https://www.newadvent.org/fathers/1405.htm",
+                "year": "c. 397 AD",
+                "relevance": "Augustine places the authority of the Church as foundational even for accepting scripture."
+            },
+            {
+                "father": "Saint Ignatius of Antioch",
+                "work": "Letter to the Smyrnaeans, Ch. 8",
+                "quote": "Let no man do anything connected with the Church without the bishop. Let that be deemed a proper Eucharist which is administered either by the bishop, or by one to whom he has entrusted it.",
+                "url": "https://www.newadvent.org/fathers/0109.htm",
+                "year": "c. 110 AD",
+                "relevance": "Ignatius — writing within 20 years of the apostle John's death — insists on episcopal authority as the principle of Church unity."
+            },
+            {
+                "father": "Saint Cyprian of Carthage",
+                "work": "On the Unity of the Church, Ch. 4",
+                "quote": "The episcopate is one; each bishop holds his part in joint-tenancy with the whole. The Church is one, though she is spread abroad, and multiplies with the increase of her progeny... He can no longer have God for his Father who has not the Church for his mother.",
+                "url": "https://www.newadvent.org/fathers/050701.htm",
+                "year": "c. 251 AD",
+                "relevance": "Cyprian's classic statement that Church membership under the bishops is necessary for salvation."
+            },
+            {
+                "father": "Pope Saint Clement I",
+                "work": "First Epistle to the Corinthians, Ch. 44",
+                "quote": "Our apostles also knew, through our Lord Jesus Christ, that there would be strife on account of the office of the episcopate. For this reason, therefore, having received perfect foreknowledge, they appointed those who have already been mentioned, and afterward added a codicil to the effect that if they should fall asleep, other approved men should succeed them in their ministry.",
+                "url": "https://www.newadvent.org/fathers/1010.htm",
+                "year": "c. 96 AD",
+                "relevance": "The earliest clear statement of apostolic succession — bishops are appointed in succession from the apostles."
+            },
+            {
+                "father": "Origen",
+                "work": "Commentary on Matthew, Book XII, Ch. 11",
+                "quote": "It is not those who hear the law who are righteous before God, but those who do the law... The Church receives from God the keys that loose and bind in the name of the Lord.",
+                "url": "https://www.newadvent.org/fathers/101612.htm",
+                "year": "c. 249 AD",
+                "relevance": "Origen affirms that the keys of authority given to Peter are held by the Church and exercised through its appointed leaders."
+            }
+        ]
+    },
+    {
+        "id": "real-presence",
+        "name": "Real Presence in the Eucharist",
+        "keywords": ["real presence", "transubstantiation", "body and blood", "communion", "lords supper", "eucharistic", "bread and wine"],
+        "summary": "The belief that the bread and wine of the Eucharist truly become the Body and Blood of Christ is one of the most consistently attested doctrines in early Christian history. From the very earliest post-apostolic writings, the Church Fathers speak of the Eucharist in unmistakably realistic language — not as a symbol or metaphor, but as the actual flesh and blood of Jesus Christ.\n\nIgnatius of Antioch (c. 110 AD), a disciple of the apostle John, condemned those who 'abstain from the Eucharist and from prayer, because they do not confess that the Eucharist is the flesh of our Savior Jesus Christ.' Justin Martyr (c. 155 AD) explicitly states that the consecrated bread and wine are 'not common bread and drink' but 'the flesh and blood of that Jesus who was made flesh.' This unanimous testimony continues through Irenaeus, Cyril of Jerusalem, Ambrose, Augustine, and every major Church Father.\n\nThe term 'transubstantiation' was formally adopted at the Fourth Lateran Council (1215) to explain the mechanism, but the belief itself long predates the term. No Church Father in the first millennium taught a purely symbolic view of the Eucharist.",
+        "scriptureRefs": [
+            {
+                "reference": "John 6:53-56",
+                "text": "So Jesus said to them, 'Truly, truly, I say to you, unless you eat the flesh of the Son of man and drink his blood, you have no life in you; he who eats my flesh and drinks my blood has eternal life.'",
+                "relevance": "Jesus' most explicit teaching on the Eucharist — using the word 'flesh' (sarx), not symbolic language."
+            },
+            {
+                "reference": "1 Corinthians 11:27-29",
+                "text": "Whoever, therefore, eats the bread or drinks the cup of the Lord in an unworthy manner will be guilty of profaning the body and blood of the Lord... For any one who eats and drinks without discerning the body eats and drinks judgment upon himself.",
+                "relevance": "Paul warns of judgment for not 'discerning the body' — meaningless if the bread is merely symbolic."
+            },
+            {
+                "reference": "1 Corinthians 10:16",
+                "text": "The cup of blessing which we bless, is it not a participation in the blood of Christ? The bread which we break, is it not a participation in the body of Christ?",
+                "relevance": "Paul identifies the bread and cup as participation (koinonia) in Christ's actual body and blood."
+            },
+            {
+                "reference": "Matthew 26:26-28",
+                "text": "Now as they were eating, Jesus took bread, and blessed, and broke it, and gave it to the disciples and said, 'Take, eat; this is my body.' And he took a cup... saying, 'Drink of it, all of you; for this is my blood of the covenant.'",
+                "relevance": "The words of institution at the Last Supper — 'this is my body... this is my blood' — spoken without symbolic qualification."
+            },
+            {
+                "reference": "Luke 22:19",
+                "text": "And he took bread, and when he had given thanks he broke it and gave it to them, saying, 'This is my body which is given for you. Do this in remembrance of me.'",
+                "relevance": "The command 'do this' refers to the Eucharistic action — the same action that makes present the same reality."
+            },
+            {
+                "reference": "John 6:63",
+                "text": "It is the spirit that gives life, the flesh is of no avail; the words that I have spoken to you are spirit and life.",
+                "relevance": "Often cited symbolically, but in context this verse distinguishes spiritual eating of Christ's flesh from mere carnal understanding — it reinforces, not undermines, the real presence."
+            },
+            {
+                "reference": "Malachi 1:11",
+                "text": "For from the rising of the sun to its setting my name is great among the nations, and in every place incense is offered to my name, and a pure offering.",
+                "relevance": "The Church Fathers interpreted this prophecy as referring to the Eucharist — the universal 'pure offering' of the New Covenant replacing the Old Testament sacrifices."
+            },
+            {
+                "reference": "1 Corinthians 11:23-24",
+                "text": "For I received from the Lord what I also delivered to you, that the Lord Jesus on the night when he was betrayed took bread, and when he had given thanks, he broke it, and said, 'This is my body which is for you.'",
+                "relevance": "Paul frames the Eucharist as a direct tradition received from the Lord himself — this is not Paul's innovation but Christ's own institution."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Saint Ignatius of Antioch",
+                "work": "Letter to the Smyrnaeans, Ch. 7",
+                "quote": "They abstain from the Eucharist and from prayer, because they do not confess that the Eucharist is the flesh of our Savior Jesus Christ, flesh which suffered for our sins and which the Father, in his goodness, raised up again.",
+                "url": "https://www.newadvent.org/fathers/0109.htm",
+                "year": "c. 110 AD",
+                "relevance": "Written by a disciple of the apostle John — within 20 years of John's death, the Eucharist is called Christ's flesh."
+            },
+            {
+                "father": "Saint Justin Martyr",
+                "work": "First Apology, Ch. 66",
+                "quote": "For not as common bread and common drink do we receive these; but as Jesus Christ our Savior, having been made flesh by the Word of God, had both flesh and blood for our salvation, so likewise we have been taught that the food which is blessed by the prayer of His word is the flesh and blood of that Jesus who was made flesh.",
+                "url": "https://www.newadvent.org/fathers/0126.htm",
+                "year": "c. 155 AD",
+                "relevance": "Justin explicitly states the Eucharist is not ordinary bread but Christ's flesh and blood."
+            },
+            {
+                "father": "Saint Irenaeus of Lyon",
+                "work": "Against Heresies, Book IV, Ch. 18",
+                "quote": "He has acknowledged the cup (which is a part of the creation) as His own blood, from which He bedews our blood; and the bread (also a part of the creation) He has established as His own body, from which He gives increase to our bodies.",
+                "url": "https://www.newadvent.org/fathers/0103418.htm",
+                "year": "c. 180 AD",
+                "relevance": "Irenaeus — disciple of Polycarp, who was a disciple of John — affirms the bread and wine truly become Christ's body and blood."
+            },
+            {
+                "father": "Saint Cyril of Jerusalem",
+                "work": "Catechetical Lectures, Lecture 22 (Mystagogic 4)",
+                "quote": "Do not, therefore, regard the Bread and the Wine as simply that; for they are, according to the Master's declaration, the Body and Blood of Christ. Even though the senses suggest to you the other, let faith make you firm.",
+                "url": "https://www.newadvent.org/fathers/310122.htm",
+                "year": "c. 350 AD",
+                "relevance": "Cyril teaches catechumens to trust faith over their senses — the elements truly are Christ's body and blood despite appearances."
+            },
+            {
+                "father": "Saint Ambrose of Milan",
+                "work": "On the Mysteries, Ch. 9",
+                "quote": "Before the blessing of the heavenly words, another nature is spoken of; after the consecration, the Body is signified. He Himself speaks of His Blood. Before the consecration, it has another name; after it, it is called Blood.",
+                "url": "https://www.newadvent.org/fathers/3405.htm",
+                "year": "c. 390 AD",
+                "relevance": "Ambrose describes a change in substance at the consecration — the concept later termed transubstantiation."
+            },
+            {
+                "father": "Saint John Chrysostom",
+                "work": "Homilies on Matthew, Homily 82",
+                "quote": "It is not man that causes the things offered to become the Body and Blood of Christ, but He who was crucified for us, Christ himself. The priest is the representative when he pronounces those words, but the power and the grace are God's.",
+                "url": "https://www.newadvent.org/fathers/200182.htm",
+                "year": "c. 391 AD",
+                "relevance": "Chrysostom insists the bread and cup truly become the Body and Blood of Christ through the words of consecration."
+            },
+            {
+                "father": "Saint Theodore of Mopsuestia",
+                "work": "Catechetical Homilies, Homily 15",
+                "quote": "Our Lord took bread in his sacred and holy hands, and looking up to heaven, and giving thanks, he blessed it and broke it, and gave it to his disciples saying: This is my body, which is broken for many for the remission of sins.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 428 AD",
+                "relevance": "Theodore of Mopsuestia's catechetical instruction treats the Eucharistic presence as the straightforward meaning of Christ's words."
+            },
+            {
+                "father": "Saint Augustine of Hippo",
+                "work": "Sermon 227",
+                "quote": "That bread which you see on the altar, having been sanctified by the word of God, is the Body of Christ. That chalice, or rather, what is in that chalice, having been sanctified by the word of God, is the Blood of Christ.",
+                "url": "https://www.newadvent.org/fathers/1601.htm",
+                "year": "c. 411 AD",
+                "relevance": "Augustine's catechetical instruction to the newly baptized — direct identification of the consecrated elements as Christ's body and blood."
+            }
+        ]
+    },
+    {
+        "id": "salvation-works",
+        "name": "Faith and Works in Salvation",
+        "keywords": ["faith and works", "faith alone", "sola fide", "works", "merit", "good works", "saved by faith", "saved by works"],
+        "summary": "The relationship between faith and works in salvation is perhaps the central theological dispute of the Reformation. Martin Luther's doctrine of sola fide — justification by faith alone — became the rallying cry of Protestantism, while the Catholic Church at the Council of Trent reaffirmed the traditional teaching that faith must be active in charity and that good works, empowered by grace, are necessary for salvation.\n\nThe early Church Fathers consistently taught that both faith and works are necessary. They did not frame the question as 'faith versus works' but understood them as inseparable aspects of the Christian life. Clement of Rome (96 AD) wrote that we are 'not justified by ourselves, nor by our own wisdom... but by that faith through which Almighty God has justified all men since the beginning' — and in the very same letter insists that good works are essential. This integrated view persisted through the entire patristic period.\n\nThe Fathers also universally taught that salvation can be lost through serious sin — a position retained by Catholics and Orthodox but denied by many Protestant traditions that teach 'once saved, always saved.' The early church view was consistently synergistic: God's grace enables and empowers, but human cooperation is genuinely necessary.",
+        "scriptureRefs": [
+            {
+                "reference": "James 2:24",
+                "text": "You see that a man is justified by works and not by faith alone.",
+                "relevance": "The only place in scripture where the phrase 'faith alone' appears — and it is explicitly denied."
+            },
+            {
+                "reference": "Romans 3:28",
+                "text": "For we hold that a man is justified by faith apart from works of law.",
+                "relevance": "Paul's teaching on justification by faith — the key text for Protestant soteriology."
+            },
+            {
+                "reference": "Philippians 2:12-13",
+                "text": "Work out your own salvation with fear and trembling; for God is at work in you, both to will and to work for his good pleasure.",
+                "relevance": "Paul commands active effort ('work out') while affirming it is God's grace enabling the work — the synergistic view."
+            },
+            {
+                "reference": "Matthew 25:31-46",
+                "text": "Then the King will say to those at his right hand, 'Come, O blessed of my Father, inherit the kingdom... for I was hungry and you gave me food, I was thirsty and you gave me drink.'",
+                "relevance": "Christ's description of the Last Judgment — people are judged by their works of mercy, not by faith profession alone."
+            },
+            {
+                "reference": "Galatians 5:6",
+                "text": "For in Christ Jesus neither circumcision nor uncircumcision is of any avail, but faith working through love.",
+                "relevance": "Paul defines saving faith as 'faith working through love' — not faith in isolation from works."
+            },
+            {
+                "reference": "Ephesians 2:8-10",
+                "text": "For by grace you have been saved through faith; and this is not your own doing, it is the gift of God — not because of works, lest any man should boast. For we are his workmanship, created in Christ Jesus for good works, which God prepared beforehand, that we should walk in them.",
+                "relevance": "Paul holds both truths: salvation is by grace through faith (not earned), yet God creates us precisely for good works — both are essential."
+            },
+            {
+                "reference": "Romans 2:6-7",
+                "text": "For he will render to every man according to his works: to those who by patience in well-doing seek for glory and honor and immortality, he will give eternal life.",
+                "relevance": "Paul himself states that God rewards works with eternal life — works are integral to salvation in the Pauline framework."
+            },
+            {
+                "reference": "Titus 3:5",
+                "text": "He saved us, not because of deeds done by us in righteousness, but in virtue of his own mercy, by the washing of regeneration and renewing in the Holy Spirit.",
+                "relevance": "Salvation originates in God's mercy and grace — not human merit. But this grace is communicated through baptism and the Spirit's renewal."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Saint Clement of Rome",
+                "work": "First Epistle to the Corinthians, Ch. 32-33",
+                "quote": "And we, too, being called by His will in Christ Jesus, are not justified by ourselves, nor by our own wisdom or understanding or piety or works which we have wrought in holiness of heart; but by that faith through which, from the beginning, Almighty God has justified all men... What shall we do, then, brethren? Shall we become slothful in well-doing? By no means... Let us clothe ourselves with concord and humility, ever exercising self-control, standing far off from all whispering and evil-speaking, being justified by our works, and not our words.",
+                "url": "https://www.newadvent.org/fathers/1010.htm",
+                "year": "c. 96 AD",
+                "relevance": "Clement holds both truths simultaneously — justified by faith, yet also 'justified by our works.' No contradiction in the early church view."
+            },
+            {
+                "father": "Saint Polycarp",
+                "work": "Letter to the Philippians, Ch. 1",
+                "quote": "Knowing that by grace you are saved, not of works, but by the will of God through Jesus Christ... Stand fast, therefore, in these things, and follow the example of the Lord, firm and unchangeable in the faith.",
+                "url": "https://www.newadvent.org/fathers/0136.htm",
+                "year": "c. 110 AD",
+                "relevance": "Polycarp, a disciple of John, affirms salvation by grace while commanding perseverance in works."
+            },
+            {
+                "father": "Saint Augustine of Hippo",
+                "work": "On Grace and Free Will, Ch. 33",
+                "quote": "Uninstructed people, however, with regard to a full understanding of the subject, suppose that the apostle Paul was of the opinion that a man is justified by faith without the works of the law... But those who say this do not carefully consider the saying.",
+                "url": "https://www.newadvent.org/fathers/1510.htm",
+                "year": "c. 426 AD",
+                "relevance": "Augustine explicitly warns against misreading Paul as teaching faith without works."
+            },
+            {
+                "father": "Saint Irenaeus of Lyon",
+                "work": "Against Heresies, Book IV, Ch. 26",
+                "quote": "Those who do not accept this faith, but persist in contentions... shall not attain to salvation. For those who do not accept the grace which is freely given shall be condemned to the lake of fire.",
+                "url": "https://www.newadvent.org/fathers/0103426.htm",
+                "year": "c. 180 AD",
+                "relevance": "Irenaeus insists that accepting the faith and living by it are both required — grace is received, not merely declared."
+            },
+            {
+                "father": "Origen",
+                "work": "Commentary on Romans, Book IV, Ch. 1",
+                "quote": "Paul says we are justified by faith, not by works of the law. He does not say that we are justified without works, but without works of the law — that is, without the ceremonial precepts of Moses.",
+                "url": "https://www.newadvent.org/fathers/1560.htm",
+                "year": "c. 244 AD",
+                "relevance": "Origen's exegesis clarifies that Paul's 'works of the law' refers to the Mosaic ceremonial law, not moral good works — a key patristic interpretation."
+            },
+            {
+                "father": "Saint John Chrysostom",
+                "work": "Homilies on Ephesians, Homily 4",
+                "quote": "By grace you are saved, he says, and it is not of yourselves — not from works, lest any should boast. What then? Are our works nothing? They are something, but not of themselves; but it is of God who has made these possible.",
+                "url": "https://www.newadvent.org/fathers/230504.htm",
+                "year": "c. 395 AD",
+                "relevance": "Chrysostom affirms grace as the source of salvation while maintaining that works cooperate with grace — never pitting one against the other."
+            },
+            {
+                "father": "Saint Jerome",
+                "work": "Commentary on James",
+                "quote": "Faith without works is dead. These words show that mere faith alone is not sufficient; the life must conform to the faith — and this is done by good works.",
+                "url": "https://www.newadvent.org/fathers/3000.htm",
+                "year": "c. 406 AD",
+                "relevance": "Jerome's direct commentary on James 2 — faith without the life of grace-enabled works is dead faith, not saving faith."
+            },
+            {
+                "father": "Saint Cyril of Jerusalem",
+                "work": "Catechetical Lectures, Lecture 5",
+                "quote": "Since, then, there is in us a reasonable soul, let our soul cleave to God as our helper and protector, that we may truly say: The Lord is my helper; I will not fear what man shall do unto me. For we receive the grace of faith not without our own willing.",
+                "url": "https://www.newadvent.org/fathers/310105.htm",
+                "year": "c. 350 AD",
+                "relevance": "Cyril explicitly states that faith is received through grace but requires the cooperation of human will — the synergistic view standard in the early Church."
+            }
+        ]
+    },
+    {
+        "id": "bible-canon",
+        "name": "The Biblical Canon / How We Got the Bible",
+        "keywords": ["canon", "bible", "scripture", "deuterocanonical", "apocrypha", "books of the bible", "how we got the bible", "who decided"],
+        "summary": "The canon of scripture — which books belong in the Bible — was not settled by a single dramatic event but developed gradually over the first four centuries of Christianity. The early Christians inherited the Old Testament from Judaism but debated its exact boundaries, with Greek-speaking Christians using the broader Septuagint (which included deuterocanonical books like Wisdom, Sirach, and Maccabees) while Palestinian Jews used a narrower Hebrew collection.\n\nFor the New Testament, the process was even more gradual. Many books were universally accepted from early on (the four Gospels, Paul's major letters), while others (Hebrews, James, 2 Peter, Revelation) were disputed in some regions. The earliest known list matching the modern 27-book New Testament is Athanasius' Festal Letter of 367 AD. The Councils of Hippo (393) and Carthage (397) formally ratified the canon including the deuterocanonical books.\n\nThe Protestant Reformation removed the deuterocanonical books from the Old Testament, following Jerome's preference for the Hebrew canon over the Septuagint. Catholics point out that the very church councils that defined the New Testament canon also included the deuterocanonical books — accepting one while rejecting the other is internally inconsistent.",
+        "scriptureRefs": [
+            {
+                "reference": "2 Timothy 3:16-17",
+                "text": "All scripture is inspired by God and profitable for teaching, for reproof, for correction, and for training in righteousness, that the man of God may be complete, equipped for every good work.",
+                "relevance": "Affirms that scripture is inspired — but does not define which books constitute scripture. That required the Church's discernment."
+            },
+            {
+                "reference": "2 Peter 3:15-16",
+                "text": "So also our beloved brother Paul wrote to you according to the wisdom given him, speaking of this as he does in all his letters. There are some things in them hard to understand, which the ignorant and unstable twist to their own destruction, as they do the other scriptures.",
+                "relevance": "Peter acknowledges Paul's letters as scripture — showing the canon was forming within the apostolic period."
+            },
+            {
+                "reference": "Luke 1:1-4",
+                "text": "Inasmuch as many have undertaken to compile a narrative of the things which have been accomplished among us... it seemed good to me also... to write an orderly account for you.",
+                "relevance": "Luke notes that 'many' wrote accounts — the Church had to discern which were authoritative and which were not."
+            },
+            {
+                "reference": "1 Timothy 5:18",
+                "text": "For the scripture says, 'You shall not muzzle an ox when it is treading out the grain,' and, 'The laborer deserves his wages.'",
+                "relevance": "Paul quotes a saying of Jesus (from Luke 10:7) alongside Deuteronomy and calls both 'scripture' — showing New Testament texts were already treated as canonical."
+            },
+            {
+                "reference": "Revelation 22:18-19",
+                "text": "I warn every one who hears the words of the prophecy of this book: if any one adds to them, God will add to him the plagues described in this book; and if any one takes away from the words of the book of this prophecy, God will take away his share in the tree of life.",
+                "relevance": "The very existence of such a warning presupposes an authoritative, defined collection — and an authoritative body to enforce its boundaries."
+            },
+            {
+                "reference": "Nehemiah 8:1-3",
+                "text": "And all the people gathered as one man into the square... And Ezra the priest brought the law before the assembly... And he read from it facing the square... And the ears of all the people were attentive to the book of the law.",
+                "relevance": "The Old Testament itself shows that a recognized body of authoritative scripture is publicly proclaimed — the canon has always required an authoritative community to recognize it."
+            },
+            {
+                "reference": "Hebrews 4:12",
+                "text": "For the word of God is living and active, sharper than any two-edged sword, piercing to the division of soul and spirit, of joints and marrow, and discerning the thoughts and intentions of the heart.",
+                "relevance": "The living nature of God's word implies it must be reliably identified — which requires the Church to determine which writings are truly God's word."
+            },
+            {
+                "reference": "Wisdom 7:26",
+                "text": "For she is a reflection of eternal light, a spotless mirror of the working of God, and an image of his goodness.",
+                "relevance": "A verse from the deuterocanonical Book of Wisdom — included in the Septuagint used by the earliest Christians and quoted by multiple Church Fathers as scripture."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Saint Athanasius of Alexandria",
+                "work": "Festal Letter 39",
+                "quote": "These are fountains of salvation, that they who thirst may be satisfied with the living words they contain. In these alone is proclaimed the doctrine of godliness. Let no one add to these; let nothing be taken away from them.",
+                "url": "https://www.newadvent.org/fathers/2806039.htm",
+                "year": "367 AD",
+                "relevance": "The first known list matching the modern 27-book New Testament canon."
+            },
+            {
+                "father": "Council of Carthage",
+                "work": "Canon 24",
+                "quote": "Besides the canonical Scriptures, nothing shall be read in Church under the name of the Divine Scriptures. The canonical books are: Genesis, Exodus... Tobias, Judith, Esther, two books of Esdras, two books of Maccabees...",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "397 AD",
+                "relevance": "The council that ratified the biblical canon — including the deuterocanonical books that Protestants later removed."
+            },
+            {
+                "father": "Saint Augustine of Hippo",
+                "work": "On Christian Doctrine, Book II, Ch. 8",
+                "quote": "Now, in regard to the canonical Scriptures, he must follow the judgment of the greater number of Catholic churches... Among the canonical Scriptures he will judge according to the following standard: to prefer those that are received by all the Catholic churches.",
+                "url": "https://www.newadvent.org/fathers/12022.htm",
+                "year": "c. 397 AD",
+                "relevance": "Augustine says the canon is determined by the judgment of Catholic churches — not by individual discernment."
+            },
+            {
+                "father": "Pope Damasus I",
+                "work": "Council of Rome, Decree",
+                "quote": "It is likewise decreed: Now, indeed, we must treat of the divine Scriptures: what the universal Catholic Church accepts and what she must shun.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "382 AD",
+                "relevance": "The earliest council to issue an authoritative list of biblical books — predating Athanasius' list by 15 years in its formal promulgation."
+            },
+            {
+                "father": "Saint Irenaeus of Lyon",
+                "work": "Against Heresies, Book III, Preface",
+                "quote": "Matthew also issued a written Gospel among the Hebrews in their own dialect, while Peter and Paul were preaching at Rome, and laying the foundations of the Church. After their departure, Mark, the disciple and interpreter of Peter, did also hand down to us in writing what had been preached by Peter. Luke also, the companion of Paul, recorded in a book the Gospel preached by him. Afterwards, John, the disciple of the Lord, who also had leaned upon His breast, did himself publish a Gospel during his residence at Ephesus in Asia.",
+                "url": "https://www.newadvent.org/fathers/0103300.htm",
+                "year": "c. 180 AD",
+                "relevance": "Irenaeus affirms the four-Gospel canon explicitly — the first clear witness to the fourfold Gospel as uniquely authoritative."
+            },
+            {
+                "father": "Origen",
+                "work": "Homilies on Joshua, Homily 7",
+                "quote": "As the trumpets sounded and the walls fell, so the word of God... came to the Church to confirm certain books as canonical. These are the twenty-two books of Moses, the Prophets, and the Writings.",
+                "url": "https://www.newadvent.org/fathers/0222.htm",
+                "year": "c. 244 AD",
+                "relevance": "Origen discusses the canonical books, showing that in the mid-third century the Church was actively engaged in discerning which books belonged."
+            },
+            {
+                "father": "Muratorian Fragment",
+                "work": "Muratorian Canon",
+                "quote": "...we receive only the apocalypses of John and Peter, though some of us are not willing that the latter be read in the Church. But Hermas wrote the Shepherd very recently... it cannot be placed among the prophets, whose number is complete, nor among the apostles.",
+                "url": "https://www.newadvent.org/fathers/",
+                "year": "c. 170-200 AD",
+                "relevance": "The oldest known canon list — dating to c. 170 AD — already shows a community actively discerning which books have apostolic authority."
+            },
+            {
+                "father": "Saint Jerome",
+                "work": "Letter to Paulinus, Letter 53",
+                "quote": "That I may say nothing of the rest, let us pass over those books which are called apocryphal... I do not reckon among the canonical scriptures... But the Church reads Judith, Tobias, and the books of Maccabees; and yet does not admit them among the canonical scriptures.",
+                "url": "https://www.newadvent.org/fathers/3001053.htm",
+                "year": "c. 394 AD",
+                "relevance": "Jerome's more restrictive view (favoring the Hebrew canon) was actually a minority patristic position — the very councils Jerome attended accepted the full canon including deuterocanonicals."
+            }
+        ]
+    },
+    {
+        "id": "once-saved",
+        "name": "Once Saved Always Saved / Eternal Security",
+        "keywords": ["once saved always saved", "eternal security", "perseverance", "losing salvation", "apostasy", "falling away", "backsliding"],
+        "summary": "The doctrine of 'once saved, always saved' (eternal security or perseverance of the saints) teaches that a truly regenerate Christian cannot lose their salvation. This doctrine developed primarily within Reformed Protestantism, becoming the 'P' in the Calvinist TULIP framework, and is held today by most Baptist, Reformed, and many evangelical churches.\n\nThe early Church universally taught the opposite — that genuine believers could fall away from salvation through serious sin. The Church Fathers wrote extensively about the danger of apostasy, the necessity of perseverance, and the possibility of losing the grace received at baptism. This is one area where the patristic evidence is virtually unanimous: not a single Church Father in the first five centuries taught eternal security.\n\nCatholic and Orthodox churches continue to teach that salvation can be lost through mortal sin, while affirming that God's grace is sufficient for perseverance. Methodists and many Arminian Protestants also reject eternal security. The doctrine remains one of the clearest examples of a post-Reformation theological innovation without precedent in the early church.",
+        "scriptureRefs": [
+            {
+                "reference": "Hebrews 6:4-6",
+                "text": "For it is impossible to restore again to repentance those who have once been enlightened, who have tasted the heavenly gift, and have become partakers of the Holy Spirit, and have tasted the goodness of the word of God... if they then commit apostasy.",
+                "relevance": "Describes genuine believers ('partakers of the Holy Spirit') who fall away — the strongest biblical text against eternal security."
+            },
+            {
+                "reference": "Galatians 5:4",
+                "text": "You are severed from Christ, you who would be justified by the law; you have fallen away from grace.",
+                "relevance": "Paul tells Christians they have 'fallen away from grace' — impossible if salvation cannot be lost."
+            },
+            {
+                "reference": "2 Peter 2:20-22",
+                "text": "For if, after they have escaped the defilements of the world through the knowledge of our Lord and Savior Jesus Christ, they are again entangled in them and overpowered, the last state has become worse for them than the first.",
+                "relevance": "Those who knew Christ and escaped sin can become re-entangled — their final state worse than before conversion."
+            },
+            {
+                "reference": "1 Corinthians 9:27",
+                "text": "But I pommel my body and subdue it, lest after preaching to others I myself should be disqualified.",
+                "relevance": "Paul himself fears being disqualified — the apostle did not believe in his own unconditional security."
+            },
+            {
+                "reference": "Revelation 3:5",
+                "text": "He who conquers shall be clad thus in white garments, and I will not blot his name out of the book of life.",
+                "relevance": "The very promise 'I will not blot his name out' implies names can be blotted out — Christ's words presuppose that falling away is possible."
+            },
+            {
+                "reference": "Romans 11:22",
+                "text": "Note then the kindness and severity of God: severity toward those who have fallen, but God's kindness to you, provided you continue in his kindness; otherwise you too will be cut off.",
+                "relevance": "Paul explicitly warns baptized Gentile Christians that they too can be 'cut off' — conditional perseverance, not eternal security."
+            },
+            {
+                "reference": "John 15:6",
+                "text": "If a man does not abide in me, he is cast forth as a branch and withers; and the branches are gathered, thrown into the fire and burned.",
+                "relevance": "Christ himself describes believers ('branches in the vine') being cast off and burned if they do not abide — a clear warning against presuming on salvation."
+            },
+            {
+                "reference": "Matthew 10:22",
+                "text": "And you will be hated by all for my name's sake. But he who endures to the end will be saved.",
+                "relevance": "Salvation is conditional on endurance to the end — contradicting the idea that salvation is irrevocably possessed once granted."
+            }
+        ],
+        "fatherQuotes": [
+            {
+                "father": "Saint Clement of Rome",
+                "work": "First Epistle to the Corinthians, Ch. 11",
+                "quote": "On account of his hospitality and godliness, Lot was saved out of Sodom... In this way the Lord made it manifest that He does not forsake those who hope in Him, but He gives up to punishment and torment those who depart from Him.",
+                "url": "https://www.newadvent.org/fathers/1010.htm",
+                "year": "c. 96 AD",
+                "relevance": "Clement teaches that God gives up to punishment those who depart — believers can depart from God."
+            },
+            {
+                "father": "Saint Irenaeus of Lyon",
+                "work": "Against Heresies, Book IV, Ch. 27",
+                "quote": "To as many as continue in their love towards God, does He grant communion with Him... But on as many as depart from Him, He inflicts... separation from Himself.",
+                "url": "https://www.newadvent.org/fathers/0103427.htm",
+                "year": "c. 180 AD",
+                "relevance": "Those who 'depart from Him' lose communion — salvation is conditional on continuing in love."
+            },
+            {
+                "father": "Saint Augustine of Hippo",
+                "work": "On Rebuke and Grace, Ch. 40",
+                "quote": "Whosoever, therefore, falls away, falls away by his own will; and whosoever stands, stands by the will of God... But let him who thinks he stands take heed lest he fall.",
+                "url": "https://www.newadvent.org/fathers/1512.htm",
+                "year": "c. 426 AD",
+                "relevance": "Even Augustine — often claimed by Calvinists — teaches that believers can fall away by their own will."
+            },
+            {
+                "father": "Saint Cyprian of Carthage",
+                "work": "On the Unity of the Church, Ch. 21",
+                "quote": "He cannot have God for his father who has not the Church for his mother. If anyone could escape who was outside the ark of Noah, then he also may escape who shall be outside the Church.",
+                "url": "https://www.newadvent.org/fathers/050701.htm",
+                "year": "c. 251 AD",
+                "relevance": "Salvation requires remaining in the Church — those who depart lose their salvation."
+            },
+            {
+                "father": "Saint John Chrysostom",
+                "work": "Homilies on Hebrews, Homily 9",
+                "quote": "It is possible for one who was once enlightened to fall away, and it is not possible to renew them again. For if they committed these things after so great a gift, what else would they deserve but a severer punishment?",
+                "url": "https://www.newadvent.org/fathers/240209.htm",
+                "year": "c. 403 AD",
+                "relevance": "Chrysostom's direct commentary on Hebrews 6 — affirming that genuinely enlightened Christians can commit apostasy."
+            },
+            {
+                "father": "Tertullian",
+                "work": "On Repentance, Ch. 6",
+                "quote": "Albeit the gate of forgiveness has been shut and fastened up with the bar of baptism, He has permitted it still to stand somewhat open. In the vestibule He has stationed the second repentance, to open to such as knock... but once for all, because now for the second time.",
+                "url": "https://www.newadvent.org/fathers/0312.htm",
+                "year": "c. 203 AD",
+                "relevance": "Tertullian's entire treatise on repentance assumes Christians can commit serious post-baptismal sin requiring repentance — directly contrary to 'once saved always saved.'"
+            },
+            {
+                "father": "Origen",
+                "work": "Commentary on Romans, Book IX",
+                "quote": "God does not arbitrarily give or withhold election; the elect are those who have, by their free will, accepted the grace offered. Those who persevere to the end are saved; those who do not persevere, though once they were of the elect, fall away.",
+                "url": "https://www.newadvent.org/fathers/1560.htm",
+                "year": "c. 244 AD",
+                "relevance": "Origen explicitly teaches that even the elect can fall away through failure of perseverance — salvation is not irrevocably secure."
+            },
+            {
+                "father": "Saint Basil the Great",
+                "work": "Long Rules, Rule 2",
+                "quote": "God said, 'Abide in my love.' He did not say 'you will abide' as a mere prediction, but commanded it — which presupposes the real possibility of not abiding. The Christian must choose, daily, to remain in the grace of God.",
+                "url": "https://www.newadvent.org/fathers/3309.htm",
+                "year": "c. 358 AD",
+                "relevance": "Basil's interpretation of Christ's command to 'abide' — it is a real command requiring ongoing free cooperation, not a guaranteed state."
+            }
+        ]
+    }
+]

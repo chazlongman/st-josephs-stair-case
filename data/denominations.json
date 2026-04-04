@@ -1,0 +1,82 @@
+[
+    {
+        "id": "catholic",
+        "name": "Catholic Church",
+        "founded": 33,
+        "parent": null,
+        "description": "The original Christian church tracing its founding to the apostles and Pentecost. Headed by the Bishop of Rome (Pope) with an unbroken line of apostolic succession.",
+        "color": "#FFD700"
+    },
+    {
+        "id": "eastern-orthodox",
+        "name": "Eastern Orthodox Church",
+        "founded": 1054,
+        "parent": "catholic",
+        "description": "Split from Rome in the Great Schism of 1054 over papal authority and the Filioque clause. Organized as autocephalous patriarchates.",
+        "color": "#4CAF50"
+    },
+    {
+        "id": "oriental-orthodox",
+        "name": "Oriental Orthodox Churches",
+        "founded": 451,
+        "parent": "catholic",
+        "description": "Separated after the Council of Chalcedon (451) over Christological definitions. Includes Coptic, Armenian, Ethiopian, Syriac, and Eritrean churches.",
+        "color": "#9C27B0"
+    },
+    {
+        "id": "lutheran",
+        "name": "Lutheran Church",
+        "founded": 1517,
+        "parent": "catholic",
+        "description": "Founded by Martin Luther's Reformation beginning in 1517. Emphasizes justification by faith alone and scripture alone.",
+        "color": "#2196F3"
+    },
+    {
+        "id": "anglican",
+        "name": "Anglican / Episcopal",
+        "founded": 1534,
+        "parent": "catholic",
+        "description": "Established when Henry VIII broke from papal authority in 1534. Retains much Catholic liturgical tradition while embracing Reformed theology.",
+        "color": "#E91E63"
+    },
+    {
+        "id": "reformed",
+        "name": "Reformed / Presbyterian",
+        "founded": 1536,
+        "parent": "catholic",
+        "description": "Rooted in John Calvin and Huldrych Zwingli's reforms. Emphasizes God's sovereignty, predestination, and covenant theology.",
+        "color": "#FF5722"
+    },
+    {
+        "id": "anabaptist",
+        "name": "Anabaptist / Mennonite",
+        "founded": 1525,
+        "parent": "catholic",
+        "description": "Radical Reformation movement rejecting infant baptism, emphasizing believer's baptism, pacifism, and separation of church and state.",
+        "color": "#795548"
+    },
+    {
+        "id": "baptist",
+        "name": "Baptist",
+        "founded": 1609,
+        "parent": "reformed",
+        "description": "Emerged from English Separatism. Emphasizes believer's baptism by immersion, congregational governance, and individual soul liberty.",
+        "color": "#FF9800"
+    },
+    {
+        "id": "methodist",
+        "name": "Methodist",
+        "founded": 1738,
+        "parent": "anglican",
+        "description": "Founded by John Wesley's revival movement within Anglicanism. Emphasizes personal holiness, sanctification, and social justice.",
+        "color": "#00BCD4"
+    },
+    {
+        "id": "pentecostal",
+        "name": "Pentecostal",
+        "founded": 1901,
+        "parent": "methodist",
+        "description": "Emerged from the Holiness movement. Emphasizes baptism in the Holy Spirit, speaking in tongues, and charismatic gifts.",
+        "color": "#F44336"
+    }
+]

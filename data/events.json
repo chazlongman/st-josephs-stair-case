@@ -1,0 +1,98 @@
+[
+    {
+        "id": "pentecost",
+        "name": "Pentecost — Birth of the Church",
+        "year": 33,
+        "description": "The Holy Spirit descended upon the apostles in Jerusalem. Peter's sermon led to 3,000 baptisms. Considered the founding event of the Christian Church.",
+        "denominationsInvolved": ["catholic"],
+        "doctrinesAffected": ["baptism", "church-governance"]
+    },
+    {
+        "id": "edict-of-milan",
+        "name": "Edict of Milan",
+        "year": 313,
+        "description": "Emperor Constantine legalized Christianity throughout the Roman Empire, ending centuries of persecution and beginning the era of state-church relations.",
+        "denominationsInvolved": ["catholic"],
+        "doctrinesAffected": []
+    },
+    {
+        "id": "council-of-rome-382",
+        "name": "Council of Rome — Biblical Canon",
+        "year": 382,
+        "description": "Pope Damasus I promulgated a list of canonical books of scripture, largely matching the modern Catholic biblical canon including deuterocanonical books.",
+        "denominationsInvolved": ["catholic"],
+        "doctrinesAffected": ["canon-of-scripture"]
+    },
+    {
+        "id": "chalcedonian-schism",
+        "name": "Chalcedonian Schism",
+        "year": 451,
+        "description": "Oriental Orthodox churches rejected the Council of Chalcedon's two-nature Christological formula, leading to a permanent split from the Catholic and later Eastern Orthodox communions.",
+        "denominationsInvolved": ["catholic", "oriental-orthodox"],
+        "doctrinesAffected": ["incarnation", "divinity-of-christ"]
+    },
+    {
+        "id": "great-schism",
+        "name": "Great Schism",
+        "year": 1054,
+        "description": "Mutual excommunications between Pope Leo IX and Patriarch Michael Cerularius finalized the split between the Western (Roman Catholic) and Eastern (Orthodox) churches. Disputes centered on papal authority, the Filioque clause, and liturgical differences.",
+        "denominationsInvolved": ["catholic", "eastern-orthodox"],
+        "doctrinesAffected": ["papal-authority", "trinity"]
+    },
+    {
+        "id": "protestant-reformation",
+        "name": "Protestant Reformation",
+        "year": 1517,
+        "description": "Martin Luther posted his 95 Theses, challenging indulgences and papal authority. Sparked a movement that produced Lutheranism, Reformed traditions, Anglicanism, and eventually hundreds of Protestant denominations.",
+        "denominationsInvolved": ["catholic", "lutheran"],
+        "doctrinesAffected": ["justification", "papal-authority", "eucharist", "sola-scriptura", "purgatory"]
+    },
+    {
+        "id": "act-of-supremacy",
+        "name": "Act of Supremacy",
+        "year": 1534,
+        "description": "King Henry VIII declared himself Supreme Head of the Church of England, breaking from papal authority. The Church of England retained much Catholic liturgy while gradually adopting Reformed theology.",
+        "denominationsInvolved": ["catholic", "anglican"],
+        "doctrinesAffected": ["papal-authority", "church-governance"]
+    },
+    {
+        "id": "radical-reformation",
+        "name": "Radical Reformation",
+        "year": 1525,
+        "description": "Anabaptists in Zurich performed the first recorded adult re-baptisms, rejecting infant baptism. This movement emphasized believer's baptism, pacifism, and separation of church and state.",
+        "denominationsInvolved": ["anabaptist"],
+        "doctrinesAffected": ["baptism", "church-governance"]
+    },
+    {
+        "id": "methodist-revival",
+        "name": "Methodist Revival",
+        "year": 1738,
+        "description": "John Wesley's Aldersgate experience and subsequent revival movement within Anglicanism. Eventually separated into the Methodist denomination, emphasizing personal holiness and sanctification.",
+        "denominationsInvolved": ["anglican", "methodist"],
+        "doctrinesAffected": ["justification", "salvation"]
+    },
+    {
+        "id": "azusa-street",
+        "name": "Azusa Street Revival",
+        "year": 1906,
+        "description": "William J. Seymour led a revival in Los Angeles that launched the modern Pentecostal movement, emphasizing Spirit baptism with speaking in tongues as the initial evidence.",
+        "denominationsInvolved": ["pentecostal"],
+        "doctrinesAffected": ["salvation"]
+    },
+    {
+        "id": "immaculate-conception-dogma",
+        "name": "Dogma of the Immaculate Conception",
+        "year": 1854,
+        "description": "Pope Pius IX defined the dogma that Mary was conceived without original sin from the first moment of her conception, by a singular grace from God.",
+        "denominationsInvolved": ["catholic"],
+        "doctrinesAffected": ["immaculate-conception"]
+    },
+    {
+        "id": "assumption-dogma",
+        "name": "Dogma of the Assumption",
+        "year": 1950,
+        "description": "Pope Pius XII defined the dogma that Mary, at the end of her earthly life, was assumed body and soul into heaven.",
+        "denominationsInvolved": ["catholic"],
+        "doctrinesAffected": ["assumption"]
+    }
+]
