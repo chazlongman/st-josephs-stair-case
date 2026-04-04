@@ -12,7 +12,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #e8e8e8;
-    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background: url('../assets/stairs.webp') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     line-height: 1.6;
