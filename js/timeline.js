@@ -8,6 +8,7 @@ const ChurchTimeline = {
     tooltip: null,
     zoom: null,
     _lastRenderKey: null,
+    _activeMarker: null,
 
     render(denominations, allItems, filters, doctrines, onSourceClick) {
         const container = document.getElementById('timeline-svg-container');
@@ -169,16 +170,22 @@ const ChurchTimeline = {
 
             const showTooltip = (event) => {
                 const rect = container.getBoundingClientRect();
-                const clientX = event.touches ? event.touches[0].clientX : event.clientX;
-                const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+                const markerRect = marker.node().getBoundingClientRect();
+                // Position relative to marker so it's stable on tap
+                const x = markerRect.left - rect.left + markerRect.width / 2;
+                const y = markerRect.top - rect.top;
+                const sourceLink = (item.sources && item.sources.length > 0)
+                    ? `<div class="tooltip-action">Tap again for source</div>`
+                    : '';
                 tooltip
                     .style('display', 'block')
-                    .style('left', (clientX - rect.left + 10) + 'px')
-                    .style('top', (clientY - rect.top - 10) + 'px')
+                    .style('left', Math.max(8, Math.min(x + 12, rect.width - 340)) + 'px')
+                    .style('top', Math.max(8, y - 10) + 'px')
                     .html(`
                         <h4>${item.name}</h4>
                         <div class="tooltip-year">${ChurchUtils.formatYear(item.year)}</div>
                         <p style="margin-top:6px;font-size:0.82rem;color:#bbb;">${item.description || ''}</p>
+                        ${sourceLink}
                     `);
             };
 
@@ -186,21 +193,39 @@ const ChurchTimeline = {
                 tooltip.style('display', 'none');
             };
 
+            // Desktop hover
             marker.on('mouseenter', showTooltip);
-            marker.on('mouseleave', hideTooltip);
-            // Touch support — don't preventDefault so native scroll still works
-            // when user accidentally lands on a marker while swiping
-            marker.on('touchend', (event) => {
-                showTooltip(event.changedTouches ? { clientX: event.changedTouches[0].clientX, clientY: event.changedTouches[0].clientY } : event);
-                setTimeout(hideTooltip, 2500);
+            marker.on('mouseleave', () => {
+                if (!isMobile) hideTooltip();
             });
+
             // Keyboard support
             marker.on('focus', showTooltip);
             marker.on('blur', hideTooltip);
 
-            marker.on('click', () => {
-                if (item.sources && item.sources.length > 0) {
-                    onSourceClick(item.sources[0]);
+            // Tap / click — show tooltip on first tap, open source on second tap
+            // (only the same marker — tapping a different marker resets)
+            marker.on('click', (event) => {
+                event.stopPropagation();
+                const isCurrentlyShown = ChurchTimeline._activeMarker === item.id;
+                if (isMobile) {
+                    if (isCurrentlyShown) {
+                        // Second tap: open source if available
+                        if (item.sources && item.sources.length > 0) {
+                            onSourceClick(item.sources[0]);
+                            hideTooltip();
+                            ChurchTimeline._activeMarker = null;
+                        }
+                    } else {
+                        // First tap: show tooltip
+                        showTooltip(event);
+                        ChurchTimeline._activeMarker = item.id;
+                    }
+                } else {
+                    // Desktop: click goes straight to source
+                    if (item.sources && item.sources.length > 0) {
+                        onSourceClick(item.sources[0]);
+                    }
                 }
             });
 
@@ -213,6 +238,14 @@ const ChurchTimeline = {
                 }
             });
         });
+
+        // Tap outside any marker (on the SVG background) dismisses the tooltip on mobile
+        if (isMobile) {
+            svg.on('click', () => {
+                ChurchTimeline._activeMarker = null;
+                tooltip.style('display', 'none');
+            });
+        }
 
         const legend = g.append('g')
             .attr('transform', `translate(0, ${innerHeight - 10})`);
