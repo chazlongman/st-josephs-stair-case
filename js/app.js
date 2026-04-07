@@ -47,6 +47,11 @@ const app = createApp({
         const traditionSearch = ref('');
         const selectedTradition = ref(null);
 
+        // Miracles
+        const miracles = ref([]);
+        const miracleSearch = ref('');
+        const selectedMiracle = ref(null);
+
         // Theme
         const isDarkTheme = ref(true);
 
@@ -72,6 +77,7 @@ const app = createApp({
                 'comparison': 'Comparison Dashboard',
                 'search': 'Topic Search',
                 'traditions': 'Traditions',
+                'miracles': 'Miracles',
                 'why-it-matters': 'Why It Matters'
             };
             return labels[currentView.value] || 'Timeline';
@@ -103,6 +109,29 @@ const app = createApp({
         function formatTraditionText(text) {
             if (!text) return '';
             return text.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
+        }
+
+        // Miracle categories
+        const miracleCategories = computed(() => {
+            const cats = new Set();
+            for (const m of miracles.value) {
+                if (m.category) cats.add(m.category);
+            }
+            return Array.from(cats).sort();
+        });
+
+        function filteredMiraclesByCategory(category) {
+            return miracles.value.filter(m => {
+                if (m.category !== category) return false;
+                if (miracleSearch.value) {
+                    return m.name.toLowerCase().includes(miracleSearch.value.toLowerCase());
+                }
+                return true;
+            });
+        }
+
+        function selectMiracle(m) {
+            selectedMiracle.value = m;
         }
 
         // Memoization cache for filteredDoctrinesByCategory
@@ -402,14 +431,16 @@ const app = createApp({
                 bibleRefs.value = data.bibleRefs;
                 loading.value = false;
 
-                // Load traditions
+                // Load traditions and miracles
                 try {
-                    const traditionsRes = await fetch('data/traditions.json');
-                    if (traditionsRes.ok) {
-                        traditions.value = await traditionsRes.json();
-                    }
+                    const [traditionsRes, miraclesRes] = await Promise.all([
+                        fetch('data/traditions.json'),
+                        fetch('data/miracles.json')
+                    ]);
+                    if (traditionsRes.ok) traditions.value = await traditionsRes.json();
+                    if (miraclesRes.ok) miracles.value = await miraclesRes.json();
                 } catch (err) {
-                    console.warn('Could not load traditions:', err);
+                    console.warn('Could not load traditions/miracles:', err);
                 }
 
                 // Load search state
@@ -451,6 +482,10 @@ const app = createApp({
             traditions, traditionSearch, selectedTradition,
             traditionCategories, filteredTraditionsByCategory,
             selectTradition, formatTraditionText,
+            // Miracles
+            miracles, miracleSearch, selectedMiracle,
+            miracleCategories, filteredMiraclesByCategory,
+            selectMiracle,
             // Theme
             isDarkTheme, toggleTheme,
             // Breadcrumb

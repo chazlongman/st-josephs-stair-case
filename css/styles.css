@@ -1159,6 +1159,161 @@ body.light-theme .tradition-denom-card { background: rgba(0, 0, 0, 0.02); border
 body.light-theme .tradition-denom-notes { color: #555; }
 body.light-theme .tradition-origin-year { color: #777; }
 
+/* --- Miracles --- */
+.miracles-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.miracles-sidebar {
+    position: sticky;
+    top: 76px;
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+}
+
+.miracle-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.miracle-location {
+    color: #bbb;
+    font-size: 0.85rem;
+}
+
+.miracle-summary {
+    color: #e0e0e0;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #ffb74d;
+    border-radius: 0 6px 6px 0;
+}
+
+.miracle-text p {
+    color: #d0d0d0;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.evidence-header {
+    color: #81c784 !important;
+    border-bottom-color: rgba(129, 199, 132, 0.3) !important;
+}
+
+.miracle-evidence {
+    background: rgba(129, 199, 132, 0.06);
+    border: 1px solid rgba(129, 199, 132, 0.15);
+    border-left: 3px solid #81c784;
+    border-radius: 0 6px 6px 0;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.miracle-evidence p {
+    color: #d0d0d0;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.miracle-evidence p:last-child {
+    margin-bottom: 0;
+}
+
+.miracle-keyfacts {
+    margin-bottom: 16px;
+}
+
+.keyfacts-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.keyfacts-list li {
+    padding: 8px 14px;
+    background: rgba(255, 183, 77, 0.08);
+    border-left: 3px solid #ffb74d;
+    border-radius: 0 4px 4px 0;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.miracle-sources {
+    margin-top: 20px;
+}
+
+.sources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.source-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    color: #ccc;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.15s;
+}
+
+a.source-chip:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    text-decoration: none;
+}
+
+.source-type-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.source-scientific .source-type-label {
+    background: rgba(129, 199, 132, 0.2);
+    color: #81c784;
+}
+
+.source-historical .source-type-label {
+    background: rgba(138, 180, 248, 0.2);
+    color: #8ab4f8;
+}
+
+.source-church .source-type-label {
+    background: rgba(255, 183, 77, 0.2);
+    color: #ffb74d;
+}
+
+/* Light theme miracles */
+body.light-theme .miracle-summary { color: #333; background: rgba(0, 0, 0, 0.03); }
+body.light-theme .miracle-text p { color: #444; }
+body.light-theme .miracle-evidence { background: rgba(46, 125, 50, 0.05); border-color: rgba(46, 125, 50, 0.15); }
+body.light-theme .miracle-evidence p { color: #444; }
+body.light-theme .keyfacts-list li { background: rgba(255, 152, 0, 0.08); color: #333; }
+body.light-theme .source-chip { background: rgba(0, 0, 0, 0.03); border-color: rgba(0, 0, 0, 0.08); color: #444; }
+body.light-theme a.source-chip:hover { background: rgba(0, 0, 0, 0.06); color: #222; }
+body.light-theme .miracle-location { color: #666; }
+
 /* --- Why It Matters --- */
 .why-layout {
     display: flex;
@@ -1395,11 +1550,11 @@ body.light-theme .tradition-origin-year { color: #777; }
     #heatmap-chart { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .lineage-modal { max-width: 95vw; padding: 20px; }
 
-    /* Traditions layout single column */
-    .traditions-layout {
+    /* Traditions & Miracles layout single column */
+    .traditions-layout, .miracles-layout {
         grid-template-columns: 1fr;
     }
-    .traditions-sidebar {
+    .traditions-sidebar, .miracles-sidebar {
         position: static;
         max-height: none;
     }
@@ -1705,6 +1860,24 @@ body.light-theme .tradition-origin-year { color: #777; }
         flex-direction: column;
         align-items: flex-start;
         gap: 6px;
+    }
+
+    /* --- Miracles --- */
+    .miracle-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    .miracle-evidence {
+        padding: 12px;
+    }
+    .keyfacts-list li {
+        font-size: 0.82rem;
+        padding: 6px 10px;
+    }
+    .source-chip {
+        font-size: 0.78rem;
+        padding: 8px 10px;
     }
 
     /* --- Footer --- */

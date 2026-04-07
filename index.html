@@ -32,6 +32,9 @@
                 <a href="#traditions"
                    :class="{ active: currentView === 'traditions' }"
                    @click.prevent="navigate('traditions')">Traditions</a>
+                <a href="#miracles"
+                   :class="{ active: currentView === 'miracles' }"
+                   @click.prevent="navigate('miracles')">Miracles</a>
                 <a href="#why-it-matters"
                    :class="{ active: currentView === 'why-it-matters' }"
                    @click.prevent="navigate('why-it-matters')">Why It Matters</a>
@@ -423,6 +426,83 @@
                     <div class="empty-state">
                         <h2>Select a Tradition</h2>
                         <p>Choose a tradition from the sidebar to explore its history, origin, and practice across Christian denominations.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Miracles View -->
+            <div v-if="currentView === 'miracles'" class="view-container miracles-layout">
+                <aside class="panel miracles-sidebar">
+                    <div class="search-box">
+                        <input type="text" v-model="miracleSearch" placeholder="Search miracles..." class="search-input">
+                    </div>
+                    <div v-for="cat in miracleCategories" :key="cat" class="doctrine-category">
+                        <h4 class="category-title">{{ cat }}</h4>
+                        <ul class="doctrine-list">
+                            <li v-for="m in filteredMiraclesByCategory(cat)" :key="m.id"
+                                :class="{ active: selectedMiracle && selectedMiracle.id === m.id }"
+                                @click="selectMiracle(m)">
+                                {{ m.name }}
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <section class="miracle-detail panel" v-if="selectedMiracle">
+                    <h2>{{ selectedMiracle.name }}</h2>
+                    <div class="miracle-meta">
+                        <span class="tradition-category-tag">{{ selectedMiracle.category }}</span>
+                        <span class="miracle-location">{{ selectedMiracle.location }}</span>
+                        <span class="tradition-origin-year">{{ selectedMiracle.year }} AD</span>
+                    </div>
+                    <p class="miracle-summary">{{ selectedMiracle.summary }}</p>
+
+                    <h3>What Happened</h3>
+                    <div class="miracle-text" v-html="formatTraditionText(selectedMiracle.description)"></div>
+
+                    <h3 class="evidence-header">Independent Scientific Evidence</h3>
+                    <div class="miracle-evidence" v-html="formatTraditionText(selectedMiracle.evidence)"></div>
+
+                    <div class="miracle-keyfacts" v-if="selectedMiracle.keyFacts && selectedMiracle.keyFacts.length">
+                        <h3>Key Facts</h3>
+                        <ul class="keyfacts-list">
+                            <li v-for="(fact, i) in selectedMiracle.keyFacts" :key="i">{{ fact }}</li>
+                        </ul>
+                    </div>
+
+                    <div v-if="selectedMiracle.conversions">
+                        <h3>Conversion Impact</h3>
+                        <div class="miracle-text" v-html="formatTraditionText(selectedMiracle.conversions)"></div>
+                    </div>
+
+                    <div v-if="selectedMiracle.churchResponse">
+                        <h3>Church Investigation</h3>
+                        <p class="miracle-text">{{ selectedMiracle.churchResponse }}</p>
+                    </div>
+
+                    <div class="miracle-sources" v-if="selectedMiracle.sources && selectedMiracle.sources.length">
+                        <h3>Sources & Further Reading</h3>
+                        <div class="sources-list">
+                            <a v-for="(src, i) in selectedMiracle.sources" :key="i"
+                               :href="src.url" target="_blank" rel="noopener"
+                               class="source-chip" :class="'source-' + src.type"
+                               v-if="src.url">
+                                <span class="source-type-label">{{ src.type }}</span>
+                                {{ src.label }}
+                            </a>
+                            <span v-else class="source-chip source-no-link" :class="'source-' + src.type">
+                                <span class="source-type-label">{{ src.type }}</span>
+                                {{ src.label }}
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="miracle-detail panel" v-else>
+                    <div class="empty-state">
+                        <h2>Select a Miracle</h2>
+                        <p>Choose a documented miracle from the sidebar to explore the evidence, scientific investigations, and historical impact.</p>
+                        <p style="margin-top:12px;font-size:0.85rem;">Each entry emphasizes independent investigation — studies conducted by secular scientists, government bodies, and non-Catholic researchers.</p>
                     </div>
                 </section>
             </div>
