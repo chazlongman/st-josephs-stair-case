@@ -483,17 +483,18 @@
                     <div class="miracle-sources" v-if="selectedMiracle.sources && selectedMiracle.sources.length">
                         <h3>Sources & Further Reading</h3>
                         <div class="sources-list">
-                            <a v-for="(src, i) in selectedMiracle.sources" :key="i"
-                               :href="src.url" target="_blank" rel="noopener"
-                               class="source-chip" :class="'source-' + src.type"
-                               v-if="src.url">
-                                <span class="source-type-label">{{ src.type }}</span>
-                                {{ src.label }}
-                            </a>
-                            <span v-else class="source-chip source-no-link" :class="'source-' + src.type">
-                                <span class="source-type-label">{{ src.type }}</span>
-                                {{ src.label }}
-                            </span>
+                            <template v-for="(src, i) in selectedMiracle.sources" :key="i">
+                                <a v-if="src.url && src.url.length > 0"
+                                   :href="src.url" target="_blank" rel="noopener"
+                                   class="source-chip" :class="'source-' + src.type">
+                                    <span class="source-type-label">{{ src.type }}</span>
+                                    {{ src.label }}
+                                </a>
+                                <span v-else class="source-chip source-no-link" :class="'source-' + src.type">
+                                    <span class="source-type-label">{{ src.type }}</span>
+                                    {{ src.label }}
+                                </span>
+                            </template>
                         </div>
                     </div>
                 </section>
