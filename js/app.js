@@ -6,7 +6,7 @@ const { createApp, ref, computed, watch, onMounted, nextTick } = Vue;
 
 const app = createApp({
     setup() {
-        const currentView = ref('timeline');
+        const currentView = ref('why-it-matters');
         const loading = ref(true);
         const error = ref(null);
 
@@ -448,7 +448,7 @@ const app = createApp({
                 availableTopics.value = TopicSearch.getAvailableTopics();
                 searchHistory.value = TopicSearch.loadHistory();
 
-                const hash = window.location.hash.replace('#', '') || 'timeline';
+                const hash = window.location.hash.replace('#', '') || 'why-it-matters';
                 navigate(hash);
 
                 // Global keyboard handler
@@ -461,7 +461,7 @@ const app = createApp({
         });
 
         window.addEventListener('hashchange', () => {
-            const hash = window.location.hash.replace('#', '') || 'timeline';
+            const hash = window.location.hash.replace('#', '') || 'why-it-matters';
             if (currentView.value !== hash) {
                 navigate(hash);
             }
