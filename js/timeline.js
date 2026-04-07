@@ -24,15 +24,17 @@ const ChurchTimeline = {
 
         const items = ChurchUtils.filterTimelineItems(allItems, filters, doctrines);
 
-        // Detect mobile (use viewport width, not container, since container may be constrained)
+        // Detect mobile / narrow viewport
         const isMobile = window.innerWidth < 700;
+        // Use short labels whenever the viewport is narrow OR container is constrained
+        const useShortLabels = isMobile || window.innerWidth < 900;
 
-        const margin = { top: 70, right: 40, bottom: 20, left: 180 };
+        const margin = { top: 70, right: 40, bottom: 20, left: 200 };
         // On mobile, force a wider canvas so the timeline is actually scrollable horizontally
         // and shows meaningful detail. Native scroll on the container handles panning.
         let width;
         if (isMobile) {
-            margin.left = 110;
+            margin.left = 130; // wider so short labels never clip
             margin.right = 30;
             width = 1100; // fixed wider canvas for mobile horizontal scroll
         } else {
@@ -107,7 +109,7 @@ const ChurchTimeline = {
 
         // Council lane label
         g.append('text')
-            .attr('x', -10)
+            .attr('x', -12)
             .attr('y', councilLaneCenter)
             .attr('dy', '0.35em')
             .attr('text-anchor', 'end')
@@ -115,7 +117,7 @@ const ChurchTimeline = {
             .attr('font-size', isMobile ? '11px' : '12px')
             .attr('font-weight', '700')
             .attr('letter-spacing', '0.05em')
-            .text(isMobile ? 'COUNCILS' : 'ECUMENICAL COUNCILS');
+            .text(useShortLabels ? 'COUNCILS' : 'ECUMENICAL COUNCILS');
 
         // Subtle horizontal guide line through council lane center
         g.append('line')
@@ -156,14 +158,14 @@ const ChurchTimeline = {
             }
 
             g.append('text')
-                .attr('x', -10)
+                .attr('x', -12)
                 .attr('y', y)
                 .attr('dy', '0.35em')
                 .attr('text-anchor', 'end')
                 .attr('fill', denom.color)
                 .attr('font-size', isMobile ? '11px' : '12px')
                 .attr('font-weight', '600')
-                .text(isMobile ? denom.name.split(' ')[0] : denom.name);
+                .text(useShortLabels ? denom.name.split(/[\s/]/)[0] : denom.name);
         });
 
         const markerColors = {
