@@ -23,10 +23,20 @@ const ChurchTimeline = {
 
         const items = ChurchUtils.filterTimelineItems(allItems, filters, doctrines);
 
+        // Detect mobile (use viewport width, not container, since container may be constrained)
+        const isMobile = window.innerWidth < 700;
+
         const margin = { top: 40, right: 40, bottom: 40, left: 180 };
-        const width = container.clientWidth || 1200;
-        // On small screens, reduce left margin
-        if (width < 600) margin.left = 100;
+        // On mobile, force a wider canvas so the timeline is actually scrollable horizontally
+        // and shows meaningful detail. Native scroll on the container handles panning.
+        let width;
+        if (isMobile) {
+            margin.left = 110;
+            margin.right = 30;
+            width = 1100; // fixed wider canvas for mobile horizontal scroll
+        } else {
+            width = container.clientWidth || 1200;
+        }
         const laneHeight = 50;
         const height = margin.top + margin.bottom + denominations.length * laneHeight + 60;
 
@@ -65,14 +75,14 @@ const ChurchTimeline = {
 
         const xAxis = d3.axisTop(xScale)
             .tickFormat(d => d + ' AD')
-            .ticks(Math.min(width < 600 ? 6 : 20, (yearMax - yearMin) / 100));
+            .ticks(Math.min(isMobile ? 10 : 20, (yearMax - yearMin) / 100));
 
         g.append('g')
             .attr('class', 'x-axis')
             .call(xAxis)
             .selectAll('text')
-            .style('fill', '#aaa')
-            .style('font-size', width < 600 ? '9px' : '11px');
+            .style('fill', '#c9a961')
+            .style('font-size', isMobile ? '10px' : '11px');
 
         g.selectAll('.x-axis line, .x-axis path')
             .style('stroke', 'rgba(255,255,255,0.15)');
@@ -111,9 +121,9 @@ const ChurchTimeline = {
                 .attr('dy', '0.35em')
                 .attr('text-anchor', 'end')
                 .attr('fill', denom.color)
-                .attr('font-size', width < 600 ? '10px' : '12px')
+                .attr('font-size', isMobile ? '11px' : '12px')
                 .attr('font-weight', '600')
-                .text(width < 600 ? denom.name.split(' ')[0] : denom.name);
+                .text(isMobile ? denom.name.split(' ')[0] : denom.name);
         });
 
         const markerColors = {
@@ -178,12 +188,12 @@ const ChurchTimeline = {
 
             marker.on('mouseenter', showTooltip);
             marker.on('mouseleave', hideTooltip);
-            // Touch support
-            marker.on('touchstart', (event) => {
-                event.preventDefault();
-                showTooltip(event);
+            // Touch support — don't preventDefault so native scroll still works
+            // when user accidentally lands on a marker while swiping
+            marker.on('touchend', (event) => {
+                showTooltip(event.changedTouches ? { clientX: event.changedTouches[0].clientX, clientY: event.changedTouches[0].clientY } : event);
+                setTimeout(hideTooltip, 2500);
             });
-            marker.on('touchend', hideTooltip);
             // Keyboard support
             marker.on('focus', showTooltip);
             marker.on('blur', hideTooltip);
@@ -227,17 +237,17 @@ const ChurchTimeline = {
                 .text(li.label);
         });
 
-        const zoomBehavior = d3.zoom()
-            .scaleExtent([0.5, 10])
-            .translateExtent([[-margin.left, -margin.top], [width + 200, height + 200]])
-            .on('zoom', (event) => {
-                g.attr('transform', `translate(${event.transform.x + margin.left},${event.transform.y + margin.top}) scale(${event.transform.k})`);
-            });
-
-        svg.call(zoomBehavior);
-        // Enable touch gestures for zoom
-        svg.on('touchstart.zoom', null);
-        svg.call(zoomBehavior.touchable(true));
+        // On mobile, skip D3 zoom entirely so native horizontal scroll works.
+        // Native scroll is more intuitive than D3's pan/zoom on touch devices.
+        if (!isMobile) {
+            const zoomBehavior = d3.zoom()
+                .scaleExtent([0.5, 10])
+                .translateExtent([[-margin.left, -margin.top], [width + 200, height + 200]])
+                .on('zoom', (event) => {
+                    g.attr('transform', `translate(${event.transform.x + margin.left},${event.transform.y + margin.top}) scale(${event.transform.k})`);
+                });
+            svg.call(zoomBehavior);
+        }
 
         this.svg = svg;
         this.tooltip = tooltip;

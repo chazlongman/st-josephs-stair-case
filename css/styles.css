@@ -2147,20 +2147,48 @@ body.light-theme .miracle-location { color: #666; }
         border-radius: 6px;
     }
 
-    /* --- Timeline --- */
+    /* --- Timeline (mobile horizontal scroll) --- */
     .timeline-container {
         overflow-x: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x proximity;
+        margin: 0 -8px;
+        padding: 0 8px 8px;
+        position: relative;
+    }
+    /* Subtle scroll indicator on right edge */
+    .timeline-container::after {
+        content: '';
+        position: sticky;
+        right: 0;
+        top: 0;
+        width: 32px;
+        height: 100%;
+        background: linear-gradient(to left, rgba(10, 8, 6, 0.6), transparent);
+        pointer-events: none;
+        margin-left: -32px;
+        display: block;
+        flex-shrink: 0;
     }
     .timeline-panel {
-        min-height: 300px;
-        min-width: 600px; /* Allow horizontal scroll on tiny screens */
+        min-height: 380px;
+        overflow: visible !important;
+        padding: 14px 12px;
+        width: max-content;
+        min-width: 100%;
+    }
+    .timeline-panel svg {
+        width: auto !important;
+        max-width: none !important;
+        display: block;
     }
     .timeline-hint {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         padding: 4px 10px;
         bottom: 8px;
-        right: 8px;
+        right: 14px;
+        position: fixed;
     }
 
     /* --- Filter panel --- */
