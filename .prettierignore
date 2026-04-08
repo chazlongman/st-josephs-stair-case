@@ -1,0 +1,22 @@
+# Prevent prettier (via the auto-format hook) from churning existing files
+# in this repo. Remove entries below if you want prettier to start formatting
+# a specific file type.
+
+# Source files already have a consistent hand-tuned style
+index.html
+css/
+js/
+data/
+
+# Generated / binary / build outputs
+exports/
+assets/
+*.pdf
+*.webp
+*.jpg
+*.jpeg
+*.png
+
+# Common sense
+node_modules/
+.git/
